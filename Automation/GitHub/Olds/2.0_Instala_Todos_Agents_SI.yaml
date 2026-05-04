@@ -1,0 +1,6 @@
+---
+ - import_playbook: "0.1.1_Install_GLPI_Agent.yaml"
+ - import_playbook: "0.1.2_Install_Elastic_Agent.yaml"
+ - import_playbook: "0.1.3_Install_Qualys_Agent.yaml"
+ - import_playbook: "0.1.4_Install_SentinelOne_Agent.yaml"
+

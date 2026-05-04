@@ -1,0 +1,31 @@
+---
+- name: Atualização de pacotes em sistemas RHEL e Ubuntu
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Atualizar todos os pacotes (RHEL/CentOS 6/7)
+      ansible.builtin.yum:
+        name: '*'
+        state: latest
+        update_cache: yes
+      when: 
+        - ansible_distribution in ["RedHat", "CentOS"]
+        - ansible_distribution_major_version in ["6", "7"]
+
+    - name: Atualizar todos os pacotes (RHEL/CentOS 8/9)
+      ansible.builtin.dnf:
+        name: '*'
+        state: latest
+        update_cache: yes
+      when:
+        - ansible_distribution in ["RedHat", "CentOS"]
+        - ansible_distribution_major_version in ["8", "9"]
+
+    - name: Atualizar todos os pacotes (Ubuntu/Debian)
+      ansible.builtin.apt:
+        upgrade: dist
+        update_cache: yes
+        autoremove: yes
+      when: ansible_distribution in ["Ubuntu", "Debian"]

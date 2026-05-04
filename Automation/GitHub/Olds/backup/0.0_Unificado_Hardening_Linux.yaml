@@ -1,0 +1,7 @@
+---
+- import_playbook: "0.1_Unificado_Instalar_Agentes_SI_Linux.yaml"
+- import_playbook: "0.2_Kernel_Hardening_Linux.yaml"
+- import_playbook: "0.3_Geral_Hardening_Linux.yaml"
+- import_playbook: "0.5_History_Hardening_Linux.yaml"
+- import_playbook: "0.6_Banner_Linux.yaml"
+- import_playbook: "0.4_SSH_Hardening_Linux.yaml"

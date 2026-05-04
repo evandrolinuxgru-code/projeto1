@@ -1,0 +1,60 @@
+---
+- name: Install Qualys Cloud Agent
+  hosts: all
+  become: yes
+  vars:
+    qualys_rpm: "http://172.31.49.176:8080/Qualys/QualysCloudAgent.rpm"
+    qualys_deb: "http://172.31.49.176:8080/Qualys/QualysCloudAgent.deb"
+    qualys_activation_id: "192418a7-300e-47cd-a94a-d1c7923a38c8"
+    qualys_customer_id: "1b910a46-7e07-400c-835f-94c8cc1c8798"
+    qualys_server_uri: "https://qagpublic.qg4.apps.qualys.com/CloudAgent/"
+  tasks:
+    - name: Install audit package
+      package:
+        name: "{{ 'audit' if ansible_facts['os_family'] == 'RedHat' else 'auditd' }}"
+        state: present
+
+    - name: Check if Qualys agent is installed
+      stat:
+        path: /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh
+      register: qualys_check
+
+    - name: Install Qualys Cloud Agent
+      block:
+        - name: Download Qualys Agent
+          get_url:
+            url: "{{ qualys_rpm if ansible_facts['os_family'] == 'RedHat' else qualys_deb }}"
+            dest: "/tmp/QualysCloudAgent.{{ 'rpm' if ansible_facts['os_family'] == 'RedHat' else 'deb' }}"
+          register: qualys_download
+          ignore_errors: yes
+
+        - name: Install Qualys Agent (RedHat)
+          yum:
+            name: "/tmp/QualysCloudAgent.rpm"
+            state: present
+            disable_gpg_check: yes
+          when: ansible_os_family == "RedHat" and qualys_download is succeeded
+          ignore_errors: yes
+
+        - name: Install Qualys Agent (Debian)
+          apt:
+            deb: "/tmp/QualysCloudAgent.deb"
+          when: ansible_os_family == "Debian" and qualys_download is succeeded
+          ignore_errors: yes
+
+        - name: Activate Qualys Agent
+          shell: >
+            /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh
+            ActivationId={{ qualys_activation_id }}
+            CustomerId={{ qualys_customer_id }}
+            ServerUri={{ qualys_server_uri }}
+          when:
+            - qualys_download is succeeded
+            - not qualys_check.stat.exists
+          ignore_errors: yes
+
+        - name: Remove Qualys installer
+          file:
+            path: "/tmp/QualysCloudAgent.{{ 'rpm' if ansible_os_family == 'RedHat' else 'deb' }}"
+            state: absent
+      when: not qualys_check.stat.exists

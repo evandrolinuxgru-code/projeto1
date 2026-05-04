@@ -1,0 +1,128 @@
+---
+- name: Hardening de Sistema Linux
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    timestamp: "{{ ansible_date_time.date }}"
+    backup_dir: "/etc/hardening_backup_{{ timestamp }}"
+
+  tasks:
+    - name: Criar diretório para backups
+      file:
+        path: "{{ backup_dir }}"
+        state: directory
+        mode: "0700"
+
+    - name: Backup arquivos de configuração UMASK
+      copy:
+        remote_src: yes
+        src: "{{ item }}"
+        dest: "{{ backup_dir }}/"
+      loop:
+        - /etc/login.defs
+        - /etc/bash.bashrc
+        - /etc/profile
+        - /root/.bashrc
+        - /etc/bashrc
+        - /etc/csh.cshrc
+        - /etc/init.d/functions
+      ignore_errors: yes
+
+    - name: Configurar UMASK 027
+      lineinfile:
+        path: "{{ item }}"
+        line: "umask 027"
+        create: yes
+        state: present
+      loop:
+        - /etc/login.defs
+        - /etc/bash.bashrc
+        - /etc/profile
+        - /root/.bashrc
+        - /etc/bashrc
+        - /etc/csh.cshrc
+        - /etc/init.d/functions
+
+    - name: Ajustar permissões de arquivos sensíveis (0600)
+      file:
+        path: "{{ item }}"
+        mode: "0600"
+        state: file
+      loop:
+        - /etc/at.deny
+        - /boot/grub2/grub.cfg
+        - /etc/crontab
+        - /etc/issue.net
+        - /etc/issue
+        - /etc/motd
+        - /etc/cron.deny
+        - /etc/ssh/sshd_config
+      ignore_errors: yes
+
+    - name: Ajustar permissões do diretório /etc/sudoers.d (0700)
+      file:
+        path: /etc/sudoers.d
+        mode: "0700"
+        state: directory
+      ignore_errors: yes
+
+    - name: Ajustar permissões de diretórios cron (0700)
+      file:
+        path: "{{ item }}"
+        mode: "0700"
+        state: directory
+      loop:
+        - /etc/cron.d
+        - /etc/cron.daily
+        - /etc/cron.hourly
+        - /etc/cron.weekly
+        - /etc/cron.monthly
+      ignore_errors: yes
+
+    - name: Backup modprobe.d/disable.conf
+      copy:
+        remote_src: yes
+        src: /etc/modprobe.d/disable.conf
+        dest: "{{ backup_dir }}/"
+      ignore_errors: yes
+
+    - name: Desabilitar protocolos inseguros
+      lineinfile:
+        path: /etc/modprobe.d/disable.conf
+        create: yes
+        line: "{{ item }}"
+        state: present
+      loop:
+        - "install dccp /bin/true"
+        - "install rds /bin/true"
+        - "install tipc /bin/true"
+        - "install sctp /bin/true"
+        - "install usb-storage /bin/true"
+        - "install firewire-core /bin/true"
+        - "install firewire-net /bin/true"
+        - "install firewire-ohci /bin/true"
+        - "install firewire-sbp2 /bin/true"
+
+    - name: Backup journald.conf
+      copy:
+        remote_src: yes
+        src: /etc/systemd/journald.conf
+        dest: "{{ backup_dir }}/journald.conf.bak"
+      when: ansible_service_mgr == 'systemd'
+      ignore_errors: yes
+
+    - name: Configurar journal persistente
+      lineinfile:
+        path: /etc/systemd/journald.conf
+        regexp: '^#?Storage='
+        line: "Storage=persistent"
+        create: yes
+      when: ansible_service_mgr == 'systemd'
+
+    - name: Recarregar daemon systemd
+      systemd:
+        daemon_reload: yes
+      when: ansible_service_mgr == 'systemd'
+  ignore_errors: yes

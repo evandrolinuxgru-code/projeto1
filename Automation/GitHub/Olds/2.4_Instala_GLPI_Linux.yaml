@@ -1,0 +1,31 @@
+---
+- name: Instalar GLPI Agent
+  hosts: all
+  become: yes
+  vars:
+    url_installer: "http://172.31.49.176:8080/Glpi/glpi-agent-1.9-linux-installer.pl"
+    nome_installer: "glpi-installer.pl"
+    servidor_glpi: "glpi.gru.com.br"
+
+  tasks:
+    - name: Verificar se o GLPI Agent já está instalado
+      stat:
+        path: /usr/bin/glpi-agent
+      register: agente_instalado
+
+    - name: Baixar instalador GLPI
+      get_url:
+        url: "{{ url_installer }}"
+        dest: "/tmp/{{ nome_installer }}"
+        mode: '0755'
+      when: not agente_instalado.stat.exists
+
+    - name: Executar instalação GLPI
+      command: "/tmp/{{ nome_installer }} -s {{ servidor_glpi }} --install --type=typical -v"
+      when: not agente_instalado.stat.exists
+
+    - name: Limpar instalador GLPI
+      file:
+        path: "/tmp/{{ nome_installer }}"
+        state: absent
+      when: not agente_instalado.stat.exists

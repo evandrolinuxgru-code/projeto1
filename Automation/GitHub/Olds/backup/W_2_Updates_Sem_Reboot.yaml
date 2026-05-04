@@ -1,0 +1,67 @@
+---
+- name: Apply Windows updates with minimal reboots
+  hosts: windows_servers
+  gather_facts: yes
+  serial: "20%"
+
+  vars:
+    update_categories:
+      - "DefinitionUpdates"   # Atualizações de definições de antivírus
+      - "SecurityUpdates"     # Atualizações de segurança
+      - "CriticalUpdates"     # Atualizações críticas do sistema
+      - "UpdateRollups"       # Pacotes cumulativos de atualizações
+      - "Updates"            # Outras atualizações recomendadas
+
+
+    reboot_preference: never
+
+  tasks:
+    - name: Ensure update report directory exists
+      win_file:
+        path: "C:\\update_reports"
+        state: directory
+      tags: reporting
+
+    - name: Check server uptime
+      win_uptime:
+      register: uptime
+      tags: prechecks
+
+    - name: Get current list of pending updates
+      win_updates:
+        category_names: "{{ update_categories }}"
+        state: searched
+        reboot: no
+      register: win_updates_result
+      tags: prechecks
+
+    - name: Display pending updates count
+      debug:
+        msg: "Pending updates found: {{ win_updates_result.updates | length }}"
+      tags: prechecks
+
+    - name: Install updates without reboot
+      win_updates:
+        category_names: "{{ update_categories }}"
+        state: installed
+        reboot: "{{ reboot_preference }}"
+      register: update_task
+      tags: updates
+
+    - name: Verify updates installed successfully
+      debug:
+        msg: "Successfully installed {{ update_task.found_update_count }} updates without reboot"
+      when: update_task is defined and update_task.found_update_count > 0
+      tags: verification
+
+    - name: List updates that require reboot
+      debug:
+        msg: "The following updates require reboot and were skipped: {{ win_updates_result.updates | selectattr('reboot_required', 'equalto', true) | map(attribute='title') | list }}"
+      when: win_updates_result.updates | selectattr('reboot_required', 'equalto', true) | list | length > 0
+      tags: reporting
+
+    - name: Save update report
+      win_template:
+        src: updates_report.j2
+        dest: "C:\\update_reports\\{{ inventory_hostname }}_updates_{{ ansible_date_time.date }}.txt"
+      tags: reporting

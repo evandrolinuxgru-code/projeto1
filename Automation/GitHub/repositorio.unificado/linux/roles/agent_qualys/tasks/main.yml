@@ -1,0 +1,73 @@
+---
+- name: Instalação e registro do Qualys Cloud Agent
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    qualys_activation_id: "192418a7-300e-47cd-a94a-d1c7923a38c8"
+    qualys_customer_id: "1b910a46-7e07-400c-835f-94c8cc1c8798"
+    qualys_server_uri: "https://qagpublic.qg4.apps.qualys.com/CloudAgent/"
+    qualys_install_base_url: "http://172.31.49.176:8080/Qualys"
+    qualys_install_path: "/usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh"
+
+  tasks:
+    - name: Verificar se o Qualys Agent já está instalado
+      stat:
+        path: "{{ qualys_install_path }}"
+      register: qualys_installed
+      changed_when: false
+
+    - name: Definir URL e caminho do pacote baseado no SO
+      set_fact:
+        qualys_package_url: "{{ qualys_install_base_url }}/QualysCloudAgent.{{ 'deb' if ansible_os_family == 'Debian' else 'rpm' }}"
+        qualys_package_path: "/tmp/QualysCloudAgent.{{ 'deb' if ansible_os_family == 'Debian' else 'rpm' }}"
+      when: not qualys_installed.stat.exists
+
+    - name: Baixar pacote do Qualys Agent
+      get_url:
+        url: "{{ qualys_package_url }}"
+        dest: "{{ qualys_package_path }}"
+        mode: '0644'
+        validate_certs: no
+      when: not qualys_installed.stat.exists
+
+    - name: Instalar pacote (Debian)
+      apt:
+        deb: "{{ qualys_package_path }}"
+      when:
+        - not qualys_installed.stat.exists
+        - ansible_os_family == "Debian"
+
+    - name: Instalar pacote (RedHat)
+      yum:
+        name: "{{ qualys_package_path }}"
+        state: present
+        disable_gpg_check: yes
+      when:
+        - not qualys_installed.stat.exists
+        - ansible_os_family == "RedHat"
+
+    - name: Registrar agente
+      command: >
+        {{ qualys_install_path }}
+        ActivationId={{ qualys_activation_id }}
+        CustomerId={{ qualys_customer_id }}
+        ServerUri={{ qualys_server_uri }}
+      when: not qualys_installed.stat.exists
+      register: registration_result
+      changed_when: "'already registered' not in registration_result.stderr"
+      no_log: true
+
+    - name: Limpar pacote temporário
+      file:
+        path: "{{ qualys_package_path }}"
+        state: absent
+      when: not qualys_installed.stat.exists
+
+    - name: Verificar status do serviço
+      systemd:
+        name: qualys-cloud-agent
+        state: started
+        enabled: yes
+      when: not qualys_installed.stat.exists

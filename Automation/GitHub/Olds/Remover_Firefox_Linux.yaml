@@ -1,0 +1,10 @@
+---
+- name: Remover Firefox de diferentes distribuições Linux
+  hosts: all
+  become: yes
+  tasks:
+    - name: Remover Firefox usando o gerenciador de pacotes apropriado
+      package:
+        name: firefox
+        state: absent
+  ignore_errors: yes

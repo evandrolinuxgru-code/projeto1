@@ -1,0 +1,10 @@
+- name: Set package path
+  set_fact:
+    sentinel_pkg: "/tmp/SentinelAgent.{{ 'rpm' if ansible_os_family == 'RedHat' else 'deb' }}"
+
+- name: Download SentinelOne package
+  get_url:
+    url: "{{ sentinel_rpm if ansible_os_family == 'RedHat' else sentinel_deb }}"
+    dest: "{{ sentinel_pkg }}"
+    mode: '0644'
+    timeout: 300

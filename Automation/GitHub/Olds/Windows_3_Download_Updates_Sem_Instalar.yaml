@@ -1,0 +1,42 @@
+---
+- name: Baixar atualizações do Windows sem instalar
+  hosts: windows_servers
+  gather_facts: yes  # Necessário para obter ansible_date_time
+  
+  vars:
+    download_dir: "C:\\Windows\\Temp\\AnsibleUpdates"
+    log_dir: "C:\\Ansible\\UpdateLogs"
+
+  tasks:
+    - name: Criar diretórios para downloads e logs
+      win_file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - "{{ download_dir }}"
+        - "{{ log_dir }}"
+
+    - name: Baixar atualizações disponíveis
+      win_updates:
+        category_names:
+          - SecurityUpdates
+          - CriticalUpdates
+          - UpdateRollups
+          - Updates
+          - DefinitionUpdates
+        reboot: no
+        state: downloaded
+      register: updates_result
+
+    - name: Registrar atualizações baixadas
+      win_template:
+        src: updates_log.j2
+        dest: "{{ log_dir }}\\updates_download_log_{{ ansible_date_time.date }}.txt"
+      when: updates_result.updates | length > 0
+
+    - name: Exibir resumo das atualizações baixadas
+      debug:
+        msg: |
+          Foram baixadas {{ updates_result.updates | length }} atualizações.
+          Consulte o arquivo de log em {{ log_dir }} para detalhes.
+      when: updates_result.updates | length > 0

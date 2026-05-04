@@ -1,0 +1,74 @@
+---
+- name: Configurar banner de acesso SSH e MOTD
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    banner_content: |
+      ###############################################################
+      #              >>> Authorized access only <<<                 #
+      #      Disconnect IMMEDIATELY if you are not authorized       #
+      #           All actions are monitored and recorded            #
+      #         For support contact the IT Infrastructure           #
+      ###############################################################
+    timestamp: "{{ ansible_facts.date_time.date }}_{{ ansible_facts.date_time.hour }}{{ ansible_facts.date_time.minute }}{{ ansible_facts.date_time.second }}"
+    backup_dir: "/etc/banner_backup_{{ timestamp }}"
+
+  tasks:
+    - name: Criar diretório de backup
+      file:
+        path: "{{ backup_dir }}"
+        state: directory
+        mode: '0755'
+
+    - name: Fazer backup dos arquivos existentes
+      copy:
+        remote_src: yes
+        src: "{{ item }}"
+        dest: "{{ backup_dir }}/{{ item | basename }}.bak"
+      loop:
+        - "/etc/ssh/sshd_banner"
+        - "/etc/ssh/sshd_config"
+        - "/etc/motd"
+      failed_when: false
+
+    - name: Configurar banner SSH
+      copy:
+        dest: /etc/ssh/sshd_banner
+        content: "{{ banner_content }}"
+        mode: '0644'
+
+    - name: Configurar MOTD
+      copy:
+        dest: /etc/motd
+        content: "{{ banner_content }}"
+        mode: '0644'
+
+    - name: Configurar diretiva Banner no sshd_config
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^Banner '
+        line: 'Banner /etc/ssh/sshd_banner'
+        state: present
+        validate: '/usr/sbin/sshd -t -f %s'
+
+    - name: Verificar se o diretório update-motd.d existe
+      stat:
+        path: /etc/update-motd.d
+      register: motd_dir
+
+    - name: Configurar MOTD dinâmico (Ubuntu)
+      copy:
+        dest: /etc/update-motd.d/99-motd
+        content: |
+          #!/bin/bash
+          cat /etc/motd
+        mode: '0755'
+      when: motd_dir.stat.exists
+
+    - name: Reiniciar serviço SSH (RedHat e Debian)
+      service:
+        name: "{{ 'sshd' if ansible_facts['os_family'] == 'RedHat' else 'ssh' }}"
+        state: restarted
+  ignore_errors: yes

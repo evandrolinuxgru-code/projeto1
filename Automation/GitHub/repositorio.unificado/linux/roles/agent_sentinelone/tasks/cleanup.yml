@@ -1,0 +1,4 @@
+- name: Remove installer
+  file:
+    path: "{{ sentinel_pkg }}"
+    state: absent

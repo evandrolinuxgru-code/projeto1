@@ -1,0 +1,7 @@
+- name: Check sentinelctl
+  stat:
+    path: /opt/sentinelone/bin/sentinelctl
+  register: sentinel_installed
+
+- meta: end_play
+  when: sentinel_installed.stat.exists

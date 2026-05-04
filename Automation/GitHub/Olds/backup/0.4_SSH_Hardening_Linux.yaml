@@ -1,0 +1,118 @@
+---
+- name: Harden SSH Configuration with SELinux and Firewall
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    ssh_port: 2289
+    allowed_users: ['*@172.31.46.20', '*@172.31.46.21', '*@172.31.49.176']
+    timestamp: "{{ ansible_date_time.date }}_{{ ansible_date_time.hour }}{{ ansible_date_time.minute }}{{ ansible_date_time.second }}"
+    backup_dir: "/etc/ssh_backup_{{ timestamp }}"
+
+  tasks:
+    - name: Create backup directory
+      file:
+        path: "{{ backup_dir }}"
+        state: directory
+        mode: '0755'
+      ignore_errors: yes
+
+    - name: Backup sshd_config
+      copy:
+        remote_src: yes
+        src: /etc/ssh/sshd_config
+        dest: "{{ backup_dir }}/sshd_config.bak"
+      failed_when: false
+      ignore_errors: yes
+
+    - name: Verificar status do SELinux
+      command: getenforce
+      register: selinux_status
+      changed_when: false
+      failed_when: false
+      when: ansible_os_family == "RedHat"
+      ignore_errors: yes
+
+    - name: Adicionar porta SSH no SELinux
+      command: semanage port -a -t ssh_port_t -p tcp {{ ssh_port }}
+      register: semanage_add
+      failed_when: semanage_add.rc != 0 and "already defined" not in semanage_add.stderr
+      when:
+        - ansible_os_family == "RedHat"
+        - selinux_status.stdout == "Enforcing"
+      ignore_errors: yes
+
+    - name: Modificar porta SSH no SELinux caso já exista
+      command: semanage port -m -t ssh_port_t -p tcp {{ ssh_port }}
+      when:
+        - ansible_os_family == "RedHat"
+        - selinux_status.stdout == "Enforcing"
+      ignore_errors: yes
+
+    - name: Aplicar parâmetros de hardening no sshd_config
+      blockinfile:
+        path: /etc/ssh/sshd_config
+        marker: "# {mark} ANSIBLE SSH HARDENING"
+        block: |
+          Port {{ ssh_port }}
+          Protocol 2
+          AllowUsers {{ allowed_users | join(' ') }}
+          PermitRootLogin yes
+          PermitEmptyPasswords no
+          AllowAgentForwarding no
+          AllowTcpForwarding no
+          X11Forwarding no
+          ClientAliveInterval 300
+          ClientAliveCountMax 2
+          TCPKeepAlive no
+          Compression no
+          LogLevel VERBOSE
+          MaxAuthTries 2
+          MaxSessions 2
+          UseDNS no
+      ignore_errors: yes
+
+    - name: Abrir nova porta SSH no firewalld (RedHat)
+      firewalld:
+        port: "{{ ssh_port }}/tcp"
+        permanent: yes
+        state: enabled
+        immediate: yes
+      when: ansible_facts.os_family == "RedHat"
+      ignore_errors: yes
+
+    - name: Remover serviço SSH padrão do firewalld (RedHat)
+      firewalld:
+        service: ssh
+        permanent: yes
+        state: disabled
+        immediate: yes
+      when: ansible_facts.os_family == "RedHat"
+      ignore_errors: yes
+
+    - name: Recarregar firewalld (RedHat)
+      command: firewall-cmd --reload
+      when: ansible_facts.os_family == "RedHat"
+      ignore_errors: yes
+
+    - name: Abrir nova porta no UFW (Ubuntu)
+      command: ufw allow {{ ssh_port }}/tcp
+      when: ansible_os_family == "Debian"
+      ignore_errors: yes
+
+    - name: Remover regra padrão SSH do UFW (Ubuntu)
+      command: ufw delete allow OpenSSH
+      when: ansible_facts.os_family == "Debian"
+      ignore_errors: yes
+
+    - name: Reiniciar o serviço SSH e encerrar playbook com sucesso
+      block:
+        - name: Restart SSHD
+          service:
+            name: sshd
+            state: restarted
+          ignore_errors: yes
+
+        - name: Finalizar com sucesso
+          meta: end_play

@@ -1,0 +1,78 @@
+---
+- name: Criar/Configurar usuário sysgru em servidores Linux (Ubuntu + RHEL)
+  hosts: all
+  become: yes
+  vars:
+    sysgru_user: "sysgru"
+    sysgru_password: "Sys@OKMnhy642"  # Senha em texto claro (criptografada no playbook)
+    sysgru_ssh_key: ""  # Opcional: chave SSH pública
+
+  tasks:
+    - name: Definir algoritmo de hash conforme o OS (SHA-512 ou SHA-256 como fallback)
+      set_fact:
+        sysgru_password_encrypted: >-
+          {% if ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6' %}
+            {{ sysgru_password | password_hash('sha256') }}
+          {% else %}
+            {{ sysgru_password | password_hash('sha512', rounds=656000) }}
+          {% endif %}
+      when: sysgru_password is defined
+      no_log: true  # Evita expor o hash nos logs
+
+    - name: Criar usuário sysgru (Ubuntu/Debian)
+      ansible.builtin.user:
+        name: "{{ sysgru_user }}"
+        password: "{{ sysgru_password_encrypted }}"
+        shell: /bin/bash
+        groups: sudo
+        append: yes
+        state: present
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Criar usuário sysgru (RHEL/CentOS)
+      ansible.builtin.user:
+        name: "{{ sysgru_user }}"
+        password: "{{ sysgru_password_encrypted }}"
+        shell: /bin/bash
+        groups: wheel
+        append: yes
+        state: present
+      when: ansible_facts['os_family'] == 'RedHat'
+
+    - name: Configurar sudo sem senha via sudoers.d (Ubuntu/RHEL 7+)
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/90-{{ sysgru_user }}
+        create: yes
+        validate: 'visudo -cf %s'
+        line: "{{ sysgru_user }} ALL=(ALL) NOPASSWD:ALL"
+        mode: '0440'
+      when: >
+        (ansible_facts['os_family'] == 'Debian') or
+        (ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] | int >= 7)
+
+    - name: Configurar sudo sem senha no arquivo principal (RHEL 6)
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers
+        validate: 'visudo -cf %s'
+        line: "{{ sysgru_user }} ALL=(ALL) NOPASSWD:ALL"
+        regexp: "^{{ sysgru_user }}"
+        state: present
+      when: >
+        ansible_facts['os_family'] == 'RedHat' and
+        ansible_facts['distribution_major_version'] | int == 6
+
+    - name: Configurar diretório .ssh (opcional se usar chave SSH)
+      ansible.builtin.file:
+        path: "/home/{{ sysgru_user }}/.ssh"
+        state: directory
+        mode: '0700'
+        owner: "{{ sysgru_user }}"
+        group: "{{ sysgru_user }}"
+      when: sysgru_ssh_key | length > 0
+
+    - name: Adicionar chave SSH autorizada (opcional)
+      ansible.builtin.authorized_key:
+        user: "{{ sysgru_user }}"
+        key: "{{ sysgru_ssh_key }}"
+        state: present
+      when: sysgru_ssh_key | length > 0

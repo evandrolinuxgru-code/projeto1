@@ -1,0 +1,139 @@
+---
+- name: Apply Windows updates without rebooting
+  hosts: all
+  gather_facts: yes
+  any_errors_fatal: false
+
+  vars:
+    update_categories:
+      - "DefinitionUpdates"
+      - "SecurityUpdates"
+      - "CriticalUpdates"
+      - "UpdateRollups"
+      - "Updates"
+
+    reboot_preference: never
+    max_update_attempts: 3
+    update_timeout: 3600
+    report_dir: "C:\\Windows\\UpdateReports"
+    report_retention_days: 30
+
+  tasks:
+    - name: Validate Windows Server connectivity
+      win_ping:
+      tags: always
+
+    - name: Ensure update report directory exists
+      win_file:
+        path: "{{ report_dir }}"
+        state: directory
+      tags: reporting
+
+    - name: Cleanup old reports (older than {{ report_retention_days }} days)
+      win_find:
+        paths: "{{ report_dir }}"
+        patterns: "*.txt"
+        age: "{{ report_retention_days }}d"
+        age_stamp: ctime
+      register: old_reports
+      when: report_retention_days > 0
+      tags: reporting
+
+    - name: Remove old reports
+      win_file:
+        path: "{{ item.path }}"
+        state: absent
+      loop: "{{ old_reports.files | default([]) }}"
+      when: old_reports.matched | default(0) > 0
+      tags: reporting
+
+    - name: Get system information
+      win_shell: |
+        [PSCustomObject]@{
+          LastBootTime = (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime
+          Uptime = (Get-Date) - (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime
+        } | ConvertTo-Json
+      register: system_info
+      tags: prechecks
+
+    - name: Display system information
+      debug:
+        msg: |
+          Last boot: {{ (system_info.stdout | from_json).LastBootTime }}
+          Uptime: {{ ((system_info.stdout | from_json).Uptime).Days }} days
+      tags: prechecks
+
+    - name: Check for pending updates
+      win_updates:
+        category_names: "{{ update_categories }}"
+        state: searched
+        reboot: no
+        log_path: "{{ report_dir }}\\{{ inventory_hostname }}_update_search.log"
+      register: win_updates_result
+      retries: "{{ max_update_attempts }}"
+      until: win_updates_result is succeeded
+      delay: 30
+      ignore_errors: yes
+      tags: prechecks
+
+    - name: Display pending updates summary
+      debug:
+        msg: |
+          Pending Updates Summary:
+          Total: {{ win_updates_result.updates | default([]) | length }}
+          Security: {{ win_updates_result.updates | default([]) | selectattr('categories', 'defined') | selectattr('categories', 'contains', 'Security Updates') | list | length }}
+          Critical: {{ win_updates_result.updates | default([]) | selectattr('categories', 'defined') | selectattr('categories', 'contains', 'Critical Updates') | list | length }}
+          Definition: {{ win_updates_result.updates | default([]) | selectattr('categories', 'defined') | selectattr('categories', 'contains', 'Definition Updates') | list | length }}
+      when: win_updates_result is succeeded
+      tags: prechecks
+
+    - block:
+        - name: Install updates without reboot
+          win_updates:
+            category_names: "{{ update_categories }}"
+            state: installed
+            reboot: "{{ reboot_preference }}"
+            log_path: "{{ report_dir }}\\{{ inventory_hostname }}_update_install.log"
+            timeout: "{{ update_timeout }}"
+          register: update_task
+          retries: "{{ max_update_attempts }}"
+          until: update_task is succeeded
+          delay: 60
+          ignore_errors: yes
+          tags: updates
+
+        - name: Verify updates installation
+          debug:
+            msg: |
+              Update Installation Results:
+              Attempted: {{ update_task.found_update_count | default(0) }}
+              Installed: {{ update_task.installed_update_count | default(0) }}
+              Failed: {{ update_task.failed_update_count | default(0) }}
+              Reboot required: {{ update_task.reboot_required | default(false) | ternary('Yes', 'No') }}
+          tags: verification
+
+      rescue:
+        - name: Collect update failure logs
+          win_shell: |
+            $logPath = "{{ report_dir }}\\{{ inventory_hostname }}_update_failure_{{ ansible_date_time.date }}.log"
+            Get-WindowsUpdateLog -LogPath $logPath
+            Write-Output "Update failed at {{ ansible_date_time.iso8601 }}" | Out-File -Append -FilePath $logPath
+          args:
+            executable: powershell
+          tags: errors
+
+        - name: Notify about update failure
+          debug:
+            msg: "Failed to install updates on {{ inventory_hostname }} after {{ max_update_attempts }} attempts"
+          tags: errors
+
+    - name: Generate detailed update report
+      win_copy:
+        content: |
+          Hostname: {{ inventory_hostname }}
+          Date: {{ ansible_date_time.iso8601 }}
+          Installed: {{ update_task.installed_update_count | default(0) }}
+          Failed: {{ update_task.failed_update_count | default(0) }}
+          Reboot Required: {{ update_task.reboot_required | default(false) }}
+        dest: "{{ report_dir }}\\{{ inventory_hostname }}_updates_{{ ansible_date_time.date }}.txt"
+      tags: reporting

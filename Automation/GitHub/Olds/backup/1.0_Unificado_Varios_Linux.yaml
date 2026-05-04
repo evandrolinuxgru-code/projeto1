@@ -1,0 +1,12 @@
+---
+- import_playbook: "0.1_Instalar_Agentes_SI_Linux.yaml"
+- import_playbook: "0.2_Kernel_Hardening_Linux.yaml"
+- import_playbook: "0.3_Geral_Hardening_Linux.yaml"
+- import_playbook: "0.4_SSH_Hardening_Linux.yaml"
+- import_playbook: "0.5_History_Hardening_Linux.yaml"
+- import_playbook: "0.6_Banner_Linux.yaml"
+- import_playbook: "2.0_DNS_Linux.yaml"
+- import_playbook: "3.0_Updates_SO_Linux.yaml"
+- import_playbook: "4.0_Altera_Senha_root.yaml"
+- import_playbook: "5.0_Configure_Zabbix.yaml"
+- import_playbook: "6.0_Aplicacoes_Uteis_Linux.yaml"

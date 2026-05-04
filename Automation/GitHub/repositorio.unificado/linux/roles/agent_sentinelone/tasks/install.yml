@@ -1,0 +1,19 @@
+- name: Install on RHEL < 8
+  yum:
+    name: "{{ sentinel_pkg }}"
+    state: present
+    disable_gpg_check: true
+  when: ansible_os_family == 'RedHat' and ansible_distribution_major_version | int < 8
+
+- name: Install on RHEL >= 8
+  dnf:
+    name: "{{ sentinel_pkg }}"
+    state: present
+    disable_gpg_check: true
+  when: ansible_os_family == 'RedHat' and ansible_distribution_major_version | int >= 8
+
+- name: Install on Debian
+  apt:
+    deb: "{{ sentinel_pkg }}"
+    install_recommends: false
+  when: ansible_os_family == 'Debian'

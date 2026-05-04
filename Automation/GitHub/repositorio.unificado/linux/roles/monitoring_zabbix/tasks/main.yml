@@ -1,0 +1,161 @@
+---
+- name: Instalar e configurar Zabbix Agent 7.0 (RHEL e Ubuntu) - compatível com AWX
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    zabbix_server_ip: "172.16.253.69"
+    zabbix_ubuntu_deb_urls:
+      "20.04": "http://192.168.0.25/downloads/Zabbix/zabbix-release_latest_7.0+ubuntu20.04_all.deb"
+      "22.04": "http://192.168.0.25/downloads/Zabbix/zabbix-release_latest_7.0+ubuntu22.04_all.deb"
+      "24.04": "http://192.168.0.25/downloads/Zabbix/zabbix-release_latest_7.0+ubuntu24.04_all.deb"
+    zabbix_rhel_rpm_url: "http://192.168.0.25/downloads/Zabbix/zabbix-release-latest-7.0.el{{ ansible_distribution_major_version }}.noarch.rpm"
+    zabbix_rhel_rpm_path: "/tmp/zabbix-release.rpm"
+
+  tasks:
+    - name: Remover pacotes antigos (Ubuntu)
+      apt:
+        name:
+          - zabbix-agent
+          - zabbix-release
+          - zabbix
+        state: absent
+        purge: yes
+      when: ansible_os_family == "Debian"
+      ignore_errors: yes
+
+    - name: Remover pacotes antigos (RHEL)
+      shell: |
+        rpm -q zabbix-agent zabbix-release zabbix zabbix-selinux | grep -v '7.0' | xargs -r yum remove -y
+      when: ansible_os_family == "RedHat"
+      ignore_errors: yes
+
+    - name: Autoremove Ubuntu
+      apt:
+        autoremove: yes
+      when: ansible_os_family == "Debian"
+      ignore_errors: yes
+
+    - name: Remover arquivos de repositórios antigos
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - /etc/yum.repos.d/zabbix.repo
+        - /etc/yum.repos.d/zabbix-agent.repo
+        - /etc/yum.repos.d/zabbix-release.repo
+        - /etc/apt/sources.list.d/zabbix.list
+      ignore_errors: yes
+
+    - name: Diagnóstico e correção do EPEL (RHEL 9)
+      block:
+        - name: Verificar existencia do epel.repo
+          stat:
+            path: /etc/yum.repos.d/epel.repo
+          register: epel_repo_stat
+
+        - name: Adicionar excludepkgs=zabbix* ao epel.repo (RHEL 9)
+          lineinfile:
+            path: /etc/yum.repos.d/epel.repo
+            insertafter: '^\[epel\]'
+            regexp: '^excludepkgs='
+            line: 'excludepkgs=zabbix*'
+          when: epel_repo_stat.stat.exists
+      when:
+        - ansible_os_family == "RedHat"
+        - ansible_distribution_major_version | int == 9
+
+    - name: Instalar repositório e agente Zabbix - RedHat
+      when: ansible_os_family == "RedHat"
+      block:
+        - name: Baixar zabbix-release rpm
+          get_url:
+            url: "{{ zabbix_rhel_rpm_url }}"
+            dest: "{{ zabbix_rhel_rpm_path }}"
+            timeout: 60
+
+        - name: Instalar pacote zabbix-release ignorando GPG e digest
+          command: rpm -Uvh --replacepkgs --nosignature --nodigest "{{ zabbix_rhel_rpm_path }}"
+          args:
+            warn: false
+          register: rpm_result
+          failed_when: rpm_result.rc != 0 and "'is already installed'" not in rpm_result.stderr
+          changed_when: "'is already installed' not in rpm_result.stderr"
+
+
+        - name: Instalar zabbix-agent
+          package:
+            name: zabbix-agent
+            state: present
+
+    - name: Instalar repositório e agente Zabbix - Ubuntu
+      when:
+        - ansible_os_family == "Debian"
+        - ansible_distribution == "Ubuntu"
+        - zabbix_ubuntu_deb_urls.get(ansible_distribution_version) is defined
+      block:
+        - name: Baixar zabbix-release .deb
+          get_url:
+            url: "{{ zabbix_ubuntu_deb_urls[ansible_distribution_version] }}"
+            dest: /tmp/zabbix-release.deb
+            timeout: 60
+
+        - name: Limpar locks do apt/dpkg
+          shell: |
+            rm -f /var/lib/dpkg/lock-frontend
+            rm -f /var/lib/apt/lists/lock
+            rm -f /var/cache/apt/archives/lock
+            dpkg --configure -a
+          ignore_errors: yes
+
+        - name: Instalar zabbix-release .deb
+          apt:
+            deb: /tmp/zabbix-release.deb
+            state: present
+            update_cache: yes
+
+        - name: Instalar zabbix-agent
+          apt:
+            name: zabbix-agent
+            state: present
+            update_cache: yes
+
+    - name: Definir zabbix_hostname
+      set_fact:
+        zabbix_hostname: "{{ ansible_hostname | upper }}"
+
+    - name: Verificar /etc/zabbix/zabbix_agentd.conf
+      stat:
+        path: /etc/zabbix/zabbix_agentd.conf
+      register: conf_check
+
+    - name: Verificar /etc/zabbix_agentd.conf
+      stat:
+        path: /etc/zabbix_agentd.conf
+      register: conf_alt_check
+
+    - name: Definir caminho do conf final
+      set_fact:
+        zabbix_conf_path: >-
+          {% if conf_check.stat.exists %}/etc/zabbix/zabbix_agentd.conf
+          {% elif conf_alt_check.stat.exists %}/etc/zabbix_agentd.conf
+          {% else %}/etc/zabbix/zabbix_agentd.conf{% endif %}
+
+    - name: Configurar zabbix_agentd.conf
+      when: conf_check.stat.exists or conf_alt_check.stat.exists
+      lineinfile:
+        path: "{{ zabbix_conf_path | trim }}"
+        regexp: "^{{ item.option }}="
+        line: "{{ item.option }}={{ item.value }}"
+        backup: yes
+      loop:
+        - { option: 'Hostname',     value: "{{ zabbix_hostname }}" }
+        - { option: 'Server',       value: "{{ zabbix_server_ip }}" }
+        - { option: 'ServerActive', value: "{{ zabbix_server_ip }}" }
+
+    - name: Habilitar e iniciar zabbix-agent
+      service:
+        name: zabbix-agent
+        state: restarted
+        enabled: yes

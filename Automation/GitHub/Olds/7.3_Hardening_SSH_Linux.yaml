@@ -1,0 +1,124 @@
+---
+- name: Configuração segura do serviço SSH + MOTD
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    ssh_port: 2289
+    allowed_users:
+      - "*@172.31.46.20"
+      - "*@172.31.46.21"
+      - "*@172.31.49.176"
+    ssh_banner_path: /etc/ssh/sshd_banner
+    sshd_config_path: /etc/ssh/sshd_config
+    timestamp: "{{ '%M-%H-%d-%m-%Y' | strftime('%s') | int | strftime('%M-%H-%d-%m-%Y') }}"
+    banner_content: |
+      ###############################################################
+      #              >>> Authorized access only <<<                 #
+      #      Disconnect IMMEDIATELY if you are not authorized       #
+      #           All actions are monitored and recorded            #
+      #         For support contact the IT Infrastructure           #
+      ###############################################################
+    ssh_config_lines:
+      - { key: "Port", value: "{{ ssh_port }}" }
+      - { key: "Protocol", value: "2" }
+      - { key: "LogLevel", value: "VERBOSE" }
+      - { key: "PermitRootLogin", value: "yes" }
+      - { key: "MaxAuthTries", value: "2" }
+      - { key: "MaxSessions", value: "2" }
+      - { key: "PermitEmptyPasswords", value: "no" }
+      - { key: "ClientAliveInterval", value: "300" }
+      - { key: "ClientAliveCountMax", value: "2" }
+      - { key: "UseDNS", value: "no" }
+      - { key: "Compression", value: "no" }
+      - { key: "AllowAgentForwarding", value: "no" }
+      - { key: "AllowTcpForwarding", value: "no" }
+      - { key: "X11Forwarding", value: "no" }
+      - { key: "TCPKeepAlive", value: "no" }
+      - { key: "Banner", value: "{{ ssh_banner_path }}" }
+      - { key: "AllowUsers", value: "{{ allowed_users | join(' ') }}" }
+
+  tasks:
+    - name: Fazer backup dos arquivos sshd_config, banner e motd
+      copy:
+        remote_src: yes
+        src: "{{ item }}"
+        dest: "{{ item }}.bkp-{{ timestamp }}"
+      loop:
+        - "{{ sshd_config_path }}"
+        - "{{ ssh_banner_path }}"
+        - "/etc/motd"
+      ignore_errors: yes
+      failed_when: false
+
+    - name: Criar banner SSH
+      copy:
+        dest: "{{ ssh_banner_path }}"
+        content: "{{ banner_content }}"
+        mode: '0644'
+
+    - name: Configurar MOTD
+      copy:
+        dest: /etc/motd
+        content: "{{ banner_content }}"
+        mode: '0644'
+
+    - name: Atualizar parâmetros no sshd_config
+      lineinfile:
+        path: "{{ sshd_config_path }}"
+        regexp: "^{{ item.key }}\\s+"
+        line: "{{ item.key }} {{ item.value }}"
+        create: yes
+        backrefs: yes
+      loop: "{{ ssh_config_lines }}"
+
+    - name: Configurar SELinux para nova porta SSH (RedHat)
+      command: semanage port -a -t ssh_port_t -p tcp {{ ssh_port }}
+      when: ansible_os_family == 'RedHat'
+      register: selinux_result
+      ignore_errors: yes
+
+    - name: Instalar policycoreutils-python-utils se necessário
+      package:
+        name: policycoreutils-python-utils
+        state: present
+      when:
+        - ansible_os_family == 'RedHat'
+        - selinux_result.rc is defined and selinux_result.rc != 0
+
+    - name: Reaplicar semanage caso tenha falhado
+      command: semanage port -a -t ssh_port_t -p tcp {{ ssh_port }}
+      when:
+        - ansible_os_family == 'RedHat'
+        - selinux_result.rc is defined and selinux_result.rc != 0
+      ignore_errors: yes
+
+    - name: Abrir porta SSH no firewalld (RedHat)
+      command: "firewall-cmd --permanent --add-port={{ ssh_port }}/tcp && firewall-cmd --reload"
+      when: ansible_os_family == 'RedHat'
+      ignore_errors: yes
+
+    - name: Abrir porta SSH no UFW (Ubuntu)
+      command: "ufw allow {{ ssh_port }}/tcp"
+      when: ansible_distribution == 'Ubuntu'
+      ignore_errors: yes
+
+    - name: Verificar se update-motd.d existe
+      stat:
+        path: /etc/update-motd.d
+      register: motd_dir
+
+    - name: Configurar MOTD dinâmico (Ubuntu)
+      copy:
+        dest: /etc/update-motd.d/99-motd
+        content: |
+          #!/bin/bash
+          cat /etc/motd
+        mode: '0755'
+      when: motd_dir.stat.exists
+
+    - name: Reiniciar serviço SSH
+      service:
+        name: "{{ 'sshd' if ansible_facts.os_family == 'RedHat' else 'ssh' }}"
+        state: restarted

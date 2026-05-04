@@ -1,0 +1,32 @@
+---
+- name: Instalar atualizações já baixadas no Windows
+  hosts: windows_servers
+  gather_facts: yes
+
+  vars:
+    log_dir: "C:\\Ansible\\UpdateLogs"
+
+  tasks:
+    - name: Instalar atualizações previamente baixadas
+      win_updates:
+        state: installed
+        reboot: yes
+      register: install_result
+
+    - name: Reboot se necessário
+      win_reboot:
+        reboot_timeout: 3600
+      when: install_result.reboot_required
+
+    - name: Registrar atualizações instaladas
+      win_template:
+        src: updates_log.j2
+        dest: "{{ log_dir }}\\updates_install_log_{{ ansible_date_time.date }}.txt"
+      when: install_result.updates | length > 0
+
+    - name: Exibir resumo das atualizações instaladas
+      debug:
+        msg: |
+          Foram instaladas {{ install_result.updates | length }} atualizações.
+          Consulte o log em {{ log_dir }} para detalhes.
+      when: install_result.updates | length > 0

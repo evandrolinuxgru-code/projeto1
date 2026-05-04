@@ -1,0 +1,52 @@
+---
+- name: Apply Windows updates with controlled reboot
+  hosts: windows_servers
+  gather_facts: yes
+  vars:
+    update_categories:
+      - DefinitionUpdates
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
+      - Updates
+
+  tasks:
+    - name: Ensure update report directory exists
+      win_file:
+        path: C:\update_reports
+        state: directory
+      tags: [reporting]
+
+    - name: Get current list of pending updates
+      win_updates:
+        category_names: "{{ update_categories }}"
+        state: searched
+        reboot: no
+      register: win_updates_result
+      tags: [prechecks]
+
+    - name: Display pending updates count
+      debug:
+        msg: "Pending updates found: {{ win_updates_result.updates | length }}"
+      tags: [prechecks]
+
+    - name: Install updates and allow reboot if required
+      win_updates:
+        category_names: "{{ update_categories }}"
+        state: installed
+        reboot: yes
+      register: update_result
+      tags: [updates]
+
+    - name: Reboot if required
+      win_reboot:
+        reboot_timeout: 3600
+      when: update_result.reboot_required | default(false)
+      tags: [reboot]
+
+    - name: Save update report
+      win_template:
+        src: updates_report.j2
+        dest: "C:\\update_reports\\{{ inventory_hostname }}_updates_{{ ansible_date_time.iso8601_basic_short }}.txt"
+      tags: [reporting]
+  

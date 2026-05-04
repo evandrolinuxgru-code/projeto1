@@ -1,0 +1,91 @@
+---
+- name: Configure system repositories and essential packages
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    ntp_servers:
+      - "172.31.50.23 iburst"
+      - "172.31.50.27 iburst"
+    essential_packages:
+      - htop
+      - sysstat
+      - telnet
+      - chrony
+      - vim
+      - lsof
+
+  tasks:
+
+    - name: Configurar repositórios e instalar EPEL (RHEL)
+      block:
+        - name: Instalar EPEL no RHEL 6
+          yum:
+            name: https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/epel-release-6-8.noarch.rpm
+            state: present
+          when: ansible_distribution_major_version == '6'
+
+        - name: Ativar repositórios opcionais e ELS no RHEL 6
+          command: >
+            subscription-manager repos
+            --enable=rhel-6-server-optional-rpms
+            --enable=rhel-6-server-retired-els-rpms
+          when: ansible_distribution_major_version == '6'
+          ignore_errors: yes
+
+        - name: Ativar CodeReady no RHEL 7–9
+          command: >
+            subscription-manager repos --enable=codeready-builder-for-rhel-{{ ansible_distribution_major_version }}-{{ ansible_architecture }}-rpms
+          when: ansible_distribution_major_version | int >= 7 and ansible_distribution_major_version | int <= 9
+          ignore_errors: yes
+
+        - name: Instalar EPEL no RHEL 8
+          yum:
+            name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+            state: present
+          when: ansible_distribution_major_version == '8'
+
+        - name: Instalar EPEL no RHEL 9
+          dnf:
+            name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+            state: present
+          when: ansible_distribution_major_version == '9'
+      when: ansible_os_family == 'RedHat'
+
+    - name: Atualizar certificados e pacotes NSS no RHEL 6
+      yum:
+        name:
+          - ca-certificates
+          - openssl
+          - "nss-*"
+        state: latest
+      when: ansible_distribution_major_version == '6'
+
+    - name: Instalar pacotes essenciais
+      package:
+        name: "{{ essential_packages }}"
+        state: present
+
+    - name: Detectar arquivo de configuração do Chrony
+      set_fact:
+        chrony_conf: >-
+          {{ '/etc/chrony.conf' if ansible_os_family == 'RedHat' and ansible_distribution_major_version | int <= 7 else
+             '/etc/chrony/chrony.conf' if ansible_os_family == 'Debian' else
+             '/etc/chrony.conf' }}
+
+    - name: Configurar servidores NTP
+      blockinfile:
+        path: "{{ chrony_conf }}"
+        block: |
+          {% for server in ntp_servers %}
+          server {{ server }}
+          {% endfor %}
+        marker: "# {mark} ANSIBLE MANAGED BLOCK - NTP CONFIG"
+        create: yes
+
+    - name: Reiniciar serviço Chrony
+      service:
+        name: "{{ 'chronyd' if ansible_os_family == 'RedHat' else 'chrony' }}"
+        state: restarted
+  ignore_errors: yes

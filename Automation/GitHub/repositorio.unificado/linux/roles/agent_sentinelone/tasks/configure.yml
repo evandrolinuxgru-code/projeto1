@@ -1,0 +1,4 @@
+- name: Set SentinelOne token
+  command: >
+    /opt/sentinelone/bin/sentinelctl management token set {{ sentinel_token }}
+  no_log: true

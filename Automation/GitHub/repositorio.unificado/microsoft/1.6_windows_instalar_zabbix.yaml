@@ -1,0 +1,58 @@
+---
+- name: Instalar e configurar Zabbix Agent no Windows (Compatível AWX sem collections extras)
+  hosts: all
+
+  vars:
+    zabbix_agent_msi_url: "http://192.168.0.25/downloads/Zabbix/zabbix_agent-7.0.12-windows-amd64-openssl.msi"
+    zabbix_agent_msi_dest: "C:\\Temp\\zabbix_agent.msi"
+    zabbix_conf_path: "C:\\Program Files\\Zabbix Agent\\zabbix_agentd.conf"
+    zabbix_server_ip: "172.16.253.88"
+
+  tasks:
+
+    - name: Criar diretório temporário C:\Temp
+      win_command: cmd.exe /c mkdir C:\Temp
+      args:
+        creates: C:\Temp
+
+    - name: Baixar Zabbix Agent MSI
+      win_get_url:
+        url: "{{ zabbix_agent_msi_url }}"
+        dest: "{{ zabbix_agent_msi_dest }}"
+        force: yes
+
+    - name: Instalar Zabbix Agent MSI
+      win_package:
+        path: "{{ zabbix_agent_msi_dest }}"
+        arguments: '/qn SERVER={{ zabbix_server_ip }} SERVERACTIVE={{ zabbix_server_ip }} HOSTNAME={{ ansible_hostname }}'
+        state: present
+
+    - name: Parar serviço Zabbix Agent (se estiver rodando)
+      win_service:
+        name: "Zabbix Agent"
+        state: stopped
+      ignore_errors: yes
+
+    - name: Configurar Server no zabbix_agentd.conf
+      win_shell: |
+        (Get-Content "{{ zabbix_conf_path }}" -Raw) `
+        -replace '^Server=.*', 'Server={{ zabbix_server_ip }}' `
+        | Set-Content "{{ zabbix_conf_path }}"
+
+    - name: Configurar ServerActive no zabbix_agentd.conf
+      win_shell: |
+        (Get-Content "{{ zabbix_conf_path }}" -Raw) `
+        -replace '^ServerActive=.*', 'ServerActive={{ zabbix_server_ip }}' `
+        | Set-Content "{{ zabbix_conf_path }}"
+
+    - name: Configurar Hostname no zabbix_agentd.conf
+      win_shell: |
+        (Get-Content "{{ zabbix_conf_path }}" -Raw) `
+        -replace '^Hostname=.*', 'Hostname={{ ansible_hostname }}' `
+        | Set-Content "{{ zabbix_conf_path }}"
+
+    - name: Startar e habilitar serviço Zabbix Agent
+      win_service:
+        name: "Zabbix Agent"
+        start_mode: auto
+        state: started

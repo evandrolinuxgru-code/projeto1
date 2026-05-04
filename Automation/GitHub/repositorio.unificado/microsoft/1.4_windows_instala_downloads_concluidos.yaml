@@ -1,0 +1,62 @@
+---
+- name: Baixar atualizações do Windows sem instalar
+  hosts: all
+  gather_facts: yes
+
+  vars:
+    download_dir: "C:\\Windows\\Temp\\AnsibleUpdates"
+    log_dir: "C:\\Ansible\\UpdateLogs"
+
+  tasks:
+    - name: Criar diretórios para downloads e logs
+      win_file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - "{{ download_dir }}"
+        - "{{ log_dir }}"
+
+    - name: Baixar atualizações disponíveis
+      win_updates:
+        category_names:
+          - SecurityUpdates
+          - CriticalUpdates
+          - UpdateRollups
+          - Updates
+          - DefinitionUpdates
+        reboot: no
+        state: downloaded
+      register: updates_result
+      retries: 3
+      delay: 30
+      until: updates_result is succeeded
+      ignore_errors: no
+
+    - name: Gerar log das atualizações baixadas
+      win_copy:
+        content: |
+          Relatório de Atualizações Baixadas
+          ==================================
+          Host: {{ inventory_hostname }}
+          Data: {{ ansible_date_time.iso8601 }}
+
+          Total de atualizações: {{ updates_result.updates | default([]) | length }}
+
+          {% for update in updates_result.updates | default([]) %}
+          - {{ update.title }}
+            Categorias: {{ update.categories | join(', ') if update.categories is defined else 'sem categoria' }}
+            Requer reinicialização: {{ update.reboot_required | default(false) | ternary('Sim', 'Não') }}
+          {% endfor %}
+        dest: "{{ log_dir }}\\updates_download_log_{{ ansible_date_time.date }}.txt"
+      when: updates_result.updates | default([]) | length > 0
+
+    - name: Exibir resumo das atualizações baixadas
+      debug:
+        msg: >
+          {% set total = updates_result.updates | default([]) | length %}
+          {% if total > 0 %}
+            Foram baixadas {{ total }} atualizações.
+            Consulte: {{ log_dir }}\\updates_download_log_{{ ansible_date_time.date }}.txt
+          {% else %}
+            Nenhuma atualização foi baixada.
+          {% endif %}

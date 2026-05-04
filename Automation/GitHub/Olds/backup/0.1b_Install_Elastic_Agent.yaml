@@ -1,0 +1,49 @@
+---
+- name: Install Elastic Agent
+  hosts: all
+  become: yes
+  vars:
+    elastic_url: "http://172.31.49.176:8080/Elastic/elastic-agent-8.17.4-linux-x86_64.tar.gz"
+    elastic_tar: "elastic-agent-8.17.4-linux-x86_64.tar.gz"
+    elastic_dir: "elastic-agent-8.17.4-linux-x86_64"
+    elastic_url_param: "https://e009a77f17a343f4a9f461be5f7db78a.fleet.eastus2.azure.elastic-cloud.com:443"
+    elastic_enroll_token: "WTBiOXQ0a0J2MjBKV2MySTA3cnA6NXZSV3ZUUlpRNENTS19oVFBib3RrUQ=="
+  tasks:
+    - name: Check if Elastic agent is installed
+      stat:
+        path: /opt/Elastic/Agent/elastic-agent
+      register: elastic_check
+
+    - name: Install Elastic agent
+      block:
+        - name: Download Elastic agent
+          get_url:
+            url: "{{ elastic_url }}"
+            dest: "/tmp/{{ elastic_tar }}"
+          register: elastic_download
+          ignore_errors: yes
+
+        - name: Extract Elastic agent
+          unarchive:
+            src: "/tmp/{{ elastic_tar }}"
+            dest: "/tmp/"
+            remote_src: yes
+          when: elastic_download is succeeded
+          ignore_errors: yes
+
+        - name: Install Elastic agent
+          shell: >
+            /tmp/{{ elastic_dir }}/elastic-agent install -f --url={{ elastic_url_param }} --enrollment-token={{ elastic_enroll_token }}
+          when:
+            - elastic_download is succeeded
+            - not elastic_check.stat.exists
+          ignore_errors: yes
+
+        - name: Clean up Elastic files
+          file:
+            path: "/tmp/{{ item }}"
+            state: absent
+          loop:
+            - "{{ elastic_tar }}"
+            - "{{ elastic_dir }}"
+      when: not elastic_check.stat.exists

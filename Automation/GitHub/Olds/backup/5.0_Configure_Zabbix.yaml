@@ -1,0 +1,32 @@
+---
+- name: Configurar Zabbix Agent com hostname em maiúsculo
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Obter hostname da máquina
+      command: hostname
+      register: hostname_raw
+
+    - name: Definir hostname em maiúsculo
+      set_fact:
+        zabbix_hostname: "{{ hostname_raw.stdout | upper }}"
+
+    - name: Configurar zabbix_agentd.conf
+      lineinfile:
+        path: /etc/zabbix/zabbix_agentd.conf
+        regexp: "{{ item.regexp }}"
+        line: "{{ item.line }}"
+        state: present
+        backup: yes
+      loop:
+        - { regexp: '^Hostname=',     line: "Hostname={{ zabbix_hostname }}" }
+        - { regexp: '^Server=',       line: "Server=172.16.253.69" }
+        - { regexp: '^ServerActive=', line: "ServerActive=172.16.253.69" }
+
+    - name: Reiniciar serviço do Zabbix Agent
+      service:
+        name: zabbix-agent
+        state: restarted
+        enabled: yes
+  ignore_errors: yes

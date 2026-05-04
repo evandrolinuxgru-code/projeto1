@@ -1,0 +1,213 @@
+---
+- name: Install monitoring and security agents
+  hosts: all
+  become: yes
+  vars:
+    glpi_url: "http://172.31.49.176:8080/Glpi/glpi-agent-1.9-linux-installer.pl"
+    glpi_installer: "glpi-agent-1.9-linux-installer.pl"
+    glpi_server: "glpi.gru.com.br"
+
+    elastic_url: "http://172.31.49.176:8080/Elastic/elastic-agent-8.17.4-linux-x86_64.tar.gz"
+    elastic_tar: "elastic-agent-8.17.4-linux-x86_64.tar.gz"
+    elastic_dir: "elastic-agent-8.17.4-linux-x86_64"
+    elastic_url_param: "https://e009a77f17a343f4a9f461be5f7db78a.fleet.eastus2.azure.elastic-cloud.com:443"
+    elastic_enroll_token: "WTBiOXQ0a0J2MjBKV2MySTA3cnA6NXZSV3ZUUlpRNENTS19oVFBib3RrUQ=="
+
+    qualys_rpm: "http://172.31.49.176:8080/Qualys/QualysCloudAgent.rpm"
+    qualys_deb: "http://172.31.49.176:8080/Qualys/QualysCloudAgent.deb"
+    qualys_activation_id: "192418a7-300e-47cd-a94a-d1c7923a38c8"
+    qualys_customer_id: "1b910a46-7e07-400c-835f-94c8cc1c8798"
+    qualys_server_uri: "https://qagpublic.qg4.apps.qualys.com/CloudAgent/"
+
+    sentinel_rpm: "http://172.31.49.176:8080/Sentinel/SentinelAgent_linux_x86_64_v24_3_3_6.rpm"
+    sentinel_deb: "http://172.31.49.176:8080/Sentinel/SentinelAgent_linux_x86_64_v24_3_3_6.deb"
+    sentinel_token: "eyJ1cmwiOiAiaHR0cHM6Ly91c2VhMS0wMTcuc2VudGluZWxvbmUubmV0IiwgInNpdGVfa2V5IjogImZjMGZmMDNmN2E3NjI1N2QifQ=="
+
+  tasks:
+
+    - name: Check if GLPI agent is installed
+      stat:
+        path: /opt/glpi-agent/bin/glpi-agent
+      register: glpi_check
+
+    - name: Install GLPI agent
+      block:
+        - name: Download GLPI installer
+          get_url:
+            url: "{{ glpi_url }}"
+            dest: "/tmp/{{ glpi_installer }}"
+            mode: '0755'
+            timeout: 10
+          register: glpi_download
+          ignore_errors: yes
+
+        - name: Run GLPI installer
+          command: "/tmp/{{ glpi_installer }} -s {{ glpi_server }} -v --no-gpg-check"
+          when:
+            - glpi_download is succeeded
+            - not glpi_check.stat.exists
+          ignore_errors: yes
+
+        - name: Remove GLPI installer file
+          file:
+            path: "/tmp/{{ glpi_installer }}"
+            state: absent
+      when: not glpi_check.stat.exists
+
+    - name: Check if Elastic agent is installed
+      stat:
+        path: /opt/Elastic/Agent/elastic-agent
+      register: elastic_check
+
+    - name: Install Elastic agent
+      block:
+        - name: Download Elastic agent
+          get_url:
+            url: "{{ elastic_url }}"
+            dest: "/tmp/{{ elastic_tar }}"
+          register: elastic_download
+          ignore_errors: yes
+
+        - name: Extract Elastic agent
+          unarchive:
+            src: "/tmp/{{ elastic_tar }}"
+            dest: "/tmp/"
+            remote_src: yes
+          when: elastic_download is succeeded
+          ignore_errors: yes
+
+        - name: Install Elastic agent
+          shell: >
+            /tmp/{{ elastic_dir }}/elastic-agent install -f --url={{ elastic_url_param }} --enrollment-token={{ elastic_enroll_token }}
+          when:
+            - elastic_download is succeeded
+            - not elastic_check.stat.exists
+          ignore_errors: yes
+
+        - name: Clean up Elastic files
+          file:
+            path: "/tmp/{{ item }}"
+            state: absent
+          loop:
+            - "{{ elastic_tar }}"
+            - "{{ elastic_dir }}"
+      when: not elastic_check.stat.exists
+
+    - name: Install audit package
+      package:
+        name: "{{ 'audit' if ansible_facts['os_family'] == 'RedHat' else 'auditd' }}"
+        state: present
+
+    - name: Check if Qualys agent is installed
+      stat:
+        path: /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh
+      register: qualys_check
+
+    - name: Install Qualys Cloud Agent
+      block:
+        - name: Download Qualys Agent
+          get_url:
+            url: "{{ qualys_rpm if ansible_facts['os_family'] == 'RedHat' else qualys_deb }}"
+            dest: "/tmp/QualysCloudAgent.{{ 'rpm' if ansible_facts['os_family'] == 'RedHat' else 'deb' }}"
+          register: qualys_download
+          ignore_errors: yes
+
+        - name: Install Qualys Agent (RedHat)
+          yum:
+            name: "/tmp/QualysCloudAgent.rpm"
+            state: present
+            disable_gpg_check: yes
+          when: ansible_os_family == "RedHat" and qualys_download is succeeded
+          ignore_errors: yes
+
+        - name: Install Qualys Agent (Debian)
+          apt:
+            deb: "/tmp/QualysCloudAgent.deb"
+          when: ansible_os_family == "Debian" and qualys_download is succeeded
+          ignore_errors: yes
+
+        - name: Activate Qualys Agent
+          shell: >
+            /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh
+            ActivationId={{ qualys_activation_id }}
+            CustomerId={{ qualys_customer_id }}
+            ServerUri={{ qualys_server_uri }}
+          when:
+            - qualys_download is succeeded
+            - not qualys_check.stat.exists
+          ignore_errors: yes
+
+        - name: Remove Qualys installer
+          file:
+            path: "/tmp/QualysCloudAgent.{{ 'rpm' if ansible_os_family == 'RedHat' else 'deb' }}"
+            state: absent
+      when: not qualys_check.stat.exists
+
+    - name: Check if SentinelOne Agent is already installed
+      stat:
+        path: /opt/sentinelone/bin/sentinelctl
+      register: sentinelctl_check
+
+    - name: Install SentinelOne Agent
+      block:
+        - name: Download SentinelOne Agent
+          get_url:
+            url: "{{ sentinel_rpm if ansible_facts['os_family'] == 'RedHat' else sentinel_deb }}"
+            dest: "/tmp/SentinelAgent.{{ 'rpm' if ansible_facts['os_family'] == 'RedHat' else 'deb' }}"
+            mode: '0644'
+          register: sentinel_download
+          ignore_errors: yes
+
+        - name: Detect major version for RedHat
+          set_fact:
+            rhel_major_version: "{{ ansible_distribution_major_version | int }}"
+          when: ansible_os_family == "RedHat"
+
+        - name: Install SentinelOne Agent on RedHat 6/7
+          command: "yum install -y --nogpgcheck /tmp/SentinelAgent.rpm"
+          when:
+            - ansible_os_family == "RedHat"
+            - (rhel_major_version | int) <= 7
+            - sentinel_download is succeeded
+            - not sentinelctl_check.stat.exists
+          ignore_errors: yes
+
+        - name: Install SentinelOne Agent on RedHat 8/9
+          dnf:
+            name: "/tmp/SentinelAgent.rpm"
+            state: present
+            disable_gpg_check: yes
+          when:
+            - ansible_os_family == "RedHat"
+            - (rhel_major_version | int) >= 8
+            - sentinel_download is succeeded
+            - not sentinelctl_check.stat.exists
+          ignore_errors: yes
+
+        - name: Install SentinelOne Agent on Debian
+          apt:
+            deb: "/tmp/SentinelAgent.deb"
+          when:
+            - ansible_os_family == "Debian"
+            - sentinel_download is succeeded
+            - not sentinelctl_check.stat.exists
+          ignore_errors: yes
+
+        - name: Set SentinelOne token
+          command: "/opt/sentinelone/bin/sentinelctl management token set {{ sentinel_token }}"
+          when:
+            - sentinel_download is succeeded
+            - sentinelctl_check.stat.exists
+          ignore_errors: yes
+
+        - name: Start SentinelOne agent
+          command: "/opt/sentinelone/bin/sentinelctl control start"
+          when:
+            - sentinel_download is succeeded
+            - sentinelctl_check.stat.exists
+          ignore_errors: yes
+
+        - name: Remove SentinelOne installer
+          file:
+            path: "/tmp/SentinelAgent.{{ 'rpm' if ansible_os_family == 'RedHat' else 'deb' }}"
+            state: absent

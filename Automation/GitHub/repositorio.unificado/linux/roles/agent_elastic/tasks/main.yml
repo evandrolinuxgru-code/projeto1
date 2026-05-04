@@ -1,0 +1,40 @@
+---
+- name: Instalar Elastic Agent
+  hosts: all
+  become: yes
+  vars:
+    elastic_url: "http://172.31.49.176:8080/Elastic/elastic-agent-8.17.4-linux-x86_64.tar.gz"
+    elastic_enroll_url: "https://e009a77f17a343f4a9f461be5f7db78a.fleet.eastus2.azure.elastic-cloud.com:443"
+    elastic_enroll_token: "WTBiOXQ0a0J2MjBKV2MySTA3cnA6NXZSV3ZUUlpRNENTS19oVFBib3RrUQ=="
+    elastic_install_path: "/opt/Elastic/Agent/elastic-agent"
+
+  tasks:
+    - name: Baixar, instalar e limpar
+      block:
+        - name: Baixar Elastic agent
+          get_url:
+            url: "{{ elastic_url }}"
+            dest: "/tmp/elastic-agent.tar.gz"
+
+        - name: Extrair Elastic agent
+          unarchive:
+            src: "/tmp/elastic-agent.tar.gz"
+            dest: "/tmp/"
+            remote_src: yes
+
+        - name: Instalar Elastic agent
+          shell: >
+            /tmp/elastic-agent-*/elastic-agent install -f
+            --url={{ elastic_enroll_url }}
+            --enrollment-token={{ elastic_enroll_token }}
+          args:
+            executable: /bin/bash
+
+        - name: Remover arquivos temporários
+          file:
+            path: "{{ item }}"
+            state: absent
+          loop:
+            - "/tmp/elastic-agent.tar.gz"
+            - "/tmp/elastic-agent-8.17.4-linux-x86_64"  # ou use find para diretório dinâmico
+      when: not ja_instalado.stat.exists

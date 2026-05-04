@@ -1,0 +1,6 @@
+---
+# Variáveis globais para todos os hosts
+ansible_python_interpreter: /usr/bin/python3
+timezone: "America/Sao_Paulo"
+ntp_server:
+  - "ntp.gru.local"

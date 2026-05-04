@@ -1,0 +1,77 @@
+---
+- name: Atualização completa de pacotes em servidores RHEL 6, 7, 8, 9 e Ubuntu 24  
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Definir comandos de atualização por SO e versão
+      block:
+        - name: Configurar para RHEL 6/7 (yum)
+          set_fact:
+            update_cmd: "yum update -y"
+            clean_cmd: "yum clean all"
+          when: ansible_distribution == 'RedHat' and ansible_distribution_major_version in ['6', '7']
+
+        - name: Configurar para RHEL 8/9 (dnf)
+          set_fact:
+            update_cmd: "dnf upgrade -y"
+            clean_cmd: "dnf clean all"
+          when: ansible_distribution == 'RedHat' and ansible_distribution_major_version in ['8', '9']
+
+        - name: Configurar para Ubuntu 24 (apt)
+          set_fact:
+            update_cmd: "apt update -y && apt full-upgrade -y"
+            clean_cmd: "apt autoremove -y && apt clean"
+          when: ansible_distribution == 'Ubuntu' and ansible_distribution_major_version == '24'
+
+    - name: Limpar cache de pacotes
+      command: "{{ clean_cmd }}"
+      register: clean_result
+      changed_when: "'Cache limpo' in clean_result.stdout or 'Cleaned' in clean_result.stdout"
+      ignore_errors: yes
+
+    - name: Executar atualização de todos os pacotes (incluindo kernel e firmware)
+      command: "{{ update_cmd }}"
+      register: update_result
+      async: 1800
+      poll: 0
+
+    - name: Monitorar conclusão da atualização
+      async_status:
+        jid: "{{ update_result.ansible_job_id }}"
+      register: job_result
+      until: job_result.finished
+      retries: 30
+      delay: 30
+
+    - name: Verificar se há pacotes que exigem reboot
+      shell: |
+        if [ -f /var/run/reboot-required ]; then
+          echo "reboot_required"
+        else
+          needs-restarting -r >/dev/null 2>&1 || echo "reboot_required"
+        fi
+      register: reboot_check
+      ignore_errors: yes
+      changed_when: false
+
+  post_tasks:
+    - name: Coletar informações sobre atualizações aplicadas
+      shell: "{{ update_cmd }} --assumeno | grep -v 'Excluding'"
+      register: update_summary
+      changed_when: false
+      ignore_errors: yes
+
+    - name: Exibir resumo da execução
+      debug:
+        msg: |
+          Atualização concluída!
+          ----------------------------------
+          Sistema: {{ ansible_distribution }} {{ ansible_distribution_version }}
+          Pacotes atualizados: {{ 'Sim' if job_result.changed else 'Nenhum' }}
+          Pacotes que exigem reboot: {{ 'Sim' if reboot_check.stdout == 'reboot_required' else 'Não' }}
+          ----------------------------------
+          Observação: O reboot não foi executado conforme solicitado.
+          Serviços críticos podem precisar ser reiniciados manualmente.
+  ignore_errors: yes

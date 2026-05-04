@@ -1,0 +1,138 @@
+---
+- name: Integrar servidores Linux ao domínio gru.local
+  hosts: all
+  become: true
+  gather_facts: true
+
+  vars:
+    domain_name: "gru.local"
+    realm_name: "GRU.LOCAL"
+    dc1: "172.31.52.24"
+    dc2: "10.36.52.53"
+    allowed_groups: "gdl_ss_gru_noc sysgru"
+
+  tasks:
+    - name: Definir resolv.conf
+      copy:
+        dest: /etc/resolv.conf
+        content: |
+          nameserver {{ dc1 }}
+          nameserver {{ dc2 }}
+          search {{ domain_name }}
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Definir krb5.conf
+      copy:
+        dest: /etc/krb5.conf
+        content: |
+          [libdefaults]
+            default_realm = {{ realm_name }}
+            dns_lookup_realm = false
+            dns_lookup_kdc = true
+
+          [realms]
+            {{ realm_name }} = {
+              kdc = {{ dc1 }}
+              kdc = {{ dc2 }}
+              admin_server = {{ dc1 }}
+            }
+
+          [domain_realm]
+            .{{ domain_name }} = {{ realm_name }}
+            {{ domain_name }} = {{ realm_name }}
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Instalar pacotes necessários (RHEL)
+      package:
+        name:
+          - realmd
+          - sssd
+          - sssd-tools
+          - krb5-workstation
+          - adcli
+          - oddjob
+          - oddjob-mkhomedir
+          - samba-common-tools
+        state: present
+      when: ansible_os_family == 'RedHat'
+
+    - name: Instalar pacotes necessários (Ubuntu)
+      apt:
+        name:
+          - realmd
+          - sssd
+          - sssd-tools
+          - krb5-user
+          - adcli
+          - oddjob
+          - oddjob-mkhomedir
+          - samba-common-bin
+        state: present
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+
+    - name: Executar o join ao domínio
+      expect:
+        command: realm join --user=Administrador {{ domain_name }}
+        responses:
+          Password: "{{ ad_admin_password }}"
+      vars_prompt:
+        - name: ad_admin_password
+          prompt: "Senha do usuário Administrador do AD"
+          private: yes
+
+    - name: Configurar sssd.conf
+      copy:
+        dest: /etc/sssd/sssd.conf
+        content: |
+          [sssd]
+          services = nss, pam
+          config_file_version = 2
+          domains = {{ domain_name }}
+
+          [domain/{{ domain_name }}]
+          ad_domain = {{ domain_name }}
+          krb5_realm = {{ realm_name }}
+          realmd_tags = manages-system joined-with-samba
+          cache_credentials = true
+          id_provider = ad
+          auth_provider = ad
+          chpass_provider = ad
+          access_provider = ad
+          ad_gpo_access_control = permissive
+          ldap_id_mapping = true
+          fallback_homedir = /home/%u@%d
+          default_shell = /bin/bash
+          use_fully_qualified_names = False
+        owner: root
+        group: root
+        mode: '0600'
+
+    - name: Ativar e iniciar o SSSD
+      service:
+        name: sssd
+        enabled: yes
+        state: started
+
+    - name: Configurar sshd AllowGroups
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^AllowGroups'
+        line: "AllowGroups {{ allowed_groups }}"
+        create: yes
+        backup: yes
+
+    - name: Reiniciar SSHD
+      service:
+        name: sshd
+        state: restarted
+      when: ansible_service_mgr == 'systemd'
+
+    - name: Reiniciar SSH (sysvinit)
+      shell: service ssh restart
+      when: ansible_service_mgr != 'systemd'
+  ignore_errors: yes

@@ -1,0 +1,62 @@
+---
+- name: Instala SentinelOne Agent
+  hosts: all
+  become: yes
+  vars:
+    sentinel_rpm: "http://172.31.49.176:8080/Sentinel/SentinelAgent_linux_x86_64_v24_3_3_6.rpm"
+    sentinel_deb: "http://172.31.49.176:8080/Sentinel/SentinelAgent_linux_x86_64_v24_3_3_6.deb"
+    sentinel_token: "eyJ1cmwiOiAiaHR0cHM6Ly91c2VhMS0wMTcuc2VudGluZWxvbmUubmV0IiwgInNpdGVfa2V5IjogImZjMGZmMDNmN2E3NjI1N2QifQ=="
+
+  tasks:
+    - name: Verificar se SentinelOne já está instalado
+      stat:
+        path: /opt/sentinelone/bin/sentinelctl
+      register: sentinelctl_check
+
+    - name: Encerrar se SentinelOne já estiver instalado
+      meta: end_play
+      when: sentinelctl_check.stat.exists
+
+    - name: Definir extensão e caminho do pacote
+      set_fact:
+        package_path: "/tmp/SentinelAgent.{{ 'rpm' if ansible_os_family == 'RedHat' else 'deb' }}"
+
+    - name: Baixar o instalador do SentinelOne
+      get_url:
+        url: "{{ sentinel_rpm if ansible_os_family == 'RedHat' else sentinel_deb }}"
+        dest: "{{ package_path }}"
+        mode: '0644'
+        timeout: 300
+      register: download_result
+      until: download_result is succeeded
+      retries: 3
+      delay: 10
+
+    - name: Instalar com yum
+      yum:
+        name: "{{ package_path }}"
+        state: present
+        disable_gpg_check: yes
+      when: ansible_os_family == "RedHat" and (ansible_distribution_major_version | int) < 8
+
+    - name: Instalar com dnf
+      dnf:
+        name: "{{ package_path }}"
+        state: present
+        disable_gpg_check: yes
+      when: ansible_os_family == "RedHat" and (ansible_distribution_major_version | int) >= 8
+
+    - name: Instalar no Debian/Ubuntu
+      apt:
+        deb: "{{ package_path }}"
+        install_recommends: no
+      when: ansible_os_family == "Debian"
+
+    - name: Configurar token SentinelOne
+      command: "/opt/sentinelone/bin/sentinelctl management token set {{ sentinel_token }}"
+      no_log: true
+
+    - name: Limpar instalador
+      file:
+        path: "{{ package_path }}"
+        state: absent

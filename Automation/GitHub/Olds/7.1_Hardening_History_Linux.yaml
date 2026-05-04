@@ -1,0 +1,59 @@
+---
+- name: Configure Bash history, prompt, and logging
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    fake_timestamp: 946684800
+    log_file: "/var/log/prompt.log"
+    rsyslog_conf: "/etc/rsyslog.conf"
+    bashrc_paths: "{{ query('fileglob', '/home/*/.bashrc') | default([]) + ['/root/.bashrc', '/etc/skel/.bashrc'] }}"
+
+  tasks:
+    - name: Add fake timestamps to Bash history for all users
+      shell: |
+        for user_dir in /home/* /root; do
+          history_file="$user_dir/.bash_history"
+          if [ -f "$history_file" ]; then
+            TEMP_FILE=$(mktemp)
+            while IFS= read -r line; do
+              if [[ "$line" != \#* ]]; then
+                echo "#{{ fake_timestamp }}" >> "$TEMP_FILE"
+              fi
+              echo "$line" >> "$TEMP_FILE"
+            done < "$history_file"
+            mv -f "$TEMP_FILE" "$history_file"
+            chown $(stat -c "%U" "$user_dir") "$history_file"
+          fi
+        done
+      args:
+        executable: /bin/bash
+
+    - name: Remove old bash config lines
+      lineinfile:
+        path: "{{ item }}"
+        state: absent
+        regexp: '^(HISTSIZE|HISTFILESIZE|HISTCONTROL|HISTTIMEFORMAT|export whoami|export PROMPT_COMMAND|export PS1|TMOUT)='
+      loop: "{{ bashrc_paths }}"
+      ignore_errors: yes
+
+    - name: Configure enhanced .bashrc settings
+      blockinfile:
+        path: "{{ item }}"
+        block: |
+          HISTSIZE=20000
+          HISTFILESIZE=20000
+          HISTCONTROL=ignorespace
+          HISTTIMEFORMAT="%d/%m/%y %T "
+          export whoami="$(whoami)@$(echo $SSH_CONNECTION | awk '{print $1}')"
+          export PROMPT_COMMAND='RETRN_VAL=$?; CMD=$(history 1 | sed '\''s/^[ ]*[0-9]\+[ ]*//'\''); logger -p local3.debug "$whoami [$$]: $CMD [$RETRN_VAL]"'
+          if [ "$(id -u)" -eq 0 ]; then
+            export PS1='\[\033[01;32m\]\u\[\033[01;31m\]@\[\033[01;32m\]\h\[\033[01;31m\][\[\033[01;33m\]\w\[\033[01;31m\]]\[\033[01;37m\]#\[\033[00m\]'
+          else
+            export PS1='\[\033[01;37m\]\u\[\033[01;31m\]@\[\033[01;37m\]\h\[\033[01;31m\][\[\033[01;33m\]\w\[\033[01;31m\]]\[\033[01;37m\]\$\[\033[00m\]'
+          fi
+          TMOUT=1800
+        marker: "# {mark} ANSIBLE MANAGED BLOCK - BASH CONFIG"
+      loop: "{{ bashrc_paths }}"
+      ignore_errors: yes
