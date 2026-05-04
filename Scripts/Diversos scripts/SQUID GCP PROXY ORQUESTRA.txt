@@ -1,0 +1,148 @@
+historico e script squid
+    1  yum update -y
+    2  yum -y install epel-release
+    3  yum -y update
+    4  yum clean all
+    5  yum -y install squid
+    6  a
+    7  clear
+    8  systemctl start squid
+    9  systemctl enable squid
+   10  systemctl status squid
+  *11  vi /etc/squid/squid.conf
+   12  systemctl restart squid
+   13  curl -x http://172.26.0.4:3128  -i http://google.com
+   14  curl -x http://172.26.0.4:3128  -i http://google.com
+   15  curl -x http://35.196.1.120:3128  -i http://google.com
+   16  history
+
+*CONF SQUID
+#
+# Recommended minimum configuration:
+#
+
+# Example rule allowing access from your local networks.
+# Adapt to list your (internal) IP networks from where browsing
+# should be allowed
+acl localnet src 10.0.0.0/8     # RFC1918 possible internal network
+acl localnet src 172.16.0.0/12  # RFC1918 possible internal network
+acl localnet src 192.168.0.0/16 # RFC1918 possible internal network
+acl localnet src fc00::/7       # RFC 4193 local private network range
+acl localnet src fe80::/10      # RFC 4291 link-local (directly plugged) machines
+acl localnet src 172.26.0.0/24 #Rede Interna projeto Transportes
+
+acl SSL_ports port 443
+acl Safe_ports port 80          # http
+acl Safe_ports port 21          # ftp
+acl Safe_ports port 443         # https
+acl Safe_ports port 70          # gopher
+acl Safe_ports port 210         # wais
+acl Safe_ports port 1025-65535  # unregistered ports
+acl Safe_ports port 280         # http-mgmt
+acl Safe_ports port 488         # gss-http
+acl Safe_ports port 591         # filemaker
+acl Safe_ports port 777         # multiling http
+acl CONNECT method CONNECT
+
+#
+# Recommended minimum Access Permission configuration:
+#
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+
+# We strongly recommend the following be uncommented to protect innocent
+# web applications running on the proxy server who think the only
+# one who can access services on "localhost" is a local user
+#http_access deny to_localhost
+
+#
+# INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
+#
+
+# Example rule allowing access from your local networks.
+# Adapt localnet in the ACL section to list your (internal) IP networks
+# from where browsing should be allowed
+http_access allow localnet
+http_access allow localhost
+
+# And finally deny all other access to this proxy
+http_access deny all
+
+# Squid normally listens to port 3128
+http_port 3128
+
+# Uncomment and adjust the following to add a disk cache directory.
+#cache_dir ufs /var/spool/squid 100 16 256
+
+# Leave coredumps in the first cache dir
+coredump_dir /var/spool/squid
+
+#
+# Add any of your own refresh_pattern entries above these.
+#
+refresh_pattern ^ftp:           1440    20%     10080
+refresh_pattern ^gopher:        1440    0%      1440
+refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
+refresh_pattern .               0       20%     4320
+
+
+============================================================================
+history orchestrator
+[root@vm-orquestracao-squid infra]# history
+    1  clear
+    2  touch script-1.sh
+    3  vi script-1.sh
+    4  chmod +x script-1.sh
+    5  ls
+    6  cron -e
+    7  crontab -e
+    8  nano /etc/crontab
+    9  vi /etc/crontab
+   10  ls -l
+   11  pwd
+   12  vi /etc/crontab
+   13  ls -l
+   14  cp script-1.sh script-2.sh
+   15  vi script-2.sh
+   16  ls -l
+   17  vi /etc/crontab
+   18  clear
+   19  ./script-1.sh
+   20  ls -l
+   21  ./script-1.sh
+   22  vi script-1.sh
+   23  history
+
+Crontab 
+00 08 * * * root /home/michel/script-1.sh
+00 10 * * * root /home/michel/script-2.sh
+
+[root@vm-orquestracao-squid michel]# cat script-1.sh
+#!/bin/bash
+
+#gcloud compute instances describe vm-proxy-squid
+
+gcloud compute instances delete-access-config vm-proxy-squid --access-config-name "External NAT" --zone=us-east1-b
+
+gcloud compute instances add-access-config vm-proxy-squid --zone us-east1-b --access-config-name "External NAT" --address 35.185.105.57
+
+[root@vm-orquestracao-squid michel]# cat script-2.sh
+#!/bin/bash
+
+#gcloud compute instances describe vm-proxy-squid
+
+gcloud compute instances delete-access-config vm-proxy-squid --access-config-name "External NAT" --zone=us-east1-b
+
+gcloud compute instances add-access-config vm-proxy-squid --zone us-east1-b --access-config-name "External NAT" --address 35.243.188.66
+
+
+
+
+

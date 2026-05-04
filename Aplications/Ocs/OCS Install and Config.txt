@@ -1,0 +1,7 @@
+yum install ocsinventory-agent -y  ; 
+sed -i "/^local/d" /etc/ocsinventory/ocsinventory-agent.cfg
+sed -i "/^server/d" /etc/ocsinventory/ocsinventory-agent.cfg
+sed -i "/^tag/d" /etc/ocsinventory/ocsinventory-agent.cfg
+bash -c 'echo "server = ocs.gru.com.br" >> /etc/ocsinventory/ocsinventory-agent.cfg'
+ocsinventory-agent
+

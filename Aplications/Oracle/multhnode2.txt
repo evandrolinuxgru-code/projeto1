@@ -1,0 +1,378 @@
+ORCLDISKARCH2 (36000d3100061a20000000000000000bb) dm-9 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:7  sdm  8:192   active ready  running
+  |- 2:0:1:7  sdeq 129:32  active ready  running
+  |- 1:0:0:7  sdbn 68:16   active ready  running
+  `- 2:0:2:7  sdfp 130:176 active ready  running
+ORCLDISKACFS10 (36000d3100061a2000000000000000160) dm-4 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:35 sdg  8:96    active ready  running
+  |- 2:0:1:35 sdek 128:192 active ready  running
+  |- 1:0:0:35 sdbh 67:176  active ready  running
+  `- 2:0:2:35 sdfj 130:80  active ready  running
+ORCLDISKVOTE1 (36000d3100061a20000000000000000af) dm-32 COMPELNT,Compellent Vol
+size=1.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:18 sdaf 65:240  active ready  running
+  |- 2:0:0:18 sddi 71:0    active ready  running
+  |- 1:0:3:18 sdcg 69:64   active ready  running
+  `- 2:0:3:18 sdgi 131:224 active ready  running
+ORCLDISKACFS1 (36000d3100061a20000000000000000c0) dm-2 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:3  sde  8:64    active ready  running
+  |- 2:0:1:3  sdei 128:160 active ready  running
+  |- 1:0:0:3  sdbf 67:144  active ready  running
+  `- 2:0:2:3  sdfh 130:48  active ready  running
+SAP_P_FIORI_ORCLSDISKDATA2 (36000d3100061a20000000000000001ed) dm-27 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:48 sdac 65:192  active ready  running
+  |- 2:0:0:48 sddf 70:208  active ready  running
+  |- 1:0:3:48 sdcd 69:16   active ready  running
+  `- 2:0:3:48 sdgf 131:176 active ready  running
+ORCLDISKARCH1 (36000d3100061a20000000000000000ba) dm-39 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:6  sddp 71:112  active ready  running
+  |- 1:0:2:6  sdam 66:96   active ready  running
+  |- 2:0:3:6  sdgp 132:80  active ready  running
+  `- 1:0:3:6  sdcn 69:176  active ready  running
+ORCLDISKVOTE0 (36000d3100061a20000000000000000ad) dm-12 COMPELNT,Compellent Vol
+size=1.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:17 sdb  8:16    active ready  running
+  |- 2:0:1:17 sdef 128:112 active ready  running
+  |- 1:0:0:17 sdbc 67:96   active ready  running
+  `- 2:0:2:17 sdfe 130:0   active ready  running
+ORCLDISKACFS0 (36000d3100061a20000000000000000bf) dm-31 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:2  sdae 65:224  active ready  running
+  |- 2:0:0:2  sddh 70:240  active ready  running
+  |- 1:0:3:2  sdcf 69:48   active ready  running
+  `- 2:0:3:2  sdgh 131:208 active ready  running
+ORCLDISKREC2 (36000d3100061a20000000000000000be) dm-30 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:16 sdaa 65:160  active ready  running
+  |- 2:0:0:16 sddd 70:176  active ready  running
+  |- 1:0:3:16 sdcb 68:240  active ready  running
+  `- 2:0:3:16 sdgd 131:144 active ready  running
+SAP_P_FIORI_ORCLSDISKDATA1 (36000d3100061a20000000000000001ec) dm-26 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:47 sdz  65:144  active ready  running
+  |- 2:0:1:47 sdfd 129:240 active ready  running
+  |- 1:0:0:47 sdca 68:224  active ready  running
+  `- 2:0:2:47 sdgc 131:128 active ready  running
+SAP_P_FIORI_ORCLSDISKOCR (36000d3100061a20000000000000001f2) dm-10 COMPELNT,Compellent Vol
+size=2.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:49 sdd  8:48    active ready  running
+  |- 2:0:1:49 sdeh 128:144 active ready  running
+  |- 1:0:0:49 sdbe 67:128  active ready  running
+  `- 2:0:2:49 sdfg 130:32  active ready  running
+ORCLDISKARCH0 (36000d3100061a20000000000000000b9) dm-6 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:5  sdj  8:144   active ready  running
+  |- 2:0:1:5  sdem 128:224 active ready  running
+  |- 1:0:0:5  sdbj 67:208  active ready  running
+  `- 2:0:2:5  sdfl 130:112 active ready  running
+SAP_P_N_ORCLDISKBKP02 (36000d3100061a2000000000000000365) dm-55 COMPELNT,Compellent Vol
+size=2.5T features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:0:54 sdhf 133:80  active ready  running
+  |- 2:0:1:54 sdhh 133:112 active ready  running
+  |- 1:0:1:54 sdhg 133:96  active ready  running
+  `- 2:0:2:54 sdhi 133:128 active ready  running
+SAP_P_FIORI_ORCLSDISKDATA0 (36000d3100061a20000000000000001eb) dm-53 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:46 sded 128:80  active ready  running
+  |- 1:0:2:46 sdba 67:64   active ready  running
+  |- 2:0:3:46 sdhd 133:48  active ready  running
+  `- 1:0:3:46 sddb 70:144  active ready  running
+ORCLDISKREC1 (36000d3100061a20000000000000000bd) dm-25 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:15 sdy  65:128  active ready  running
+  |- 2:0:1:15 sdfc 129:224 active ready  running
+  |- 1:0:0:15 sdbz 68:208  active ready  running
+  `- 2:0:2:15 sdgb 131:112 active ready  running
+mpatho (36000d3100061a2000000000000000148) dm-52 COMPELNT,Compellent Vol
+size=1.4T features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=0 status=enabled
+  |- 1:0:2:30 sdaz 67:48   failed faulty running
+  |- 2:0:0:30 sdec 128:64  failed faulty running
+  |- 1:0:3:30 sdda 70:128  failed faulty running
+  `- 2:0:3:30 sdhc 133:32  failed faulty running
+ORCLDISKREC0 (36000d3100061a20000000000000000bc) dm-51 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:14 sdeb 128:48  active ready  running
+  |- 1:0:2:14 sday 67:32   active ready  running
+  |- 2:0:3:14 sdhb 133:16  active ready  running
+  `- 1:0:3:14 sdcz 70:112  active ready  running
+ORCLDISKDATA5 (36000d3100061a200000000000000012e) dm-40 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:22 sddq 71:128  active ready  running
+  |- 1:0:2:22 sdan 66:112  active ready  running
+  |- 2:0:3:22 sdgq 132:96  active ready  running
+  `- 1:0:3:22 sdco 69:192  active ready  running
+ORCLDISKACFS9 (36000d3100061a200000000000000015f) dm-47 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:42 sddx 71:240  active ready  running
+  |- 1:0:2:42 sdau 66:224  active ready  running
+  |- 2:0:3:42 sdgx 132:208 active ready  running
+  `- 1:0:3:42 sdcv 70:48   active ready  running
+ORCLDISKDATA4 (36000d3100061a200000000000000012d) dm-7 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:21 sdk  8:160   active ready  running
+  |- 2:0:1:21 sden 128:240 active ready  running
+  |- 1:0:0:21 sdbk 67:224  active ready  running
+  `- 2:0:2:21 sdfm 130:128 active ready  running
+SAP_P_N_ORCLDISKDATA5 (36000d3100061a2000000000000000185) dm-20 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:43 sdu  65:64   active ready  running
+  |- 2:0:1:43 sdey 129:160 active ready  running
+  |- 1:0:0:43 sdbv 68:144  active ready  running
+  `- 2:0:2:43 sdfx 131:48  active ready  running
+ORCLDISKDATA3 (36000d3100061a2000000000000000113) dm-37 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:20 sddm 71:64   active ready  running
+  |- 1:0:2:20 sdak 66:64   active ready  running
+  |- 2:0:3:20 sdgm 132:32  active ready  running
+  `- 1:0:3:20 sdck 69:128  active ready  running
+ORCLDISKACFS8 (36000d3100061a200000000000000015e) dm-17 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:41 sdr  65:16   active ready  running
+  |- 2:0:1:41 sdev 129:112 active ready  running
+  |- 1:0:0:41 sdbs 68:96   active ready  running
+  `- 2:0:2:41 sdfu 131:0   active ready  running
+SAP_DATA2DISK2 (36000d3100061a2000000000000000261) dm-5 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:53 sdi  8:128   active ready  running
+  |- 2:0:1:53 sdep 129:16  active ready  running
+  |- 1:0:0:53 sdbm 68:0    active ready  running
+  `- 2:0:2:53 sdfo 130:160 active ready  running
+SAP_P_FIORI_ORCLSDISKVOTE (36000d3100061a20000000000000001f1) dm-3 COMPELNT,Compellent Vol
+size=1.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:51 sdh  8:112   active ready  running
+  |- 2:0:1:51 sdel 128:208 active ready  running
+  |- 1:0:0:51 sdbi 67:192  active ready  running
+  `- 2:0:2:51 sdfk 130:96  active ready  running
+SAP_P_N_ORCLDISKDATA4 (36000d3100061a2000000000000000156) dm-33 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:34 sdag 66:0    active ready  running
+  |- 2:0:0:34 sddj 71:16   active ready  running
+  |- 1:0:3:34 sdch 69:80   active ready  running
+  `- 2:0:3:34 sdgj 131:240 active ready  running
+ORCLDISKACFS7 (36000d3100061a200000000000000014e) dm-54 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:31 sdee 128:96  active ready  running
+  |- 1:0:2:31 sdbb 67:80   active ready  running
+  |- 2:0:3:31 sdhe 133:64  active ready  running
+  `- 1:0:3:31 sddc 70:160  active ready  running
+ORCLDISKDATA2 (36000d3100061a20000000000000000b8) dm-45 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:10 sddv 71:208  active ready  running
+  |- 1:0:2:10 sdas 66:192  active ready  running
+  |- 2:0:3:10 sdgv 132:176 active ready  running
+  `- 1:0:3:10 sdct 70:16   active ready  running
+SAP_P_FIORI_ORCLSDISKRECO (36000d3100061a20000000000000001f0) dm-34 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:50 sdah 66:16   active ready  running
+  |- 2:0:0:50 sddk 71:32   active ready  running
+  |- 1:0:3:50 sdci 69:96   active ready  running
+  `- 2:0:3:50 sdgk 132:0   active ready  running
+SAP_P_FIORI_ORCLSDISKACFS0 (36000d3100061a20000000000000001ee) dm-50 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:44 sdea 128:32  active ready  running
+  |- 1:0:2:44 sdax 67:16   active ready  running
+  |- 2:0:3:44 sdha 133:0   active ready  running
+  `- 1:0:3:44 sdcy 70:96   active ready  running
+SAP_DATA2DISK1 (36000d3100061a2000000000000000260) dm-35 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:52 sdai 66:32   active ready  running
+  |- 2:0:0:52 sddo 71:96   active ready  running
+  |- 1:0:3:52 sdcm 69:160  active ready  running
+  `- 2:0:3:52 sdgo 132:64  active ready  running
+ORCLDISKOCR2 (36000d3100061a20000000000000000b3) dm-21 COMPELNT,Compellent Vol
+size=2.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:13 sdv  65:80   active ready  running
+  |- 2:0:1:13 sdez 129:176 active ready  running
+  |- 1:0:0:13 sdbw 68:160  active ready  running
+  `- 2:0:2:13 sdfy 131:64  active ready  running
+ORCLDISKACFS15 (36000d3100061a2000000000000000165) dm-43 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:40 sddu 71:192  active ready  running
+  |- 1:0:2:40 sdar 66:176  active ready  running
+  |- 2:0:3:40 sdgu 132:160 active ready  running
+  `- 1:0:3:40 sdcs 70:0    active ready  running
+SAP_P_N_ORCLDISKDATA3 (36000d3100061a2000000000000000147) dm-22 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:29 sdw  65:96   active ready  running
+  |- 2:0:1:29 sdfa 129:192 active ready  running
+  |- 1:0:0:29 sdbx 68:176  active ready  running
+  `- 2:0:2:29 sdfz 131:80  active ready  running
+ORCLDISKACFS6 (36000d3100061a2000000000000000133) dm-16 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:25 sdq  65:0    active ready  running
+  |- 2:0:1:25 sdeu 129:96  active ready  running
+  |- 1:0:0:25 sdbr 68:80   active ready  running
+  `- 2:0:2:25 sdft 130:240 active ready  running
+ORCLDISKDATA1 (36000d3100061a20000000000000000b7) dm-15 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:9  sdp  8:240   active ready  running
+  |- 2:0:1:9  sdet 129:80  active ready  running
+  |- 1:0:0:9  sdbq 68:64   active ready  running
+  `- 2:0:2:9  sdfs 130:224 active ready  running
+ORCLDISKOCR1 (36000d3100061a20000000000000000b2) dm-48 COMPELNT,Compellent Vol
+size=2.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:12 sddy 128:0   active ready  running
+  |- 1:0:2:12 sdav 66:240  active ready  running
+  |- 2:0:3:12 sdgy 132:224 active ready  running
+  `- 1:0:3:12 sdcw 70:64   active ready  running
+ORCLDISKACFS14 (36000d3100061a2000000000000000164) dm-14 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:39 sdo  8:224   active ready  running
+  |- 2:0:1:39 sdes 129:64  active ready  running
+  |- 1:0:0:39 sdbp 68:48   active ready  running
+  `- 2:0:2:39 sdfr 130:208 active ready  running
+SAP_P_N_ORCLDISKDATA2 (36000d3100061a2000000000000000146) dm-49 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:28 sddz 128:16  active ready  running
+  |- 1:0:2:28 sdaw 67:0    active ready  running
+  |- 2:0:3:28 sdgz 132:240 active ready  running
+  `- 1:0:3:28 sdcx 70:80   active ready  running
+SAP_P_FIORI_ORCLSDISKARCH (36000d3100061a20000000000000001ef) dm-24 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:45 sdx  65:112  active ready  running
+  |- 2:0:1:45 sdfb 129:208 active ready  running
+  |- 1:0:0:45 sdby 68:192  active ready  running
+  `- 2:0:2:45 sdga 131:96  active ready  running
+ORCLDISKDATA0 (36000d3100061a20000000000000000b6) dm-44 COMPELNT,Compellent Vol
+size=100G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:8  sdds 71:160  active ready  running
+  |- 1:0:2:8  sdap 66:144  active ready  running
+  |- 2:0:3:8  sdgs 132:128 active ready  running
+  `- 1:0:3:8  sdcq 69:224  active ready  running
+ORCLDISKACFS5 (36000d3100061a2000000000000000132) dm-42 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:24 sddt 71:176  active ready  running
+  |- 1:0:2:24 sdaq 66:160  active ready  running
+  |- 2:0:3:24 sdgt 132:144 active ready  running
+  `- 1:0:3:24 sdcr 69:240  active ready  running
+ORCLDISKOCR0 (36000d3100061a20000000000000000b1) dm-18 COMPELNT,Compellent Vol
+size=2.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:11 sds  65:32   active ready  running
+  |- 2:0:1:11 sdew 129:128 active ready  running
+  |- 1:0:0:11 sdbt 68:112  active ready  running
+  `- 2:0:2:11 sdfv 131:16  active ready  running
+ORCLDISKACFS13 (36000d3100061a2000000000000000163) dm-41 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:38 sddr 71:144  active ready  running
+  |- 1:0:2:38 sdao 66:128  active ready  running
+  |- 2:0:3:38 sdgr 132:112 active ready  running
+  `- 1:0:3:38 sdcp 69:208  active ready  running
+SAP_P_N_ORCLDISKDATA1 (36000d3100061a2000000000000000145) dm-19 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:27 sdt  65:48   active ready  running
+  |- 2:0:1:27 sdex 129:144 active ready  running
+  |- 1:0:0:27 sdbu 68:128  active ready  running
+  `- 2:0:2:27 sdfw 131:32  active ready  running
+ORCLDISKACFS4 (36000d3100061a2000000000000000131) dm-13 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:23 sdn  8:208   active ready  running
+  |- 2:0:1:23 sder 129:48  active ready  running
+  |- 1:0:0:23 sdbo 68:32   active ready  running
+  `- 2:0:2:23 sdfq 130:192 active ready  running
+ORCLDISKARCH4 (36000d3100061a2000000000000000153) dm-23 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:33 sdc  8:32    active ready  running
+  |- 2:0:1:33 sdeg 128:128 active ready  running
+  |- 1:0:0:33 sdbd 67:112  active ready  running
+  `- 2:0:2:33 sdff 130:16  active ready  running
+ORCLDISKACFS12 (36000d3100061a2000000000000000162) dm-8 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:37 sdl  8:176   active ready  running
+  |- 2:0:1:37 sdeo 129:0   active ready  running
+  |- 1:0:0:37 sdbl 67:240  active ready  running
+  `- 2:0:2:37 sdfn 130:144 active ready  running
+SAP_P_N_ORCLDISKDATA0 (36000d3100061a2000000000000000144) dm-46 COMPELNT,Compellent Vol
+size=200G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:26 sddw 71:224  active ready  running
+  |- 1:0:2:26 sdat 66:208  active ready  running
+  |- 2:0:3:26 sdgw 132:192 active ready  running
+  `- 1:0:3:26 sdcu 70:32   active ready  running
+ORCLDISKACFS3 (36000d3100061a200000000000000010f) dm-29 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:1  sdad 65:208  active ready  running
+  |- 2:0:0:1  sddg 70:224  active ready  running
+  |- 1:0:3:1  sdce 69:32   active ready  running
+  `- 2:0:3:1  sdgg 131:192 active ready  running
+ORCLDISKACFS11 (36000d3100061a2000000000000000161) dm-38 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 2:0:0:36 sddn 71:80   active ready  running
+  |- 1:0:2:36 sdal 66:80   active ready  running
+  |- 2:0:3:36 sdgn 132:48  active ready  running
+  `- 1:0:3:36 sdcl 69:144  active ready  running
+ORCLDISKARCH3 (36000d3100061a2000000000000000152) dm-28 COMPELNT,Compellent Vol
+size=20G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:32 sdab 65:176  active ready  running
+  |- 2:0:0:32 sdde 70:192  active ready  running
+  |- 1:0:3:32 sdcc 69:0    active ready  running
+  `- 2:0:3:32 sdge 131:160 active ready  running
+ORCLDISKVOTE2 (36000d3100061a20000000000000000b0) dm-11 COMPELNT,Compellent Vol
+size=1.0G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:1:19 sdf  8:80    active ready  running
+  |- 2:0:1:19 sdej 128:176 active ready  running
+  |- 1:0:0:19 sdbg 67:160  active ready  running
+  `- 2:0:2:19 sdfi 130:64  active ready  running
+ORCLDISKACFS2 (36000d3100061a20000000000000000c1) dm-36 COMPELNT,Compellent Vol
+size=10G features='1 queue_if_no_path' hwhandler='0' wp=rw
+`-+- policy='round-robin 0' prio=1 status=active
+  |- 1:0:2:4  sdaj 66:48   active ready  running
+  |- 2:0:0:4  sddl 71:48   active ready  running
+  |- 1:0:3:4  sdcj 69:112  active ready  running
+  `- 2:0:3:4  sdgl 132:16  active ready  running

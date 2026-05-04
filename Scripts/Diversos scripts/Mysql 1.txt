@@ -1,0 +1,322 @@
+GRANT ALL PRIVILEGES ON *.* TO 'orion'@'localhost' IDENTIFIED BY 'orion';
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Cont@123456';
+create user 'root'@'%' IDENTIFIED BY 'Cont@123456';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'Cont@123456';
+
+uninstall plugin validate_password;
+
+create user teste@'localhost' identified by 'Teste1020#';
+create user teste@'localhost' identified by 'Teste1020#';
+create user zabbix@'%' identified by '123456';
+create user otrs@'192.168.5.18' identified by 'Cont@1234567';
+
+create user web_dev@'*' identified by 'Cnt$3wlvQKYmVpn@21mh5';
+GRANT ALL PRIVILEGES ON web.* TO 'web_dev'@'%' identified by 'Cnt$3wlvQKYmVpn@21mh5';
+Prod:
+IP: 192.168.5.187
+DNS: web_prod.database.gru.com.br
+user: web_prod
+Senha: PhxT@5wTvmVpn#@mh5#78
+Base: web
+create user cnd_avaliacao@'%' identified by 'xE2@huSrY0@78vRgdAM4ay';
+GRANT ALL PRIVILEGES ON web to web@'%' identified by 'KqyR2UVt@FWk8iWdmg5UZ@';
+create user simplifique@'%' identified by 'A4e5jfidf74njfa09$d@';
+
+create database transportes_dev;
+create user transportes_dev@'%' identified by 'r8xo@ysbZoFz@xIEqCX@jU3';
+GRANT ALL PRIVILEGES ON transportes_dev.* to transportes_dev@'%' identified by 'r8xo@ysbZoFz@xIEqCX@jU3';
+
+create user blog_prod@'%' identified by '7NLYn@EiLcUEQ0R7L@@98ii';
+
+GRANT ALL PRIVILEGES ON blog_prod.* to blog_prod@'%' identified by '7NLYn@EiLcUEQ0R7L@@98ii';
+
+create user contadoronlinenovo@'%' identified by 'liMba6$dra3591D';
+create user contadoronlinenovo@'%' identified by 'li591D';
+
+li591D
+GRANT ALL PRIVILEGES ON contadoronlinenovo.* TO contadoronlinenovo@'%' identified by 'liMba6$dra3591D';
+GRANT ALL PRIVILEGES ON simplifique.* to simplifique@'%' identified by 'A4e5jfidf74njfa09$d@';
+UPDATE orion SET Password=PASSWORD('orion') WHERE USER='orion';
+
+update user set authentication_string=PASSWORD("orion") where User='orion';
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Cont@123';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Cont@sfkOVmqe5Lr34';
+GRANT ALL PRIVILEGES ON cnd_web.* TO 'root'@'%' identified by 'm!#Q42';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'
+
+GRANT ALL PRIVILEGES ON *.* TO 'otrs'@'%' identified by '6ifcWAuT8O';
+
+GRANT ALL PRIVILEGES ON *.* TO 'otrs'@'%' WITH GRANT OPTION;
+
+yum install -y wget ;wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm ; yum install -y mysql57-community-release-el7-11.noarch.rpm ; yum install mysql-server ; service mysqld start
+
+
+create user cnd@'%' identified by 'm!#Q42';
+ok
+GRANT ALL PRIVILEGES ON cnd_web.* TO 'cnd'@'%' identified by 'm!#Q42';
+ok
+GRANT ALL PRIVILEGES ON cnd_backend.* TO 'cnd'@'%' identified by 'm!#Q42';
+ok
+ create user 'fundacao'@'www2.cursosgru.com.br' identified by 'ff!yjSzRG6*p';
+ok
+
+GRANT ALL PRIVILEGES ON fundacao.* TO 'fundacao'@'www2.cursosgru.com.br' identified by 'ff!yjSzRG6*p';
+
+Al3rt@zabX$
+
+GRANT ALL PRIVILEGES ON cnd_wp.* TO 'cnd_wp'@'%';
+
+
+CREATE USER 'zbx_monitor'@'%' IDENTIFIED BY 'j5kzAK5dfelAA4X_BEAKmLLnQ_Zd5gOM';
+CREATE USER 'zbx_monitor'@'localhost' IDENTIFIED BY 'j5kzAK5dfelAA4X_BEAKmLLnQ_Zd5gOM';
+GRANT USAGE,REPLICATION CLIENT,PROCESS,SHOW DATABASES,SHOW VIEW ON *.* TO 'zbx_monitor'@'localhost';
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Cont@123#12Rfaytsg@';
+
+
+transportes_prod
+
+
+CREATE USER 'ricardo.portilho'@'%' IDENTIFIED BY 'Seele@Ricardo2021';
+CREATE USER 'ricardo.portilho'@'localhost' IDENTIFIED BY 'Seele@Ricardo2021';
+GRANT ALL PRIVILEGES ON *.* TO 'ricardo.portilho'@'%' IDENTIFIED BY 'Seele@Ricardo2021';
+GRANT ALL PRIVILEGES ON *.* TO 'ricardo.portilho'@'localhost' IDENTIFIED BY 'Seele@Ricardo2021';
+flush privileges;
+
+create database dev_sst;
+CREATE USER 'dev_sst'@'%' IDENTIFIED BY 'x@HQuC7B@xvbvDL@Nkopjah';
+GRANT ALL PRIVILEGES ON dev_sst.* TO 'dev_sst'@'%' IDENTIFIED BY 'x@HQuC7B@xvbvDL@Nkopjah';
+flush privileges;
+
+Banco: 192.168.5.150
+DB: dev_sst
+User: dev_sst
+Pass: x@HQuC7B@xvbvDL@Nkopjah
+
+Site: https://dev.sst.gru.com.br/
+IP: 192.168.34
+
+CREATE USER 'ocs'@'%' IDENTIFIED BY '4t3BWShY3I@jqTQ3@TbXG2';
+CREATE USER 'zbx_monitor'@'%' IDENTIFIED BY 'j5kzAK5dfelAA4X_BEAKmLLnQ_Zd5gOM';
+GRANT ALL PRIVILEGES ON ocs.* to 'ocs'@'%' IDENTIFIED BY '4t3BWShY3I@jqTQ3@TbXG2';
+flush privileges;
+
+senha root ocs 4t3BWShY3IjqTQ3TbXG2
+
+
+CREATE USER 'backup_system'@'%' IDENTIFIED BY 'ConT@1q@az2wsx';
+CREATE USER 'backup_system'@'localhost' IDENTIFIED BY 'ConT@1q@az2wsx';
+GRANT ALL PRIVILEGES ON *.* to 'backup_system'@'%' IDENTIFIED BY 'ConT@1q@az2wsx';
+GRANT ALL PRIVILEGES ON *.* to 'backup_system'@'localhost' IDENTIFIED BY 'ConT@1q@az2wsx';
+flush privileges;
+
+
+backup_system -p'1qaz2wsx'
+
+
+CREATE USER 'everton.silva'@'%' IDENTIFIED BY 'ConT@E6vwsx';
+GRANT ALL PRIVILEGES ON alunocursos.* to 'everton.silva'@'%' IDENTIFIED BY 'ConT@E6vwsx';
+flush privileges;
+
+CREATE USER 'augusto.camargo'@'%' IDENTIFIED BY 'ConT@ACz2wX';
+GRANT ALL PRIVILEGES ON alunocursos.* to 'augusto.camargo'@'%' IDENTIFIED BY 'ConT@ACz2wX';
+flush privileges;
+
+Banco: 192.168.5.83
+Base: alunocursos
+
+user:everton.silva
+senha:ConT@E6vwsx
+
+user:augusto.camargo
+senha:ConT@ACz2wX
+
+CREATE USER 'michel.sa'@'%' IDENTIFIED BY 'Mic@@221Cnt';
+CREATE USER 'michel.sa'@'localhost' IDENTIFIED BY 'Mic@@221Cnt';
+GRANT ALL PRIVILEGES ON *.* to 'michel.sa'@'%' IDENTIFIED BY 'Mic@@221Cnt';
+GRANT ALL PRIVILEGES ON *.* to 'michel.sa'@'localhost' IDENTIFIED BY 'Mic@@221Cnt';
+flush privileges;
+
+
+
+GRANT ALL PRIVILEGES ON autoatendimento.* to 'gilberto'@'%';
+
+
+CREATE USER 'contbox'@'%' IDENTIFIED BY 'BCnt#$2BxPl*vr49Cont';
+CREATE USER 'contbox'@'localhost' IDENTIFIED BY 'BCnt#$2BxPl*vr49Cont';
+GRANT ALL PRIVILEGES ON contbox.* to 'contbox'@'%' ;
+GRANT ALL PRIVILEGES ON contbox.* to 'contbox'@'localhost' ;
+flush privileges;
+
+
+CREATE USER 'cursos_wp'@'%' IDENTIFIED BY 'Z1J@JBlpvH0t@kBUwQHX#CPRD';
+GRANT ALL PRIVILEGES ON cursos_wp.* to 'cursos_wp'@'%' IDENTIFIED BY 'Z1J@JBlpvH0t@kBUwQHX#CPRD';;
+flush privileges;
+
+
+GRANT ALL PRIVILEGES ON web.* to web_prod@'%' identified by 'D@9sFtEExO3Qh@k4JN8wlo';
+
+GRANT ALL PRIVILEGES ON cliente.* to 'gilberto'@'%' identified by 'Cont@123';
+
+CREATE USER 'empregosweb'@'%' IDENTIFIED BY 'ZAABlpvH45@kBUwssCPRD';
+GRANT ALL PRIVILEGES ON portaldeempregosweb.* to 'empregosweb'@'%' IDENTIFIED BY 'ZAABlpvH45@kBUwssCPRD';
+flush privileges;
+
+192.168.5.158
+base portaldeempregosweb
+usuario empregosweb
+senha ZAABlpvH45@kBUwssCPRD
+
+create database dev_pontoeletronico;
+CREATE USER 'dev_pontoeletronico'@'%' IDENTIFIED BY 'A@@B35x$$pv45@kB66UwsDev';
+GRANT ALL PRIVILEGES ON dev_pontoeletronico.* to 'dev_pontoeletronico'@'%' IDENTIFIED BY 'A@@B35x$$pv45@kB66UwsDev';
+flush privileges;
+
+create database bd_meiasdobem;
+CREATE USER 'user_meiasdobem'@'%' IDENTIFIED BY 'A@@B35x$$pv45@kB66Uws';
+GRANT ALL PRIVILEGES ON bd_meiasdobem.* to 'user_meiasdobem'@'%' IDENTIFIED BY 'A@@B35x$$pv45@kB66Uws';
+flush privileges;
+
+create database bd_intranet;
+CREATE USER 'user_intranet'@'%' IDENTIFIED BY '@IntraNet.@BD@@2017@';
+GRANT ALL PRIVILEGES ON bd_intranet.* to 'user_intranet'@'%' IDENTIFIED BY '@IntraNet.@BD@@2017@';
+flush privileges;
+
+ALTER USER 'user_intranet'@'%' IDENTIFIED WITH mysql_native_password BY '@IntraNet.@BD@@2017@';
+flush privileges;
+
+
+CREATE DATABASE bd_redmine CHARACTER SET utf8;
+CREATE USER 'user_redmine'@'%' IDENTIFIED BY '@redmneNt@BD.@201@';
+GRANT ALL ON bd_redmine.* TO 'user_redmine'@'%';
+
+ALTER USER 'user_redmine'@'%' IDENTIFIED WITH mysql_native_password BY '@redmneNt@BD.@201@';
+flush privileges;
+
+create database ocsweb;
+CREATE USER 'ocs'@'localhost' IDENTIFIED BY '@OCSUnc56.@2ocs';
+GRANT ALL PRIVILEGES ON ocsweb.* TO 'ocs'@'localhost' IDENTIFIED BY '@OCSUnc56.@2ocs';
+flush privileges;
+
+CREATE USER 'ocs'@'%' IDENTIFIED BY '@OCSUnc56.@2ocs';
+GRANT ALL PRIVILEGES ON ocsweb.* TO 'ocs'@'%' IDENTIFIED BY '@OCSUnc56.@2ocs';
+flush privileges;
+
+CREATE USER 'ocs'@'localhost' IDENTIFIED BY '@OCSUnc56.@2ocs';
+GRANT ALL PRIVILEGES ON ocsweb.* TO 'ocs'@'localhost' IDENTIFIED BY '@OCSUnc56.@2ocs';
+flush privileges;
+
+
+CREATE DATABASE mundopuket CHARACTER SET utf8;
+CREATE USER 'mundopuket'@'%' IDENTIFIED BY '@rMunNt@B#221@';
+GRANT ALL ON mundopuket.* TO 'mundopuket'@'%';
+ALTER USER 'mundopuket'@'%' IDENTIFIED WITH mysql_native_password BY '@rMunNt@B#221@';
+flush privileges;
+
+CREATE DATABASE mundopuket2 CHARACTER SET utf8;
+CREATE USER 'mundopuket2'@'%' IDENTIFIED BY '@rMunNt@B#221@2';
+GRANT ALL ON mundopuket2.* TO 'mundopuket2'@'%';
+ALTER USER 'mundopuket2'@'%' IDENTIFIED WITH mysql_native_password BY '@rMunNt@B#221@2';
+flush privileges;
+
+CREATE DATABASE submarino CHARACTER SET utf8;
+CREATE USER 'submarino'@'%' IDENTIFIED BY 'SB@rnNt@B#273@2';
+GRANT ALL ON submarino.* TO 'submarino'@'%';
+flush privileges;
+
+CREATE DATABASE infra CHARACTER SET utf8;
+CREATE USER 'infra'@'%' IDENTIFIED BY 'Infra##Nt@735';
+GRANT ALL ON infra.* TO 'infra'@'%';
+flush privileges;
+
+#hJSW5@7
+
+CREATE DATABASE estoque CHARACTER SET utf8;
+CREATE USER 'estoque'@'%' IDENTIFIED BY '#hJSW5@7';
+GRANT ALL ON estoque.* TO 'estoque'@'%';
+flush privileges;
+
+CREATE DATABASE grupounico CHARACTER SET utf8;
+CREATE USER 'grupounico'@'%' IDENTIFIED BY '@34jSgr5@7unicoW';
+GRANT ALL ON grupounico.* TO 'grupounico'@'%';
+flush privileges;
+
+CREATE DATABASE otrs CHARACTER SET utf8;
+CREATE USER 'otrs'@'%' IDENTIFIED BY '#jSgOtrsnic32';
+GRANT ALL ON otrs.* TO 'otrs'@'%';
+flush privileges;
+
+CREATE DATABASE estagio CHARACTER SET utf8;
+CREATE USER 'estagio'@'%' IDENTIFIED BY 'Est@trs#nic32';
+GRANT ALL ON estagio.* TO 'estagio'@'%';
+flush privileges;
+
+
+CREATE DATABASE db_abastecimento CHARACTER SET utf8;
+CREATE USER 'abastecimento'@'%' IDENTIFIED BY '22@#PAbt@t32';
+GRANT ALL ON db_abastecimento.* TO 'abastecimento'@'%';
+flush privileges;
+
+
+CREATE DATABASE db_blogfranquia CHARACTER SET utf8;
+CREATE USER 'blogfranquia'@'%' IDENTIFIED BY 'BL23@#P46XSt@';
+GRANT ALL ON db_blogfranquia.* TO 'blogfranquia'@'%';
+flush privileges;
+
+CREATE DATABASE db_blogfranquiapuket CHARACTER SET utf8;
+CREATE USER 'bgfranquiapuket'@'%' IDENTIFIED BY 'PUK@#H86XXT#';
+GRANT ALL ON db_blogfranquiapuket.* TO 'bgfranquiapuket'@'%';
+flush privileges;
+
+Site: https://blogfranquia.puket.com.br/
+WP-admin user: blogfranpkt
+Senha: BG@@Puket23#
+
+FTP:
+Servidor: blogfranquia.puket.com.br
+User: blogfranpkt
+Senha: BG@@Puket23#
+
+
+CREATE DATABASE mundopuket_franq CHARACTER SET utf8;
+CREATE USER 'mundopuket_franq'@'%' IDENTIFIED BY '@rMu#_franq21@';
+GRANT ALL ON mundopuket_franq.* TO 'mundopuket_franq'@'%';
+ALTER USER 'mundopuket_franq'@'%' IDENTIFIED WITH mysql_native_password BY '@rMu#_franq21@';
+flush privileges;
+
+CREATE DATABASE hgrupounico CHARACTER SET utf8;
+CREATE USER 'hgrupounico'@'%' IDENTIFIED BY '@homg5@7unicW';
+GRANT ALL ON hgrupounico.* TO 'hgrupounico'@'%';
+flush privileges;
+
+CREATE DATABASE blogmind CHARACTER SET utf8;
+CREATE USER 'blogmind'@'%' IDENTIFIED BY '@hblogm#@mind';
+GRANT ALL ON blogmind.* TO 'blogmind'@'%';
+flush privileges;
+
+GRANT ALL ON homolog_abastecimento.* TO 'abastecimento'@'%';
+flush privileges;
+
+CREATE DATABASE blogimaginarium CHARACTER SET utf8;
+CREATE USER 'blogimaginarium'@'%' IDENTIFIED BY '@h@rMu#maginnd';
+GRANT ALL ON blogimaginarium.* TO '@h@rMu#maginnd';
+flush privileges;
+
+CREATE DATABASE glpi_db CHARACTER SET utf8;
+CREATE USER 'glpi_db'@'%' IDENTIFIED BY '@h@rglpi_db@nNd';
+GRANT ALL ON glpi_db.* TO 'glpi_db'@'%' IDENTIFIED BY '@h@rglpi_db@nNd';
+flush privileges;
+
+
+CREATE DATABASE otrs2 CHARACTER SET utf8;
+CREATE USER 'otrs2'@'%' IDENTIFIED BY '@OTRS2GruServiceUp';
+GRANT ALL ON otrs2.* TO 'otrs2'@'%' IDENTIFIED BY '@OTRS2GruServiceUp';
+flush privileges;
+
+
+
+CREATE DATABASE otrs2 CHARACTER SET utf8;
+GRANT ALL ON otrs2.* TO 'otrs2'@'%' IDENTIFIED BY '@OTRS2GruServiceUp';
+flush privileges;

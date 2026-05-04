@@ -1,0 +1,866 @@
+Asset Id;Name;IP Addresses;Modules;OS;Last Logged-In User;Last Inventory;Activity;NetBIOS Name;Sources;Tags
+26642838;SPRDAPLOGSGRU01.GRU.LOCAL;172.31.49.221;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 7.9;sysgru;16 May 2025 03:11AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20900152;sprdbdzabgru02;172.31.62.93,172.16.253.93;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;16 May 2025 07:48AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+182246107;sdqbdoragru02;172.31.52.109,10.1.1.138,172.31.52.107,fe80:0:0:0:250:56ff:fe9d:2c8a,169.254.189.226,172.31.52.110,fe80:0:0:0:250:56ff:fe9d:1602;VM,SCA,CSAM;Red Hat Enterprise Linux Server 6.5;root;15 May 2025 07:43PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+204123175;shombdcmsgru01.gru.local;172.31.52.33;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMBDCMSGRU01;;AG_GRU_Homologação
+23923043;SPRDAPDCLGRU02.gru.local;172.31.49.188,fe80:0:0:0:3542:71b4:340f:f6e7;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19377;gru.local\adm-rafael.prado;16 May 2025 11:20AM GMT-0300;Inventory Scan Complete;SPRDAPDCLGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+23923069;SPRDAPENVGRU02.gru.local;172.31.49.206,169.254.19.116;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;Administrator;16 May 2025 01:22PM GMT-0300;Inventory Scan Complete;SPRDAPENVGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+150728936;1950237-DC1.sd1950237.carpark;172.31.48.21;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\administrator;16 May 2025 02:58AM GMT-0300;Inventory Scan Complete;1950237-DC1;Cloud Agent;Cloud Agent, GRU-GERAL
+20701473;SHOMADGRU01.gru.local;172.31.52.24;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Standard 6.2.9200 64-bit N/A Build 9200 UBR 24523;gru.local\adm-thiago.pereira;08 Apr 2025 01:31AM GMT-0300;Manifest Downloaded;SHOMADGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193162140;nossohubh.gru.com.br;10.36.52.243;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+100034006;SPRDAPLGGRU01.gru.local;172.31.49.110;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7070;GRU\sistemas.gru;16 May 2025 02:36AM GMT-0300;Inventory Scan Complete;SPRDAPLGGRU01;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-LG
+193162147;10.36.52.190;10.36.52.190;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+134035420;SPRDAPRPGRU15;192.168.0.25;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 09:30PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-AMS
+151535913;SPRDCCTVGRU21.gru.local;10.36.60.101,169.254.156.113,10.36.61.101,10.36.57.115,10.36.57.114,10.36.57.101,10.36.57.113;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 4252;GRU\svc-sql-cluster;16 May 2025 08:21AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU21;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193162158;172.31.52.233;172.31.52.233;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193162157;10.36.52.142;10.36.52.142;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176502;172.31.52.42;172.31.52.42;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176501;shombdgru10.gru.local;10.36.52.249;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMBDGRU10;;AG_GRU_Homologação
+109924021;SPRDSIEM02;172.31.46.31,fe80:0:0:0:250:56ff:fe92:7484;VM,SCA,PM,CSAM;Debian Linux 11.11;root;16 May 2025 12:36AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+95849868;sprdapbigru01;fe80:0:0:0:569f:35ff:fe73:1136,10.1.1.129,fe80:0:0:0:569f:35ff:fe73:bbc,172.31.49.156;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;sysgru;15 May 2025 09:49PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-SAP
+193176505;172.31.52.121;172.31.52.121;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176504;10.36.52.106;10.36.52.106;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176509;172.31.52.17;172.31.52.17;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176514;10.36.52.64;10.36.52.64;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+23300385;SPRDAPATKGRU01.gru.local;172.31.49.9;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 21620;gru.local\adm-denis.lima;16 May 2025 03:48AM GMT-0300;Inventory Scan Complete;SPRDAPATKGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+56003349;SHOMBDCMSGRU01.gru.local;172.31.52.33;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\sistemas.gru;16 May 2025 02:54AM GMT-0300;Inventory Scan Complete;SHOMBDCMSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+111662816;SPRDAPRMAGRU03.GRU.LOCAL;172.31.50.142,fe80:0:0:0:250:56ff:fe9d:750d;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.1;root;16 May 2025 03:03AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+150753452;1950237-DC2.sd1950237.carpark;fe80:0:0:0:e921:3f84:2e45:4162,172.31.48.22;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\Administrator;16 May 2025 04:46AM GMT-0300;Inventory Scan Complete;1950237-DC2;Cloud Agent;Cloud Agent, GRU-GERAL
+117190318;GRU-TI-144TC44.gru.local;fe80:0:0:0:2914:a067:dbec:dad0,2804:14c:98:20de:b:f9bd:ea76:1020,2804:14c:98:20de:0:0:0:1ecc,2804:14c:98:20de:329d:4705:81f4:cd15,192.168.0.11;VM,SCA,PM,CSAM;Microsoft Windows 11 Pro 10.0.22631 64 bits N/A Build 22631 UBR 4112;GRU\thiago.pereira;16 May 2025 11:34AM GMT-0300;Inventory Scan Complete;GRU-TI-144TC44;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+105340447;SHOMRMAGRU01;10.36.52.18,fe80:0:0:0:250:56ff:fe8a:d40b;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;16 May 2025 04:21AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+26728909;SPRDAPSAPGRU01;192.168.0.19;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200;svc-rp;18 Jun 2024 03:49PM GMT-0300;Inventory Scan Complete;SPRDAPSAPGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+53338999;SPRDCCTVGRU02.gru.local;fe80:0:0:0:1bbc:da34:e882:b6af,10.36.61.46,10.36.60.46,fe80:0:0:0:b252:296:cdec:ee8d,10.36.57.47;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 5458;GRU\thiago.pereira;16 May 2025 05:13AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU02;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+187931497;SHOMAPBCBPGRU02.gru.local;172.31.52.150;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;GRU\sistemas.gru;16 May 2025 02:38AM GMT-0300;Inventory Scan Complete;SHOMAPBCBPGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24693029;SVEDI2-GRU.gru.local;172.31.50.81;VM,SCA,PM,CSAM;Microsoft Windows 7 Professional 6.1.7601 32-bit Service Pack 1 Build 7601;GRU\sistemas.gru;16 May 2025 07:49AM GMT-0300;Inventory Scan Complete;SVEDI2-GRU;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-TARIFAGRU
+20312402;SPRDAPCCGRU03.gru.local;172.31.49.14;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7606;Administrator;16 May 2025 04:47AM GMT-0300;Inventory Scan Complete;SPRDAPCCGRU03;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CCURE
+53353285;SPRDCCTVGRU28.gru.local;10.36.60.102,10.36.61.102,10.36.57.118,fe80:0:0:0:6920:9732:4410:8958,10.36.57.116,10.36.57.102,10.36.57.117;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 5458;GRU\thiago.pereira;16 May 2025 06:47AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU28;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193149934;sdevapbigru01.gru.local;172.31.52.101;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193149937;10.36.52.246;10.36.52.246;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193149947;172.31.52.84;172.31.52.84;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193149946;172.31.52.28;172.31.52.28;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+23447832;SPRDAPEGTGRU05.gru.local;172.31.49.64;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 24314;gru.local\svc-egate;16 May 2025 12:54AM GMT-0300;Inventory Scan Complete;SPRDAPEGTGRU05;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+101701234;SPRDAPINVGRU04.gru.local;172.31.57.57,fe80:0:0:0:1967:c628:c81a:9c8c;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 5066;GRU\thiago.pereira;16 May 2025 03:55AM GMT-0300;Inventory Scan Complete;SPRDAPINVGRU04;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193149949;10.36.52.153;10.36.52.153;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25317635;SUATBDORAGRU01;10.36.52.144;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;sysgru;16 May 2025 03:25AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193168129;uat-services.gru.com.br.gru.com.br;172.31.52.16;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+55978965;TEST-AMS-WEB01.gru.local;10.36.52.68;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\sistemas.gru;16 May 2025 02:33AM GMT-0300;Inventory Scan Complete;TEST-AMS-WEB01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193176324;10.36.52.115;10.36.52.115;VM,CSAM;VMware ESXi 6.5.0 build 13004031;'-;'-;Scanned;;;AG_GRU_Homologação
+204676276;10.36.52.82;10.36.52.82;VM,CSAM;Ubuntu/Linux;'-;'-;Scanned;;;AG_GRU_Homologação
+20255166;SPRDAPSAFGRU02.gru.local;fe80:0:0:0:71f8:71d7:1bb3:96f7,172.31.62.51,172.31.7.51;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 5501;GRU\marcus.batista;16 May 2025 04:19AM GMT-0300;Inventory Scan Complete;SPRDAPSAFGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+171092665;SHOMAPRIMAGRU01.gru.local;172.31.52.238;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3207;GRU\thiago.pereira;16 May 2025 03:31AM GMT-0300;Inventory Scan Complete;SHOMAPRIMAGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+65338217;SPRDSKPPCGRU15;172.31.48.37,fe80:0:0:0:27:6815:1908:4012;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 03:50AM GMT-0300;Inventory Scan Complete;1950237-115;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+193141531;shombdgru01.gru.local;10.36.52.12;VM,CSAM;Windows 2016;'-;'-;Scanned;SHOMBDGRU01;;AG_GRU_Homologação
+193141535;172.31.52.69;172.31.52.69;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+34929290;SPRDVCHSEGRU04;172.31.49.55;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6189;GRU\antonio.pacheco.t;16 May 2025 03:37AM GMT-0300;Inventory Scan Complete;SPRDVCHSEGRU04;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+180886102;shomapamsgru01.gru.local;172.31.52.38;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SHOMAPAMSGRU01;;AG_GRU_Homologação
+193141533;10.36.52.109;10.36.52.109;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193141532;172.31.52.195;172.31.52.195;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193178403;172.31.52.112;172.31.52.112;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+20701593;SHOMAPCMSGRU02.gru.local;fe80:0:0:0:baca:3aff:fe35:1a0f,172.31.52.59;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 09:32PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+129459988;SPRDAPETESGRU01.gru.local;172.31.50.121;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 3692;alpha;16 May 2025 05:41AM GMT-0300;Inventory Scan Complete;SPRDAPETESGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+203895940;shomfsqagru01.gru.local;10.36.52.103;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMFSQAGRU01;;AG_GRU_Homologação
+193141541;172.31.52.81;172.31.52.81;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+65260360;SPRDSKPPCGRU13;172.31.48.35,fe80:0:0:0:6cfe:df47:ad5d:37f3;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 07:49AM GMT-0300;Inventory Scan Complete;1950237-113;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+203895945;test-ams-apv01.gru.local;10.36.52.69;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;TEST-AMS-APV01;;AG_GRU_Homologação
+193166135;172.31.52.225;172.31.52.225;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193166133;10.36.52.49;10.36.52.49;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+23921108;SPRDAPDCLGRU01.gru.local;fe80:0:0:0:7060:7ef6:feec:a3f3,172.31.49.187;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19817;gru.local\adm-rafael.prado;16 May 2025 04:27AM GMT-0300;Inventory Scan Complete;SPRDAPDCLGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193166138;10.36.52.134;10.36.52.134;VM,CSAM;Ubuntu/Linux;'-;'-;Scanned;;;AG_GRU_Homologação
+19466643;SPRDSQLGRU17.gru.local;169.254.1.231,172.31.50.47,fe80:0:0:0:3401:4999:ba3c:61a8,172.31.50.40,10.1.2.50;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64 bits N/A Build 14393 UBR 5989;GRU\cleber.malaquias;16 May 2025 06:44AM GMT-0300;Inventory Scan Complete;SPRDSQLGRU17;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174335;172.31.52.2;172.31.52.2;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174333;10.36.52.20;10.36.52.20;VM,CSAM;Linux 2.6;'-;'-;Scanned;;;AG_GRU_Homologação
+193166140;172.31.52.204;172.31.52.204;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174338;10.36.52.230;10.36.52.230;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174336;172.31.52.252;172.31.52.252;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174343;10.36.52.154;10.36.52.154;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174347;172.31.52.220;172.31.52.220;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24682932;SPRDAPNAPGRU01.gru.local;172.31.50.26;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601;administrator;16 May 2025 03:59AM GMT-0300;Inventory Scan Complete;SPRDAPNAPGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+65301288;SPRDSKPPCGRU14;172.31.48.36,fe80:0:0:0:65e1:c946:12a8:ae45;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 02:20AM GMT-0300;Inventory Scan Complete;1950237-114;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+193166159;172.31.52.226;172.31.52.226;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+55972763;TEST-AMS-APV01.gru.local;10.36.52.69;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6893;Administrator;13 May 2025 02:26AM GMT-0300;Inventory Scan Complete;TEST-AMS-APV01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174350;172.31.52.116;172.31.52.116;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174348;172.31.52.251;172.31.52.251;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19251696;SPRDCCTVGRU25.gru.local;10.36.60.105,10.36.57.127,fe80:0:0:0:74a8:515:6f8f:a296,10.36.57.126,10.36.57.105,10.36.61.105,fe80:0:0:0:2132:883a:ce9b:ec63;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4645;GRU\svc-sql-cluster;16 May 2025 04:59AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU25;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+20214241;SFTP1-GRU.gru.local;192.168.0.34;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\washington.silva;15 May 2025 10:28PM GMT-0300;Inventory Scan Complete;SFTP1-GRU;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+65268538;SPRDSKPPCGRU11;172.31.48.33,fe80:0:0:0:30d7:cb5c:cd37:6466;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 06:02AM GMT-0300;Inventory Scan Complete;1950237-111;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+142172320;SPRDMYSQLGRU02;172.16.253.90;VM,PM,CSAM;Red Hat Enterprise Linux Server 7.9;sysgru;15 May 2025 10:21PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24379798;SPRDAPSHPGRU01.gru.local;172.31.49.230;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 21620;gru.local\adm-luiz.moura.t;26 Sep 2024 05:03PM GMT-0300;Agent Downloaded;SPRDAPSHPGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+21209515;SDQOEMCWGRU01.gru.local;172.31.52.124,fe80:0:0:0:8d47:94a7:ab32:2d33;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 21620;SDQOEMCWGRU01\Administrator;26 Sep 2024 05:29PM GMT-0300;Inventory Scan Complete;SDQOEMCWGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+118288358;shombdoragru01.gru.local;fe80:0:0:0:baca:3aff:fe33:8f37,10.1.1.9,172.31.52.67,fe80:0:0:0:baca:3aff:fe33:8f3a,172.31.52.66,172.31.52.60,172.31.52.63,169.254.27.150,172.31.52.65,172.31.52.64;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.5;sysgru;16 May 2025 01:54PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+118300643;sprdapzbpxgru02;172.16.1.99,172.16.253.91;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;sysgru;15 May 2025 08:54PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193147763;shomotrsgru01.gru.local;10.36.52.127;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147762;10.36.52.47;10.36.52.47;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+203062510;SPRDAPCMSGRU10.gru.local;172.31.50.16;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3453;Administrator;16 May 2025 05:21AM GMT-0300;Inventory Scan Complete;SPRDAPCMSGRU10;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+33936112;SPRDVCBKPGRU01.gru.local;172.31.50.149,172.31.62.149,fe80:0:0:0:8425:999a:e805:acfe;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7136;Administrator;16 May 2025 02:13AM GMT-0300;Inventory Scan Complete;SPRDVCBKPGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193147766;172.31.52.241;172.31.52.241;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147764;10.36.52.228;10.36.52.228;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147769;ssacad-hm.gru.com.br;10.36.52.90;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193122946;uat-portal.gru.com.br;10.36.52.143;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193104512;172.31.52.77;172.31.52.77;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+44753836;SPRDVCWEBGRU02.gru.local;fe80:0:0:0:e210:8f9a:d484:bd87,172.31.49.148;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 5329;Administrator;16 May 2025 07:01AM GMT-0300;Inventory Scan Complete;SPRDVCWEBGRU02;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+56033873;TEST-AMS-SQL1.gru.local;10.36.52.70;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\svc-sql-cluster;16 May 2025 07:10AM GMT-0300;Inventory Scan Complete;TEST-AMS-SQL1;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193104517;172.31.52.85;172.31.52.85;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+184097777;SPRDAPBCBPGRU01.gru.local;172.31.49.173;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;Administrator;16 May 2025 06:28AM GMT-0300;Inventory Scan Complete;SPRDAPBCBPGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193104522;172.31.52.49;172.31.52.49;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25763968;SPRDAPLGGRU02.gru.local;172.31.49.115;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 5356;GRU\sistemas.gru;16 May 2025 03:53AM GMT-0300;Inventory Scan Complete;SPRDAPLGGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+55935580;SPRDAPDGFGRU02.gru.local;192.168.0.46;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64-bit N/A Build 9600 UBR 21620;gru.local\adm-washington.silva;16 May 2025 03:13AM GMT-0300;Inventory Scan Complete;SPRDAPDGFGRU02;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193104520;172.31.52.191;172.31.52.191;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193104521;172.31.52.132;172.31.52.132;VM,CSAM;Linux 2.6;'-;'-;Scanned;;;AG_GRU_Homologação
+193208975;shomaptecagru01.gru.local;172.31.52.13;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193122958;shomadgru04.gru.local;10.36.52.192;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMADGRU04;;AG_GRU_Homologação
+193104525;10.36.52.23;10.36.52.23;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193122957;172.31.52.133;172.31.52.133;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193208971;172.31.52.169;172.31.52.169;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+23726203;SPRDAPSCOGRU01.gru.local;172.31.49.86;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;GRU\rafael.prado;15 May 2025 10:08PM GMT-0300;Inventory Scan Complete;SPRDAPSCOGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+97619136;GRU-TI-9DBKDQ2.gru.local;192.168.200.171,fe80:0:0:0:2027:6517:7d84:e033;VM,SCA,PM,CSAM;Microsoft Windows 10 Pro 10.0.19045 64 bits N/A Build 19045 UBR 4291;GRU\henrique.gomes;16 May 2025 12:19PM GMT-0300;Inventory Scan Complete;GRU-TI-9DBKDQ2;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+193104533;172.31.52.129;172.31.52.129;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+65268475;SPRDSKPPCGRU03;172.31.48.25,fe80:0:0:0:5d0c:a4b1:c915:687f;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 07:22AM GMT-0300;Inventory Scan Complete;1950237-103;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+21125213;SPRDCCTVGRU05.gru.local;10.36.57.55,10.36.61.52,10.36.60.52;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4974;GRU\svc-sql-cluster;16 May 2025 04:42AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU05;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+135074095;SPRDAPESBGRU12.gru.local;172.31.50.230;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 2762;alpha;16 May 2025 05:12AM GMT-0300;Inventory Scan Complete;SPRDAPESBGRU12;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+15552974;GRU-TI-1QBJSY2.gru.local;172.26.176.1,fe80:0:0:0:c43b:edf6:3dbf:4432,192.168.72.1,192.168.88.1,fe80:0:0:0:b5f6:b64c:f498:3ff8,fe80:0:0:0:3d81:180d:c586:f450,fe80:0:0:0:d8e9:d045:fb34:6546,192.168.56.1;VM,SCA,PM,CSAM;Microsoft Windows 10 Pro 10.0.19045 64 bits N/A Build 19045 UBR 1949;GRU\marcus.batista;16 May 2025 11:37AM GMT-0300;Inventory Scan Complete;GRU-TI-1QBJSY2;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+193204903;10.36.52.159;10.36.52.159;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24674396;SHOMAPITLGRU01.gru.local;172.31.50.15;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;administrator;14 May 2025 09:54PM GMT-0300;Manifest Downloaded;SHOMAPITLGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193204904;10.36.52.83;10.36.52.83;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+145357190;SPRDAPLSTGRU01;172.31.150.100,fe80:0:0:0:f4c4:b32a:fd51:1b77,172.31.152.100,fe80:0:0:0:9495:a13c:2a4c:cad6;VM,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64 bits N/A Build 9600 UBR 21620;Administrador;16 May 2025 04:20AM GMT-0300;Inventory Scan Complete;SRVALCDLGRULS;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-RADIOTETRA
+193204907;10.36.52.207;10.36.52.207;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+111644566;sdqbdoragru01;172.31.52.108,fe80:0:0:0:250:56ff:fe9d:7dbf,10.1.1.137,fe80:0:0:0:250:56ff:fe9d:2b48,172.31.52.106,169.254.52.218,172.31.52.111,172.31.52.112;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.5;root;16 May 2025 08:02AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193204917;shomapmmetgru01.gru.local;10.36.52.110;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+20279296;SPRDAPRADGRU01.gru.local;172.31.50.126;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7876;GRU\fulvio.costa;16 May 2025 02:53AM GMT-0300;Inventory Scan Complete;SPRDAPRADGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193137338;172.31.52.227;172.31.52.227;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193204926;10.36.52.219;10.36.52.219;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193094334;172.31.52.127;172.31.52.127;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193137341;shomaplisagru02.gru.local;10.36.52.44;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193196733;10.36.52.191;10.36.52.191;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193204922;172.31.52.190;172.31.52.190;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193204923;10.36.52.101;10.36.52.101;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193137347;172.31.52.202;172.31.52.202;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193094339;172.31.52.255;172.31.52.255;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193196738;172.31.52.179;172.31.52.179;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193196743;172.31.52.160;172.31.52.160;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193094340;10.36.52.200;10.36.52.200;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193137349;172.31.52.210;172.31.52.210;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193196741;10.36.52.38;10.36.52.38;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+118300234;shombdoragru02.gru.local;fe80:0:0:0:baca:3aff:fe35:1a77,172.31.52.61,10.1.1.10,fe80:0:0:0:baca:3aff:fe35:1a7a;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;sysgru;15 May 2025 08:06PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+108920629;sprdapgrfgru01;172.31.50.165,fe80:0:0:0:250:56ff:feb6:a15a;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;root;15 May 2025 10:42PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193094347;10.36.52.181;10.36.52.181;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193137353;172.31.52.134;172.31.52.134;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193094345;172.31.52.198;172.31.52.198;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193137359;10.36.52.14;10.36.52.14;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193196751;172.31.52.140;172.31.52.140;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193137358;172.31.52.236;172.31.52.236;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193094349;10.36.52.146;10.36.52.146;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193094353;172.31.52.211;172.31.52.211;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193196752;10.36.52.13;10.36.52.13;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193094358;10.36.52.233;10.36.52.233;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+16157091;SHOMAPPTGRU05.gru.local;10.36.52.244;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 22104;GRU\svc-hvmware;16 May 2025 12:37AM GMT-0300;Inventory Scan Complete;SHOMAPPTGRU05;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+186008142;SPRDAPBCBPGRU02;172.31.49.160;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;alpha;16 May 2025 07:16AM GMT-0300;Inventory Scan Complete;SPRDAPBCBPGRU02;Cloud Agent;Cloud Agent, GRU-GERAL
+23896117;SPRDAPOPCGRUB.gru.local;169.254.74.7,172.31.49.96,fe80:0:0:0:5ca3:4715:59c5:4a07;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\renan.santos.t;16 May 2025 05:04AM GMT-0300;Inventory Scan Complete;SPRDAPOPCGRUB;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193196762;shomapvonegru01.gru.local;10.36.52.160;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+114356106;SHOMAPCMSGRU11;192.168.122.1,10.36.52.182;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;adm-rafael.prado;15 May 2025 10:04PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193196760;amsclient.gru.com.br;10.36.52.16;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193178335;172.31.52.229;172.31.52.229;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+180902806;172.31.52.109;172.31.52.109;VM,CSAM;Ubuntu / Tiny Core Linux / Linux 2.6.x / IBM ASM / HP StoreOnce / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+27697344;sprdapecgru01;fe80:0:0:0:569f:35ff:fe73:da3,172.31.49.152,fe80:0:0:0:569f:35ff:fe73:b7b,10.1.1.73;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;root;16 May 2025 03:53AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+193178341;172.31.52.163;172.31.52.163;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168107;10.36.52.162;10.36.52.162;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168106;172.31.52.215;172.31.52.215;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168105;172.31.52.72;172.31.52.72;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168104;172.31.52.144;172.31.52.144;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+180902820;172.31.52.32;172.31.52.32;VM,CSAM;EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+193178348;shombdgru03.gru.local;10.36.52.238;VM,CSAM;Windows 2016;'-;'-;Scanned;SHOMBDGRU03;;AG_GRU_Homologação
+193168115;172.31.52.152;172.31.52.152;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176307;10.36.52.0;10.36.52.0;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193176306;172.31.52.217;172.31.52.217;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176305;shomapesbgru03.gru.local;10.36.52.236;VM,CSAM;Windows 2016;'-;'-;Scanned;SHOMAPESBGRU03;;AG_GRU_Homologação
+193176304;172.31.52.240;172.31.52.240;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168119;172.31.52.10;172.31.52.10;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+51817056;SPRDAPCONVGRU01.gru.local;172.31.6.55,172.16.253.66,fe80:0:0:0:b4dd:cd66:d0f7:d781,172.31.50.101;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7336;GRU\wanilson.santos;16 May 2025 05:05AM GMT-0300;Inventory Scan Complete;SPRDAPCONVGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193168117;10.36.52.33;10.36.52.33;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176309;10.36.52.3;10.36.52.3;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168116;sqasapbwgru01.gru.local;172.31.52.102;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176308;10.36.52.173;10.36.52.173;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193168121;shomsqlgru09.gru.local;10.36.52.209;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMSQLGRU09;;AG_GRU_Homologação
+193168124;172.31.52.164;172.31.52.164;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+173536209;SHOMAPCMSGRU05.gru.local;172.31.52.222;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3207;GRU\sistemas.gru;16 May 2025 02:42AM GMT-0300;Inventory Scan Complete;SHOMAPCMSGRU05;Cloud Agent;Cloud Agent, GRU-GERAL
+109584129;sqasapecgru01;172.31.52.105,fe80:0:0:0:250:56ff:fe9d:9b95;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;sysgru;15 May 2025 10:25PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193171977;shomadgru03.gru.local;10.36.52.53;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMADGRU03;;AG_GRU_Homologação
+28962859;SPRDAPCOVGRU02.gru.local;169.254.1.242,fe80:0:0:0:f9bf:3ce6:14b8:3ec0,172.31.49.223,10.1.1.20;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 4974;GRU\romulo.soares.t;16 May 2025 03:04AM GMT-0300;Inventory Scan Complete;SPRDAPCOVGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+28962863;SPRDAPCOVGRU01.gru.local;169.254.2.93,172.31.49.225,fe80:0:0:0:dc92:acf1:6ebb:b0a,172.31.49.224,10.1.1.21;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 4974;GRU\luiz.moura.t;16 May 2025 04:41AM GMT-0300;Inventory Scan Complete;SPRDAPCOVGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+65299069;SPRDSKPPCGRU09;172.31.48.31,fe80:0:0:0:c00e:de1f:42d:3e21;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 06:25AM GMT-0300;Inventory Scan Complete;1950237-109;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+25364529;SPRDAPCMSGRU07;172.31.49.99,172.31.49.126;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.7;root;16 May 2025 04:10AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20813962;SPRDAPCMSGRU04.gru.local;fe80:0:0:0:baca:3aff:fe35:1a1c,172.31.49.89;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;16 May 2025 04:04AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+24383683;SPRDAPFSCCGRU01.gru.local;fe80:0:0:0:5486:4109:1eee:d243,172.31.49.237;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24533;gru.local\sistemas.gru;16 May 2025 03:53AM GMT-0300;Inventory Scan Complete;SPRDAPFSCCGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+16159050;SHOMAPVPXGRU02.gru.local;10.36.52.174;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\svc-hvmware;16 May 2025 03:36AM GMT-0300;Inventory Scan Complete;SHOMAPVPXGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193157703;172.31.52.54;172.31.52.54;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193157701;172.31.52.20;172.31.52.20;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+94897251;SPRDAPBCCGRU01.gru.local;172.31.49.135;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3770;GRU\cleber.malaquias;16 May 2025 02:49AM GMT-0300;Inventory Scan Complete;SPRDAPBCCGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-TARIFAGRU
+122107532;SPRDAPESBGRU08.gru.local;172.31.62.99,172.31.50.99,172.31.50.86,172.31.50.96,172.31.50.98;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7336;GRU\wbiadmin;16 May 2025 07:20AM GMT-0300;Inventory Scan Complete;SPRDAPESBGRU08;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-BROKER
+24389797;SPRDAPOCRGRU01.gru.local;172.31.49.240;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601;GRU\sistemas.gru;16 May 2025 05:19AM GMT-0300;Inventory Scan Complete;SPRDAPOCRGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193157717;172.31.52.178;172.31.52.178;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+26093657;SPRDAPBHSGRU01.gru.local;172.31.50.232;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Standard 6.2.9200 64-bit N/A Build 9200;gru.local\adm-washington.silva;09 Apr 2025 04:06AM GMT-0300;Manifest Downloaded;SPRDAPBHSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+65237556;SPRDSKPPCGRU02;fe80:0:0:0:e0c4:d9ae:2381:1746,172.31.48.24;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 02:04AM GMT-0300;Inventory Scan Complete;1950237-102;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+24674465;SPRDAPBMSGRU02.gru.local;fe80:0:0:0:4d45:1a71:d7c4:b025,172.31.49.253;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 6252;GRU\sistemas.gru;16 May 2025 02:56AM GMT-0300;Inventory Scan Complete;SPRDAPBMSGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+17739989;shomapihsgru01.gru.local;192.168.122.1,10.36.52.48;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;16 May 2025 09:10AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24504469;SPRDSHPINTGRU05.gru.local;172.31.49.245;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 20045;gru.local\sistemas.gru;26 Sep 2024 05:28PM GMT-0300;Manifest Downloaded;SPRDSHPINTGRU05;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25768041;SPRDAPLGGRU04.gru.local;172.31.49.118;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 8066;GRU\sistemas.gru;16 May 2025 10:21AM GMT-0300;Inventory Scan Complete;SPRDAPLGGRU04;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193208933;shombdgru05.gru.local;10.36.52.239;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMBDGRU05;;AG_GRU_Homologação
+103415755;SPRDAPNFSGRU01;172.31.49.68,fe80:0:0:0:250:56ff:fea3:3391;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 09:26PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+198337083;SPRDAPCMSM01;fe80:0:0:0:250:56ff:fea3:9198,172.31.49.184;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;16 May 2025 12:58AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-CMS
+90449039;SHOMADGRU03.gru.local;10.36.52.53;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\thiago.pereira;16 May 2025 06:10AM GMT-0300;Inventory Scan Complete;SHOMADGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193208943;172.31.52.187;172.31.52.187;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193208936;172.31.52.7;172.31.52.7;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24905868;SPRDAPMELGRU01.gru.local;172.31.50.133;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3165;GRU\eduardo.silva2.t;16 May 2025 08:03AM GMT-0300;Inventory Scan Complete;SPRDAPMELGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+85888236;SPRDZBGRU03;fe80:0:0:0:250:56ff:fe92:9771,172.16.253.70;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.2;root;15 May 2025 09:53PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193208950;10.36.52.32;10.36.52.32;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+167698440;SPRDAPCMSGRU06;172.31.49.98,192.168.122.1;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;15 May 2025 11:01PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL
+193104506;172.31.52.80;172.31.52.80;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193122938;10.36.52.35;10.36.52.35;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193104507;10.36.52.212;10.36.52.212;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193208957;10.36.52.131;10.36.52.131;VM,CSAM;NetScaler;'-;'-;Scanned;;;AG_GRU_Homologação
+193122942;10.36.52.63;10.36.52.63;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193122940;172.31.52.209;172.31.52.209;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193208954;10.36.52.247;10.36.52.247;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24679288;SPRDAPMDSGRU01.gru.local;172.31.50.14;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 2565;GRU\sistemas.gru;15 May 2025 11:11PM GMT-0300;Inventory Scan Complete;SPRDAPMDSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+23915374;SPRDAPINTGRU01.gru.local;172.31.49.114;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\sistemas.gru;23 Nov 2024 06:52PM GMT-0300;Inventory Scan Complete;SPRDAPINTGRU01;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-BROKER
+29236156;SPRDIRGRU01.gru.local;192.168.0.39;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 8066;Administrator;16 May 2025 11:12AM GMT-0300;Inventory Scan Complete;SPRDIRGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20880186;shomapamsgru02.gru.local;30.30.30.2,172.31.52.39,172.31.52.41,169.254.2.69;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 23964;administrator;16 May 2025 05:25AM GMT-0300;Inventory Scan Complete;SHOMAPAMSGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+113128634;shomapglpigru02;10.36.52.118,fe80:0:0:0:250:56ff:fe8a:7e2b;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;16 May 2025 01:30PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24576875;SHOMWBBENGRU01.gru.local;10.36.52.74;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\svc-hvmware;16 May 2025 04:44AM GMT-0300;Inventory Scan Complete;SHOMWBBENGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193182110;10.36.52.112;10.36.52.112;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20304683;SPRDAPDHCPGRU02.gru.local;172.31.49.122,fe80:0:0:0:952f:2650:6f21:c86d;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 21620;gru.local\adm-thiago.pereira;15 May 2025 10:18PM GMT-0300;Inventory Scan Complete;SPRDAPDHCPGRU02;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193182109;10.36.52.77;10.36.52.77;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+80230120;shomdbdotrsgru02;fe80:0:0:0:250:56ff:fe8a:a5a7,10.36.52.126;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;sysgru;15 May 2025 09:25PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+96348056;sprdapecgru03;fe80:0:0:0:569f:35ff:fe73:b95,172.31.49.154;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;root;15 May 2025 09:47PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+193182116;172.31.52.44;172.31.52.44;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+29240208;SPRDAPIHSGRU02;192.168.122.1,192.168.0.41;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.3;admin;15 May 2025 08:40PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-BROKER
+193173936;shomapibgru01.gru.local;10.36.52.10;VM,CSAM;Windows 7 Service Pack 1;'-;'-;Scanned;SHOMAPIBGRU01;;AG_GRU_Homologação
+109900985;SPRDSIEM01;172.31.46.30,fe80:0:0:0:250:56ff:feb6:3db5;VM,SCA,PM,CSAM;Debian Linux 11.11;root;16 May 2025 02:53AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193173942;10.36.52.27;10.36.52.27;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173941;10.36.52.223;10.36.52.223;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173940;172.31.52.199;172.31.52.199;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+65298904;SPRDSKPPCGRU16;fe80:0:0:0:189c:6a57:b221:37a9,172.31.48.38;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 03:26AM GMT-0300;Inventory Scan Complete;1950237-116;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+190603618;SPRDBDHSQLGRU14.gru.local;172.31.62.104,172.31.49.104,fe80:0:0:0:5bd8:e1e3:e251:e66b,fe80:0:0:0:f0bb:b817:8cb7:11e5;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;Administrator;16 May 2025 03:05AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU14;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+193173949;172.31.52.246;172.31.52.246;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+112360589;SPRDAPDIPGRU01;fe80:0:0:0:250:56ff:fea3:b178,192.168.40.136;VM,SCA,PM,CSAM;Oracle Enterprise Linux 9.4;root;15 May 2025 08:37PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193171906;10.36.52.189;10.36.52.189;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173953;10.36.52.113;10.36.52.113;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173952;10.36.52.15;10.36.52.15;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173959;172.31.52.22;172.31.52.22;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193171909;172.31.52.93;172.31.52.93;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173963;172.31.52.143;172.31.52.143;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193173962;172.31.52.186;172.31.52.186;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193171913;172.31.52.181;172.31.52.181;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193171912;10.36.52.26;10.36.52.26;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193171918;10.36.52.88;10.36.52.88;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193171917;shomapcmsgru01.gru.local;172.31.52.62;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193171922;shomapaogru02.gru.local;10.36.52.66;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20345701;SPRDAPRPGRU12;192.168.0.60,fe80:0:0:0:250:56ff:fea3:ff9;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;root;16 May 2025 04:15AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CMS
+193171927;10.36.52.206;10.36.52.206;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25643997;SPRDAPGEDGRU04.gru.local;172.31.50.226;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\svc-mgmt;15 May 2025 11:44PM GMT-0300;Inventory Scan Complete;SPRDAPGEDGRU04;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+65274303;SPRDSKPPCGRU06;172.31.48.28,fe80:0:0:0:d92f:997b:5b99:a1da;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 04:32AM GMT-0300;Inventory Scan Complete;1950237-106;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+129484268;SPRDAPIAMGRU06.gru.local;172.31.50.206;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6351;GRU\sistemas.gru;16 May 2025 06:30AM GMT-0300;Inventory Scan Complete;SPRDAPIAMGRU06;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+193120734;vipbcbpuat.gru.local;172.31.52.57;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193120732;10.36.52.186;10.36.52.186;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193120733;10.36.52.135;10.36.52.135;VM,CSAM;Ubuntu/Linux;'-;'-;Scanned;;;AG_GRU_Homologação
+38209575;SHOMSQLGRU08.gru.local;fe80:0:0:0:1a54:267:4f3e:dd16,10.36.60.28,8.8.8.1,10.36.52.208,10.36.52.133,10.36.52.199,fe80:0:0:0:111a:5e1a:f835:7b3b,fe80:0:0:0:b45c:5389:f15a:18ba,fe80:0:0:0:b411:e0b8:fb60:285c,10.36.52.210,169.254.1.231;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7136;Administrator;16 May 2025 04:19AM GMT-0300;Inventory Scan Complete;SHOMSQLGRU08;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193204710;172.31.52.162;172.31.52.162;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193120737;172.31.52.21;172.31.52.21;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+97273768;SPRDSQLGRU24.gru.local;169.254.1.20,10.1.2.61,fe80:0:0:0:3164:55d1:bd0d:c139,172.31.50.128,172.31.50.137,172.31.50.130,172.31.50.139,172.31.50.138;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 5830;GRU\eduardo.silva.t;16 May 2025 03:25AM GMT-0300;Inventory Scan Complete;SPRDSQLGRU24;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CMS
+193120743;10.36.52.96;10.36.52.96;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193120740;10.36.52.76;10.36.52.76;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193204706;10.36.52.195;10.36.52.195;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193120741;sdevapbwgru01.gru.local;172.31.52.100;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193120746;10.36.52.71;10.36.52.71;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+20831063;SPRDAPCCPRGRU01;192.168.122.1,172.31.49.137,fe80:0:0:0:250:56ff:fe92:1e50;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.8;root;15 May 2025 09:52PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-TARIFAGRU
+26608637;SPRDAPHDMGRU01.gru.local;192.168.0.18;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Standard 6.2.9200 64-bit N/A Build 9200 UBR 22858;gru.local\sistemas.gru;06 Apr 2025 05:08PM GMT-0300;Inventory Scan Complete;SPRDAPHDMGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+29236179;SPRDAPIHSGRU01;192.168.122.1,192.168.0.40;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.3;admin;16 May 2025 04:15AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-BROKER
+193120751;172.31.52.219;172.31.52.219;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193204713;10.36.52.99;10.36.52.99;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193120748;10.36.52.4;10.36.52.4;VM,CSAM;VMware ESXi 6.5.0 build 13004031;'-;'-;Scanned;;;AG_GRU_Homologação
+19239754;SPRDCCTVGRU01.gru.local;10.36.60.64,10.36.61.64,fe80:0:0:0:8fa5:767f:ae28:7ed4,10.36.57.57,169.254.182.208,10.36.57.58,10.36.57.59;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3650;GRU\svc-sql-cluster;16 May 2025 09:10AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193120749;10.36.52.89;10.36.52.89;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+65274261;SPRDSKPPCGRU01;fe80:0:0:0:61ea:cf06:fa93:d72d,172.31.48.23;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7969;SD1950237\1950237_parkuser;16 May 2025 05:49AM GMT-0300;Inventory Scan Complete;1950237-101;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+193204720;172.31.52.157;172.31.52.157;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+101823588;SPRDAPJPGRU05.gru.local;172.31.131.69,fe80:0:0:0:e80a:ee89:970c:bda7;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6054;GRU\svc-mgmt;16 May 2025 07:06AM GMT-0300;Inventory Scan Complete;SPRDAPJPGRU05;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193204721;pvn-hom.gru.com.br;10.36.52.203;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193204723;172.31.52.76;172.31.52.76;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19239772;SPRDCCTVGRU10.gru.local;10.36.61.53,10.36.57.56,10.36.60.53;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64-bit N/A Build 9600 UBR 19296;gru.local\adm-thiago.pereira;16 May 2025 11:46AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU10;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+114357420;sprdapecgru06;fe80:0:0:0:569f:35ff:fe71:d955,172.31.49.167;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;16 May 2025 01:50PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+193204729;email-uat.gru.com.br;10.36.52.97;VM,CSAM;NetScaler;'-;'-;Scanned;;;AG_GRU_Homologação
+23331812;SPRDAPRPAGRU02.gru.local;fe80:0:0:0:2568:ad26:4564:f61f,172.31.49.20;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 3866;GRU\sistemas.gru;16 May 2025 03:40AM GMT-0300;Inventory Scan Complete;SPRDAPRPAGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25637635;SPRDAPDATGRU01.gru.local;172.31.50.221;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\sistemas.gru;16 May 2025 07:40AM GMT-0300;Inventory Scan Complete;SPRDAPDATGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+26102538;SIAS1-GRU.gru.local;172.31.50.248;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601;gru.local\sistemas.gru;30 Dec 2024 12:03AM GMT-0300;VM Manifest Downloaded;SIAS1-GRU;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+168949909;SHOMADGRU02.gru.local;172.31.52.25;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 3692;GRU\thiago.pereira;16 May 2025 09:03AM GMT-0300;Inventory Scan Complete;SHOMADGRU02;Cloud Agent;Cloud Agent, GRU-GERAL
+180879438;shomapptcagru01.gru.local;172.31.52.26;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SHOMAPPTCAGRU01;;AG_GRU_Homologação
+198308164;SPRDAPCMSP02;fe80:0:0:0:250:56ff:fea3:ba97,172.31.49.182;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;16 May 2025 02:07AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-CMS
+193212700;shomapbcbpgru02.gru.local;172.31.52.150;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPBCBPGRU02;;AG_GRU_Homologação
+193212709;10.36.52.177;10.36.52.177;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+16099926;SHOMAPBENGRU01.gru.local;10.36.52.72;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 03:02AM GMT-0300;Inventory Scan Complete;SHOMAPBENGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212706;172.31.52.249;172.31.52.249;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+17601446;SHOMAPIAMGRU02.gru.local;10.36.52.8;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 02:37AM GMT-0300;Inventory Scan Complete;SHOMAPIAMGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+96870252;sprdappigru01;fe80:0:0:0:569f:35ff:fe73:107f,fe80:0:0:0:569f:35ff:fe73:baf,172.31.49.155,10.1.1.89;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;sysgru;16 May 2025 04:07AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_1-Insignificante, GRU-GERAL, GRU_CAT_ACN-SAP
+36059277;SHOMAPAMSWGRU01.gru.local;fe80:0:0:0:fd1c:ce7d:a7bb:4486,192.168.1.36,172.31.52.52,fe80:0:0:0:754f:bf21:dd41:205d;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 20174;gru.local\adm-paulo.costa.t;16 May 2025 01:03AM GMT-0300;Inventory Scan Complete;SHOMAPAMSWGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25346862;sprdotrsgru01;172.31.49.49,fe80:0:0:0:250:56ff:fea3:520c;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;root;16 May 2025 03:13AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193093932;10.36.52.255;10.36.52.255;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212715;10.36.52.174;10.36.52.174;VM,CSAM;Windows 10;'-;'-;Scanned;;;AG_GRU_Homologação
+193093937;172.31.52.175;172.31.52.175;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212720;10.36.52.152;10.36.52.152;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24679373;SPRDAZADGRU01.gru.local;172.31.50.29;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7606;GRU\sistemas.gru;16 May 2025 03:17AM GMT-0300;Inventory Scan Complete;SPRDAZADGRU01;Cloud Agent;Cloud Agent, GRU_ACN_1-Insignificante, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193093940;172.31.52.154;172.31.52.154;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+204549767;SHOMAPCUPSGRU01;fe80:0:0:0:250:56ff:feb6:3130,172.31.52.132;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 08:17PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193093947;172.31.52.168;172.31.52.168;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193093944;10.36.52.2;10.36.52.2;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193093945;sbdt1-gru.gru.local;172.31.52.47;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+151139262;SSERV1-GRU.gru.local;172.31.50.89;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24356;gru.local\sistemas.gru;16 May 2025 03:09AM GMT-0300;Inventory Scan Complete;SSERV1-GRU;Cloud Agent;Cloud Agent, GRU-GERAL
+193212729;sprdaptesgru02;10.36.52.75;VM,CSAM;Windows 2012 R2 Datacenter;'-;'-;Scanned;SPRDAPTESGRU02;;AG_GRU_Homologação
+65261917;SPRDSKDAUGRU02;fe80:0:0:0:441a:118d:ea3e:aec4,192.168.1.109;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 06:32AM GMT-0300;Inventory Scan Complete;1950237-01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+56154521;SHOMWBCMSGRU01;fe80:0:0:0:c16:6dff:fe33:3a01,10.88.0.1,fe80:0:0:0:901f:64ff:fef3:ec44,fe80:0:0:0:250:56ff:feb6:da65,192.168.122.1,172.31.52.32;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;16 May 2025 07:30AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193093958;172.31.52.248;172.31.52.248;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+109900874;SPRDVCCHOGRU01;172.17.0.1,172.18.0.1,fe80:0:0:0:80e9:9fff:fe38:226,fe80:0:0:0:1866:86ff:fe43:a127,fe80:0:0:0:42:17ff:fe43:c410,fe80:0:0:0:10ca:afff:fe37:a21d,fe80:0:0:0:250:56ff:fe92:9841,172.31.6.25;VM,SCA,PM,CSAM;SUSE Linux Enterprise Server 12 SP5;root;16 May 2025 01:40AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193177935;shomapiamgru01.gru.local;10.36.52.7;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+27247441;SPRDAPDGFGRU01.gru.local;192.168.0.43,10.36.60.230,10.36.60.231;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64 bits N/A Build 9600 UBR 20778;gru.local\sistemas.gru;01 Mar 2025 02:28AM GMT-0300;Inventory Scan Complete;SPRDAPDGFGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193177933;10.36.52.149;10.36.52.149;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177937;172.31.52.161;172.31.52.161;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+26092374;SPRDAUTGRU01.gru.local;172.31.34.28,172.31.50.238,fe80:0:0:0:4057:c7a9:9153:7fca;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU.LOCAL\eduardo.osilva.t;01 Mar 2025 08:59PM GMT-0300;Inventory Scan Complete;SPRDAUTGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193177946;172.31.52.165;172.31.52.165;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+21506965;SPRDTSQGRU03.gru.local;fe80:0:0:0:e80b:fb84:fd04:a127,172.31.50.185;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 1850;Administrator;16 May 2025 07:27AM GMT-0300;Inventory Scan Complete;SPRDTSQGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193177949;10.36.52.24;10.36.52.24;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+16099882;SHOMADFSGRU01.gru.local;10.36.52.165;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7969;Administrator;16 May 2025 05:41AM GMT-0300;Inventory Scan Complete;SHOMADFSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+204029644;10.36.52.117;10.36.52.117;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+19463119;SPRDSQLGRU02.gru.local;172.31.50.228,172.31.50.229,172.31.50.4,172.31.50.243,172.31.50.147,172.31.50.71,172.31.50.236,172.31.50.12,1.1.1.2,172.31.50.237;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;gru.local\svc-sql-cluster;23 Apr 2025 06:24PM GMT-0300;Inventory Scan Complete;SPRDSQLGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+22375353;SHOMAPAMSGRU01.gru.local;30.30.30.1,172.31.52.38,172.31.52.40,169.254.1.18;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 23964;administrator;16 May 2025 04:26AM GMT-0300;Inventory Scan Complete;SHOMAPAMSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+29236049;sprdaprpgru09;fe80:0:0:0:250:56ff:fe92:7faf,192.168.0.33,fe80:0:0:0:0:0:0:1,fe80:0:0:0:5463:54ff:fe04:8a67;VM,SCA,PM,CSAM;Ubuntu Linux 16.04.7;svc-rp;16 May 2025 01:45PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+25346941;SPRDAPILMTGRU02.gru.local;fe80:0:0:0:5496:e6a8:1f17:4fa4,172.31.49.59;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\thiago.pereira;16 May 2025 06:59AM GMT-0300;Inventory Scan Complete;SPRDAPILMTGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25358979;sprdapbkpgru01.gru.local;172.31.49.95,172.31.62.95;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64-bit N/A Build 9600 UBR 19817;gru.local\adm-thiago.rocha;26 Sep 2024 05:22PM GMT-0300;Agent Downloaded;SPRDAPBKPGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+48296418;SPRDVCAMSGRU02.gru.local;172.31.49.130;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6659;Administrator;16 May 2025 06:24AM GMT-0300;Inventory Scan Complete;SPRDVCAMSGRU02;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-AMS
+102520090;SPRDVCHSEGRU03.gru.local;172.31.49.32,fe80:0:0:0:d930:4cd9:1c4d:59b0;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 06:01AM GMT-0300;Inventory Scan Complete;SPRDVCHSEGRU03;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-GPA
+48296426;SPRDVCAMSGRU01.gru.local;172.31.49.129;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6659;Administrator;16 May 2025 07:46AM GMT-0300;Inventory Scan Complete;SPRDVCAMSGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-AMS
+190847082;GRU-TI-1S7PQR3.gru.local;172.31.156.252,fe80:0:0:0:f90b:744a:5848:187;VM,SCA,CSAM;Microsoft Windows 10 Pro 10.0.19045 64 bits N/A Build 19045 UBR 3393;GRU\giovanna.bezerra;15 May 2025 12:51PM GMT-0300;Inventory Scan Complete;GRU-TI-1S7PQR3;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+111662504;sdevapecgru01;172.31.52.103,fe80:0:0:0:250:56ff:fe9d:12cc;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 09:17PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193177747;sprdapapvgru01.gru.local;172.31.52.228;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177746;172.31.52.8;172.31.52.8;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+37976406;SHOMRMAGRU01;10.36.52.19,fe80:0:0:0:250:56ff:fe8a:8cd1;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;16 May 2025 04:44AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193177748;10.36.52.217;10.36.52.217;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+180888018;shomapamsgru02.gru.local;172.31.52.41;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SHOMAPAMSGRU02;;AG_GRU_Homologação
+193175705;sprdapmetgru03.gru.local;10.36.52.29;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SPRDAPMETGRU03;;AG_GRU_Homologação
+193177753;10.36.52.102;10.36.52.102;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177759;10.36.52.252;10.36.52.252;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175709;10.36.52.87;10.36.52.87;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177757;172.31.52.188;172.31.52.188;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177756;172.31.52.87;172.31.52.87;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175715;10.36.52.220;10.36.52.220;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175714;172.31.52.197;172.31.52.197;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193177761;shomapiamgru06.gru.local;10.36.52.57;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+36002054;SPRDAPRPGRU08;fe80:0:0:0:d8d:81a6:f1e0:4b56,192.168.1.87;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19356;svc-rp;16 May 2025 12:21PM GMT-0300;Inventory Scan Complete;SPRDAPRPGRU08;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193175712;10.36.52.197;10.36.52.197;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177760;172.31.52.216;172.31.52.216;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175716;172.31.52.184;172.31.52.184;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+107146571;PRDRMADS02;192.168.122.1,fe80:0:0:0:250:56ff:fea3:3f23,172.31.49.50;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;15 May 2025 08:59PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193175722;10.36.52.108;10.36.52.108;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+180931043;shomapamsgru01.gru.local;172.31.52.40;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SHOMAPAMSGRU01;;AG_GRU_Homologação
+193175720;10.36.52.188;10.36.52.188;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193177768;172.31.52.9;172.31.52.9;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+48318926;SPRDVCWEBGRU01.gru.local;192.168.0.32;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6775;GRU\sistemas.gru;16 May 2025 03:33AM GMT-0300;Inventory Scan Complete;SPRDVCWEBGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-AMS
+52058152;SPRDAPFSGRU01;172.31.62.43,172.31.50.43;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6893;GRU\thiago.rocha;16 May 2025 06:16AM GMT-0300;Inventory Scan Complete;SPRDAPFSGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193173703;10.36.52.136;10.36.52.136;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173702;shomapvpxgru03.gru.local;10.36.52.176;VM,CSAM;Windows 2012 R2 Standard;'-;'-;Scanned;SHOMAPVPXGRU03;;AG_GRU_Homologação
+193173705;10.36.52.216;10.36.52.216;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193173711;172.31.52.123;172.31.52.123;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24683050;stesappvgru01.gru.local;172.31.50.62;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\eduardo.silva2.t;16 May 2025 01:28PM GMT-0300;Inventory Scan Complete;STESAPPVGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193173712;172.31.52.196;172.31.52.196;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25352919;SPRDJPBEUMER-01.gru.local;172.31.49.78;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 02:53AM GMT-0300;Inventory Scan Complete;SPRDJPBEUMER-01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+173019397;SHOMAPBCBPGRU01.gru.local;172.31.52.239;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3207;GRU\thiago.pereira;16 May 2025 02:36AM GMT-0300;Inventory Scan Complete;SHOMAPBCBPGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+198320308;SPRDAPCMSP03;172.31.49.183,fe80:0:0:0:250:56ff:fea3:d71;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;16 May 2025 03:50AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-CMS
+193122538;172.31.52.75;172.31.52.75;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193122539;10.36.52.226;10.36.52.226;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193122540;172.31.52.126;172.31.52.126;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193122547;172.31.52.99;172.31.52.99;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+28611278;sprdaprpgru10;192.168.0.37;VM,SCA,PM,CSAM;Ubuntu Linux 16.04.6;svc-rp;15 May 2025 09:25PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-LG
+25625338;SPRDPRGGRU02.gru.local;172.31.50.172;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;gru.local\sergio.fais;15 May 2025 09:19PM GMT-0300;VM Manifest Downloaded;SPRDPRGGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+23735018;SPRDAPBMSGRUA.gru.local;169.254.192.197,172.31.49.93;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;GRU\renan.santos.t;30 Jul 2024 05:07AM GMT-0300;VM Manifest Downloaded;SPRDAPBMSGRUA;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+48318817;SPRDVCRMQGRU01;fe80:0:0:0:f1c5:6c1f:3966:e9f4,172.31.49.132;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 5936;Administrator;16 May 2025 05:09AM GMT-0300;Inventory Scan Complete;SPRDVCRMQGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-AMS
+189135042;SPRDBDHSQLGRU10.gru.local;172.31.62.103,1.1.1.162,172.31.49.103,fe80:0:0:0:cb55:3f35:fea5:7b36,169.254.1.64,fe80:0:0:0:3b76:eccc:8830:30c5,172.31.49.101,172.31.49.100;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;Administrator;16 May 2025 04:48AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU10;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25633289;SPRDAPBHSGRU03.gru.local;172.31.50.219;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 3113;GRU\luiz.moura.t;16 May 2025 07:25AM GMT-0300;Inventory Scan Complete;SPRDAPBHSGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193216532;172.31.52.153;172.31.52.153;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216535;10.36.52.95;10.36.52.95;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+205090732;test-ams-app01.gru.local;10.36.52.67;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;TEST-AMS-APP01;;AG_GRU_Homologação
+193216531;172.31.52.12;172.31.52.12;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216536;idm-hom.gru.com.br;10.36.52.202;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25633304;SPRDAPGEDGRU01.gru.local;172.31.50.223;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\sistemas.gru;17 Dec 2024 12:59PM GMT-0300;Inventory Scan Complete;SPRDAPGEDGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193216539;172.31.52.245;172.31.52.245;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193103907;10.36.52.229;10.36.52.229;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216544;172.31.52.237;172.31.52.237;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193103911;shomapamswgru01.gru.local;172.31.52.52;VM,CSAM;Windows 2012 R2 Datacenter;'-;'-;Scanned;SHOMAPAMSWGRU01;;AG_GRU_Homologação
+193216545;172.31.52.131;172.31.52.131;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193103908;172.31.52.95;172.31.52.95;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216546;shomapaogru01.gru.local;10.36.52.65;VM,CSAM;Windows 2008 R2 Standard Service Pack 1;'-;'-;Scanned;SHOMAPAOGRU01;;AG_GRU_Homologação
+193103914;10.36.52.104;10.36.52.104;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193103918;10.36.52.211;10.36.52.211;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193216552;172.31.52.113;172.31.52.113;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193103919;10.36.52.224;10.36.52.224;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216553;172.31.52.146;172.31.52.146;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216554;10.36.52.41;10.36.52.41;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216555;172.31.52.90;172.31.52.90;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+37974515;SHOMRMAGRU03;10.36.52.22,fe80:0:0:0:250:56ff:fe8a:8c36;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;15 May 2025 08:50PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193103921;sqasapbigru01.gru.local;172.31.52.104;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216567;172.31.52.156;172.31.52.156;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193179703;172.31.52.1;172.31.52.1;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193103924;siam1-gru.gru.local;10.36.52.60;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193179700;shomsqlgru08.gru.local;10.36.52.199;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMSQLGRU08;;AG_GRU_Homologação
+193179706;10.36.52.138;10.36.52.138;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193216568;172.31.52.137;172.31.52.137;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193103932;172.31.52.37;172.31.52.37;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193179708;172.31.52.51;172.31.52.51;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193179714;10.36.52.214;10.36.52.214;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193179713;172.31.52.55;172.31.52.55;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+28619376;SPRDAPRPGRU07;fe80:0:0:0:5165:23db:32c8:2b23,192.168.0.20;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64 bits N/A Build 14393 UBR 3986;Administrador;16 May 2025 02:28AM GMT-0300;Inventory Scan Complete;SPRDAPRPGRU07;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193179719;10.36.52.80;10.36.52.80;VM,CSAM;Windows 10;'-;'-;Scanned;;;AG_GRU_Homologação
+148433694;SPRDAPINVGRU09.gru.local;fe80:0:0:0:a817:d101:feff:6f14,172.31.50.132;VM,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 2989;GRU\sistemas.gru;16 May 2025 05:35AM GMT-0300;Inventory Scan Complete;SPRDAPINVGRU09;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+24683186;SPRDWBBENGRU01.gru.local;172.31.50.117;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6414;GRU\thiago.pereira;16 May 2025 06:11AM GMT-0300;Inventory Scan Complete;SPRDWBBENGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+182292758;SHOMFSQUA01.gru.local;169.254.176.99,fe80:0:0:0:a4a9:4fcc:f429:e396,172.31.62.120,172.31.49.220;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;Alpha;16 May 2025 03:07AM GMT-0300;Inventory Scan Complete;SPRDFSQUA01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25625162;SPRDAPBHSGRU02.gru.local;172.31.50.218;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 3113;GRU\luiz.moura.t;16 May 2025 07:26AM GMT-0300;Inventory Scan Complete;SPRDAPBHSGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+95600255;SPRDAPFILAGRU01.gru.local;172.31.57.58;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 2582;Administrator;16 May 2025 03:41AM GMT-0300;Inventory Scan Complete;SPRDAPFILAGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193179724;172.31.52.214;172.31.52.214;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+57563324;sprdapprmgru01;fe80:0:0:0:250:56ff:feb6:133d,172.31.50.167;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;root;15 May 2025 09:24PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212502;172.31.52.177;172.31.52.177;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+97308191;SPRDAPSSHGRU01;fe80:0:0:0:569f:35ff:fe73:b61,172.31.49.176,10.42.0.0,172.17.0.1,10.42.0.1;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.2;sysgru;15 May 2025 09:55PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212499;172.31.52.86;172.31.52.86;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212508;172.31.52.224;172.31.52.224;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25633370;SPRDAPGEDGRU02.gru.local;172.31.50.224;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;administrator;30 Apr 2025 12:48PM GMT-0300;Manifest Downloaded;SPRDAPGEDGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212506;10.36.52.170;10.36.52.170;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212507;10.36.52.139;10.36.52.139;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212516;shomapvcsagru02.gru.local;10.36.52.120;VM,CSAM;VMware vCenter Server Appliance 6.7.0 build 20504362;'-;'-;Scanned;;;AG_GRU_Homologação
+196231248;TEST-AMS-RPT.gru.local;10.36.52.71;VM,SCA,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;15 May 2025 10:05PM GMT-0300;Inventory Scan Complete;TEST-AMS-RPT;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212512;172.31.52.174;172.31.52.174;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212513;172.31.52.151;172.31.52.151;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+100034065;SPRDAPLGGRU03.gru.local;172.31.49.117;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\sistemas.gru;16 May 2025 03:25AM GMT-0300;Inventory Scan Complete;SPRDAPLGGRU03;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-LG
+193212521;172.31.52.207;172.31.52.207;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+28873292;SPRDAPBCCGRU02.gru.local;172.31.49.136;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3770;GRU\luiz.moura.t;16 May 2025 02:23AM GMT-0300;Inventory Scan Complete;SPRDAPBCCGRU02;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-TARIFAGRU
+23440027;SPRDAPEGTGRU06.gru.local;172.31.49.69;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 22640;gru.local\adm-thiago.pereira;16 May 2025 03:49AM GMT-0300;Inventory Scan Complete;SPRDAPEGTGRU06;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+28609098;SPRDAPSFTPGRU01.gru.local;fe80:0:0:0:19bd:db92:6b7b:252a,192.168.0.50;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3532;Administrator;16 May 2025 04:31AM GMT-0300;Inventory Scan Complete;SPRDAPSFTPGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095552;10.36.52.116;10.36.52.116;VM,CSAM;VMware ESXi 6.5.0 build 13004031;'-;'-;Scanned;;;AG_GRU_Homologação
+193095558;10.36.52.30;10.36.52.30;VM,CSAM;VMware ESX Server;'-;'-;Scanned;SPRDAPMETGRU04;;AG_GRU_Homologação
+24665471;SPRDAPSVNGRU01.gru.local;172.31.50.60;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 4169;GRU\sistemas.gru;16 May 2025 02:43AM GMT-0300;Inventory Scan Complete;SPRDAPSVNGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212300;172.31.52.247;172.31.52.247;VM,CSAM;Linux 2.6;'-;'-;Scanned;;;AG_GRU_Homologação
+193212302;10.36.52.39;10.36.52.39;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+118289154;sprdapgfngru02;172.16.253.82,fe80:0:0:0:250:56ff:fea3:efe1;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.3;root;16 May 2025 02:01AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+24683881;SSHAREPOINT2-GR.gru.local;fe80:0:0:0:10fc:b01:3278:f1bf,172.31.50.65;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;administrator;16 May 2025 01:10PM GMT-0300;Inventory Scan Complete;SSHAREPOINT2-GR;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+109894301;SPRDAPNTWSGRU01;fe80:0:0:0:250:56ff:fe92:5cb2,172.31.62.186,192.168.122.1;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;16 May 2025 01:30PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+23733630;SPRDAPSCOGRU03.gru.local;172.31.49.88;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 6452;GRU\svc-score;16 May 2025 01:21PM GMT-0300;Inventory Scan Complete;SPRDAPSCOGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212316;172.31.52.15;172.31.52.15;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+204247093;TEST-AMS-APV01.gru.local;10.36.52.69;VM,SCA,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6893;Administrator;16 May 2025 03:34AM GMT-0300;Inventory Scan Complete;TEST-AMS-APV01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+99351031;WIN-36T5TI6N8F9;172.31.49.17;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6054;alpha;16 May 2025 04:54AM GMT-0300;Inventory Scan Complete;WIN-36T5TI6N8F9;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193212313;10.36.52.157;10.36.52.157;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212315;172.31.52.89;172.31.52.89;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193212324;172.31.52.74;172.31.52.74;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193214373;10.36.52.34;10.36.52.34;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+19531016;SPRDAPIAMGRU08.gru.local;172.31.50.209;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7876;GRU\sistemas.gru;16 May 2025 04:18AM GMT-0300;Inventory Scan Complete;SPRDAPIAMGRU08;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+203061308;172.31.52.108;172.31.52.108;VM,CSAM;Ubuntu / Tiny Core Linux / Linux 2.6.x / IBM ASM / HP StoreOnce / F5 Networks Big-IP / Cisco IOS Software;'-;'-;Scanned;;;AG_GRU_Homologação
+19531013;SPRDAPIAMGRU07.gru.local;172.31.50.207;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7876;GRU\sistemas.gru;16 May 2025 01:58AM GMT-0300;Inventory Scan Complete;SPRDAPIAMGRU07;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+96989672;SPRDAPCUPSGRU03;172.31.49.208;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 08:56PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+53495552;SPRDAPHSEGRU06.gru.local;172.31.62.158,fe80:0:0:0:9bfd:be4c:f0f2:7603,172.31.49.158,fe80:0:0:0:4ad5:99ee:5290:fe6;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 5936;GRU\sistemas.gru;16 May 2025 07:02AM GMT-0300;Inventory Scan Complete;SPRDAPHSEGRU06;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+180903675;shomapcmsgru05.gru.local;172.31.52.222;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPCMSGRU05;;AG_GRU_Homologação
+19531038;SPRDAPPAVGRU01.gru.local;172.31.49.231;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19404;gru.local\adm-diogo.ramalho.t;16 May 2025 01:13PM GMT-0300;Inventory Scan Complete;SPRDAPPAVGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+186941213;SPRDAPLGGRU01.gru.local;172.31.52.135;VM,SCA,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7969;Administrator;28 Apr 2025 01:05AM GMT-0300;Inventory Scan Complete;SHOMAPLGGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+203032614;shombdotrsgru01.gru.local;10.36.52.128;VM,CSAM;Windows 2008 R2/7;'-;'-;Scanned;SHOMBDOTRSGRU01;;AG_GRU_Homologação
+113517306;shomapgrfgru01;10.36.52.137,fe80:0:0:0:250:56ff:fe8a:cac9;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;sysgru;15 May 2025 08:01PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20299125;SPRDADGRU04.gru.local;172.31.50.27;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7336;GRU\svc-mgmt;16 May 2025 06:53AM GMT-0300;Inventory Scan Complete;SPRDADGRU04;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+20305279;SPRDAPEGTGRU01.gru.local;172.31.49.60;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 23255;gru.local\svc-egate;16 May 2025 04:32AM GMT-0300;Inventory Scan Complete;SPRDAPEGTGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-EGATE
+181102215;SPRDBDHSQLGRU07.gru.local;172.31.62.173,172.31.50.171;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;GRU\thiago.pereira;16 May 2025 02:30AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU07;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+44728036;SPRDAPIAMGRU11;fe80:0:0:0:9605:c608:c93b:18c5,172.31.50.217,172.31.62.217;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 5329;GRU\thiago.rocha;16 May 2025 06:53AM GMT-0300;Inventory Scan Complete;SPRDSQL021;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+193175507;10.36.52.222;10.36.52.222;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175505;10.36.52.178;10.36.52.178;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175511;10.36.52.73;10.36.52.73;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175510;10.36.52.93;10.36.52.93;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175512;10.36.52.91;10.36.52.91;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+55961355;TEST-AMS-APP01.gru.local;10.36.52.67;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\adm-rafael.prado;16 May 2025 04:51AM GMT-0300;Inventory Scan Complete;TEST-AMS-APP01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+131535799;SHOMAPIHSGRU02;172.31.52.53,fe80:0:0:0:250:56ff:feb6:ef7c;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;16 May 2025 01:14PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193175522;172.31.52.79;172.31.52.79;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19455306;SPRDAPVPXGRU02.gru.local;172.31.50.242,fe80:0:0:0:7545:6989:2f8e:f678,169.254.1.232,12.12.12.2,172.31.50.158;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64-bit N/A Build 9600 UBR 19941;gru.local\adm-jean.santos.t;16 May 2025 03:02AM GMT-0300;Inventory Scan Complete;SPRDAPVPXGRU02;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-BCBP
+193175520;10.36.52.46;10.36.52.46;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175526;172.31.52.203;172.31.52.203;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175525;10.36.52.172;10.36.52.172;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175524;172.31.52.234;172.31.52.234;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20305245;SPRDAPDHCPGRU01.gru.local;172.31.49.121,fe80:0:0:0:b174:644c:2175:a55b;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 21620;gru.local\adm-thiago.pereira;16 May 2025 12:31PM GMT-0300;Inventory Scan Complete;SPRDAPDHCPGRU01;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+180887224;172.31.52.31;172.31.52.31;VM,CSAM;EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+16147588;SHOMAPHSEGRU01.gru.local;10.36.52.55;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 2273;GRU\adm-alexis.moura.t;15 May 2025 11:14PM GMT-0300;Inventory Scan Complete;SHOMAPHSEGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20923725;SPRDAPSTWBGRU01.gru.local;172.31.49.128;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601;gru\sistemas.gru;16 May 2025 01:01PM GMT-0300;Inventory Scan Complete;SPRDAPSTWBGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20280654;SPRDAPQUAGR01.gru.local;172.31.49.35,fe80:0:0:0:c0c6:47cc:1c66:4fc7;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;GRU\eduardo.osilva.t;16 May 2025 08:44AM GMT-0300;Inventory Scan Complete;SPRDAPQUAGR01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+19242329;SPRDCCTVGRU20.gru.local;10.36.61.100,10.36.57.112,10.36.60.100,10.36.57.110,10.36.57.111,10.36.57.100;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 4252;GRU\eduardo.silva;16 May 2025 08:04AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU20;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+25558277;sprdapsmgru02;172.31.49.201,172.31.49.200,fe80:0:0:0:569f:35ff:fe71:d962,fe80:0:0:0:569f:35ff:fe71:dd88,10.1.1.82,172.31.49.147;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 09:22PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+193185537;172.31.52.141;172.31.52.141;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193175303;shomapntpgru01.gru.local;10.36.52.43;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175302;172.31.52.92;172.31.52.92;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+180899406;sdqoemcwgru01.gru.local;172.31.52.124;VM,CSAM;Windows 2012 R2 Datacenter;'-;'-;Scanned;SDQOEMCWGRU01;;AG_GRU_Homologação
+113121846;shomapglpigru01;fe80:0:0:0:250:56ff:fe8a:1f75,10.36.52.117;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;15 May 2025 08:48PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193175307;172.31.52.96;172.31.52.96;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193185547;10.36.52.215;10.36.52.215;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+21511618;SPRDTSQGRU02.gru.local;172.31.50.174,fe80:0:0:0:abb1:52ea:307b:3215;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 1970;Administrator;16 May 2025 03:09AM GMT-0300;Inventory Scan Complete;SPRDTSQGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+17757573;SHOMAPSCOGRU01.gru.local;10.36.52.175;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4010;GRU\svc-hvmware;16 May 2025 02:52AM GMT-0300;Inventory Scan Complete;SHOMAPSCOGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+118285191;sprdapzabgru02;172.31.62.10,192.168.122.1,172.16.253.88;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;16 May 2025 04:27AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193175304;172.31.52.192;172.31.52.192;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193185544;10.36.52.198;10.36.52.198;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175311;172.31.52.45;172.31.52.45;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193185550;shomapiamgru02.gru.local;10.36.52.8;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20299195;SPRDAPEGTGRU02.gru.local;172.31.49.61;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 23255;gru.local\svc-egate;16 May 2025 03:10AM GMT-0300;Inventory Scan Complete;SPRDAPEGTGRU02;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-EGATE
+193175309;shomapatgru01.gru.local;10.36.52.40;VM,CSAM;Windows 2012 R2 Datacenter;'-;'-;Scanned;SHOMAPATGRU01;;AG_GRU_Homologação
+193175308;172.31.52.223;172.31.52.223;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193185548;shomapiamgru07.gru.local;10.36.52.58;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175313;172.31.52.36;172.31.52.36;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175312;172.31.52.218;172.31.52.218;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175316;172.31.52.115;172.31.52.115;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175327;10.36.52.205;10.36.52.205;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175326;172.31.52.130;172.31.52.130;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20192662;SPRDADGRU02.gru.local;172.31.50.25,fe80:0:0:0:f9e2:61bb:78bd:10e;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24564;GRU\sistemas.gru;16 May 2025 11:57AM GMT-0300;Inventory Scan Complete;SPRDADGRU02;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+127370037;SPRDAPRMIGRU01.gru.local;192.168.0.69;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3887;alpha;16 May 2025 03:06AM GMT-0300;Inventory Scan Complete;SPRDAPRMIGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+84636072;SPRDZBGRU04;172.16.253.71,fe80:0:0:0:250:56ff:fe92:656a;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.2;root;15 May 2025 08:32PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193124134;shombdgru04.gru.local;10.36.52.237;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMBDGRU04;;AG_GRU_Homologação
+193124133;10.36.52.184;10.36.52.184;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193124138;172.31.52.97;172.31.52.97;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193124139;172.31.52.29;172.31.52.29;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+18841012;SPRDCCTVGRU11.gru.local;10.36.57.54,10.36.60.55,10.36.61.55;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4737;GRU\svc-sql-cluster;16 May 2025 02:36AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU11;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+21366253;SPRDAPRMAGRU04.GRU.LOCAL;192.168.0.36,fe80:0:0:0:250:56ff:fe92:ec09;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;root;15 May 2025 10:30PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-AMS
+193124150;172.31.52.88;172.31.52.88;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193124149;10.36.52.251;10.36.52.251;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+109890098;SPRDAPNMCGRU01;fe80:0:0:0:250:56ff:fe92:d1c9,192.168.122.1,172.31.62.187;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;16 May 2025 04:20AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+180868630;shomapamsgru02.gru.local;172.31.52.39;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SHOMAPAMSGRU02;;AG_GRU_Homologação
+37066476;SPRDAPGWBIGRU03;172.31.50.247;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\eduardo.osilva.t;16 May 2025 08:35AM GMT-0300;Inventory Scan Complete;SPRDAPGWBIGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+111661693;SPRDAPRMAGRU02.GRU.LOCAL;fe80:0:0:0:250:56ff:fe9d:8562,172.31.50.141;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.1;root;15 May 2025 10:04PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+113121892;SHOMAPRMAGRU02;fe80:0:0:0:250:56ff:fe8a:bb30,10.36.52.151;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;sysgru;15 May 2025 08:57PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+180868635;sdesapmntgru01.gru.local;172.31.52.182;VM,CSAM;Windows 2008 R2 Enterprise Service Pack 1;'-;'-;Scanned;SDESAPMNTGRU01;;AG_GRU_Homologação
+95867240;sprdapecgru02;172.31.49.153,fe80:0:0:0:569f:35ff:fe73:b88;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;root;15 May 2025 08:32PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+118629325;SPRDBDHSQLGRU06.gru.local;172.31.62.171,172.31.50.170;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6189;alpha;16 May 2025 03:01AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU06;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CCURE
+193214299;shomapiamgru04.gru.local;10.36.52.11;VM,CSAM;Windows 10;'-;'-;Scanned;;;AG_GRU_Homologação
+180903465;172.31.52.110;172.31.52.110;VM,CSAM;Ubuntu / Tiny Core Linux / Linux 2.6.x / IBM ASM / HP StoreOnce / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+193214304;172.31.52.120;172.31.52.120;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193214305;shomwbbengru01.gru.local;10.36.52.74;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMWBBENGRU01;;AG_GRU_Homologação
+180903470;shomapbcbpgru01.gru.local;172.31.52.239;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPBCBPGRU01;;AG_GRU_Homologação
+193214307;10.36.52.62;10.36.52.62;VM,CSAM;EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+193214316;172.31.52.46;172.31.52.46;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+56149937;SHOMAPCMSGRU01;fe80:0:0:0:88d1:6aff:fe1a:56df,fe80:0:0:0:c7:dcff:fece:b5e9,fe80:0:0:0:24c1:aaff:fe9f:3885,fe80:0:0:0:ac29:7eff:fe75:b8c,fe80:0:0:0:2c7f:54ff:fe04:e62e,fe80:0:0:0:b42e:c7ff:fe6c:c3a8,fe80:0:0:0:a4af:afff:fea8:bb7b,fe80:0:0:0:28b5:58ff:fec9:31c4,fe80:0:0:0:d877:8ff:fe3e:9a39,fe80:0:0:0:8c2f:1aff:fee1:84d2,fe80:0:0:0:7c54:edff:fee0:8da1,fe80:0:0:0:7838:a3ff:fed6:187,fe80:0:0:0:6c5f:84ff:fe50:ab4c,fe80:0:0:0:d824:69ff:fe93:331c,fe80:0:0:0:20bf:abff:feb3:7ed6,fe80:0:0:0:988b:e3ff:fe01:10d6,fe80:0:0:0:e037:90ff:fe8d:d578,fe80:0:0:0:d09e:87ff:fe26:d03,fe80:0:0:0:8885:62ff:fefc:e404,fe80:0:0:0:c6a:eaff:fee3:c7bd,10.88.0.1,fe80:0:0:0:a88c:f6ff:fe66:c91b,fe80:0:0:0:a839:5fff:fe40:4613,fe80:0:0:0:6cc1:34ff:fe79:180,fe80:0:0:0:5878:d7ff:fe25:beb8,fe80:0:0:0:c7e:77ff:fea7:9cdf,fe80:0:0:0:b85d:28ff:fe38:f94f,fe80:0:0:0:6c24:26ff:fed3:4544,fe80:0:0:0:4ce0:6cff:febe:222c,fe80:0:0:0:6480:2ff:fe7a:7da4,fe80:0:0:0:b4f9:e1ff:fe28:3167,fe80:0:0:0:250:56ff:feb6:f34b,192.168.122.1,172.31.52.31;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;15 May 2025 07:58PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095531;shomapfsgru01.gru.local;10.36.52.123;VM,CSAM;Windows 2012 Datacenter;'-;'-;Scanned;SHOMAPFSGRU01;;AG_GRU_Homologação
+27698509;sprdapecgru04;10.1.1.74,172.31.49.195,fe80:0:0:0:569f:35ff:fe71:d93b,fe80:0:0:0:569f:35ff:fe71:db63,172.31.49.165,172.31.49.194;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;root;16 May 2025 03:55AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+24683924;SPRDAPBENGRU01.gru.local;172.31.50.72;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6414;Administrator;16 May 2025 02:11AM GMT-0300;Inventory Scan Complete;SPRDAPBENGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095534;suatwsusgru01.uatgru.local;10.36.52.121;VM,CSAM;Windows 2012 R2 Datacenter;'-;'-;Scanned;SUATWSUSGRU01;;AG_GRU_Homologação
+193214312;h.gru.com.br;10.36.52.158;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193214314;10.36.52.155;10.36.52.155;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095538;172.31.52.189;172.31.52.189;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095539;10.36.52.248;10.36.52.248;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+167699724;SPRDAPVPRGRU05;fe80:0:0:0:250:56ff:feb6:27f8,172.31.62.197;VM,SCA,PM,CSAM;SUSE Linux Enterprise Server 12 SP5;admin;13 May 2025 01:08AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL
+193095536;10.36.52.37;10.36.52.37;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193095542;172.31.52.221;172.31.52.221;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095543;shomapshpgru01.gru.local;10.36.52.52;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095541;172.31.52.48;172.31.52.48;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095546;172.31.52.68;172.31.52.68;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+101014265;WIN-36T5TI6N8F9;fe80:0:0:0:abc4:372f:984:4aa1,172.31.131.71;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6054;GRU\svc-mgmt;16 May 2025 02:38AM GMT-0300;Inventory Scan Complete;SPRDAPJPGRU04;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095550;172.31.52.185;172.31.52.185;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095548;172.31.52.212;172.31.52.212;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193156739;10.36.52.250;10.36.52.250;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193156737;172.31.52.50;172.31.52.50;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+187721267;SHOMAPCADGRU01.gru.local;fe80:0:0:0:fefe:a2c3:2d54:4c52,10.36.52.124;VM,SCA,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7136;GRU\marcus.souto.t;16 May 2025 03:04AM GMT-0300;Inventory Scan Complete;SHOMAPCADGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193156736;dev-services.gru.com.br;10.36.52.132;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+27258011;SPRDAPCTBGRU01.gru.local;192.168.0.84;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7515;GRU\rafael.prado;16 May 2025 05:36AM GMT-0300;Inventory Scan Complete;SPRDAPCTBGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193156743;10.36.52.196;10.36.52.196;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193156741;10.36.52.225;10.36.52.225;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193156744;172.31.52.128;172.31.52.128;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193121934;172.31.52.118;172.31.52.118;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+192200313;SHOMADGRU01.gru.local;172.31.52.24;VM,SCA,CSAM;Microsoft Windows Server 2012 Standard 6.2.9200 64-bit N/A Build 9200 UBR 24523;gru.local\adm-rafael.prado;16 May 2025 09:44AM GMT-0300;Inventory Scan Complete;SHOMADGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+115430383;PRDSQLSC020.gru.local;172.31.62.66,172.31.50.66;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6189;alpha;16 May 2025 06:23AM GMT-0300;Inventory Scan Complete;PRDSQLSC020;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193121933;172.31.52.159;172.31.52.159;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193156748;172.31.52.83;172.31.52.83;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+167736559;SPRDAPVPRGRU06.GRU.LOCAL;172.31.62.198,fe80:0:0:0:250:56ff:feb6:e072;VM,SCA,PM,CSAM;SUSE Linux Enterprise Server 12 SP5;admin;14 May 2025 01:18AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL
+193121936;amswebuat.gru.com.br;10.36.52.168;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193156753;10.36.52.180;10.36.52.180;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193121937;172.31.52.78;172.31.52.78;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193156752;10.36.52.84;10.36.52.84;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193121943;172.31.52.27;172.31.52.27;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193121950;10.36.52.86;10.36.52.86;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193121951;10.36.52.193;10.36.52.193;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193121948;shomapmetgru01.gru.local;10.36.52.45;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+84635668;SPRDZBGRU05;fe80:0:0:0:250:56ff:fe92:f21d,172.16.253.72;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.2;root;16 May 2025 01:39PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193121949;172.31.52.58;172.31.52.58;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+16149975;SHOMAPCNWGRU01.gru.local;10.36.52.80;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7136;Administrator;16 May 2025 06:34AM GMT-0300;Inventory Scan Complete;SHOMAPCNWGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+16149973;SHOMAPCCGRU001.gru.local;10.36.52.42;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4377;Administrator;16 May 2025 01:51AM GMT-0300;Inventory Scan Complete;SHOMAPCCGRU001;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095333;shomaplggru03.gru.local;172.31.52.136;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPLGGRU03;;AG_GRU_Homologação
+193121957;10.36.52.94;10.36.52.94;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24396892;SHOMRMAGRU05;fe80:0:0:0:250:56ff:fe8a:27f2,10.36.52.21;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;reboot;16 May 2025 02:53AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+138530152;SHOMAPESBGRU07.gru.local;172.31.52.230;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3692;alpha;16 May 2025 09:12AM GMT-0300;Inventory Scan Complete;SHOMAPESBGRU07;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+186881544;SHOMAPLGGRU03.gru.local;172.31.52.136;VM,SCA,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7136;Administrator;28 Apr 2025 01:48AM GMT-0300;Inventory Scan Complete;SHOMAPLGGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095337;shomapbengru01.gru.local;10.36.52.72;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPBENGRU01;;AG_GRU_Homologação
+193095342;172.31.52.43;172.31.52.43;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+23321683;SPRDAPESTGRU01.gru.local;172.31.49.33;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 8066;GRU\sistemas.gru;16 May 2025 06:30AM GMT-0300;Inventory Scan Complete;SPRDAPESTGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095346;10.36.52.232;10.36.52.232;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+109876158;SENHASEGURA_ARBRITO;172.31.46.24,172.17.0.1,fe80:0:0:0:e724:c925:2674:9f4f;VM,SCA,PM,CSAM;CentOS Linux 7.9.2009;root;15 May 2025 09:11PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+20894733;spbdoragru09.gru.local;172.31.49.192,172.31.49.193,169.254.26.230,172.31.49.189,10.1.1.57,172.31.49.150,fe80:0:0:0:569f:35ff:fe73:b6e,fe80:0:0:0:569f:35ff:fe73:cec;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;root;15 May 2025 09:35PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+102165285;GRU-TI-1Q6NSY2;2804:1b3:a8c2:aa06:2891:3b9b:44c5:2e70,192.168.15.5,2804:1b3:a8c2:aa06:7b6f:6a22:cb67:dc75,fe80:0:0:0:4f91:7d1e:b9a6:69de;VM,SCA,PM,CSAM;Microsoft Windows 10 Pro 10.0.19045 64 bits N/A Build 19045 UBR 4717;GRU\gezeli.backes;02 Apr 2025 03:14PM GMT-0300;Manifest Downloaded;GRU-TI-1Q6NSY2;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+193095350;sprdapamsgru01.gru.local;172.31.52.4;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+115678163;SHOMAPNFSGRU01;10.36.52.20,fe80:0:0:0:250:56ff:fe8a:6ce7;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 09:33PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+16096717;SHOMAPATGRU01.gru.local;10.36.52.40;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19377;gru.local\sistemas.gru;26 Sep 2024 05:11PM GMT-0300;Agent Downloaded;SHOMAPATGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193095355;10.36.52.28;10.36.52.28;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193095356;shomapiamgru05.gru.local;10.36.52.56;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+27700453;sprdsapnasgru01;172.31.49.202,fe80:0:0:0:250:56ff:fe92:74e;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;sysgru;15 May 2025 09:13PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+99807409;SPRDAPBMSGRUA1.gru.local;172.31.49.93;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;GRU\thiago.pereira;16 May 2025 03:43AM GMT-0300;Inventory Scan Complete;SPRDAPBMSGRUA;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+23917610;SPRDAPMONGRU02.gru.local;172.31.49.112;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7600 64-bit N/A Build 7600;Administrator;07 May 2025 07:21AM GMT-0300;Inventory Scan Complete;SPRDAPMONGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20890737;SPRDAPCMSGRU05.gru.local;172.31.49.90,fe80:0:0:0:baca:3aff:fe35:1a6a;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;16 May 2025 02:04AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+84281417;SPRDZBGRU01;fe80:0:0:0:250:56ff:fe92:18c6,172.16.253.68;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.2;root;15 May 2025 10:15PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+112853995;spbdoragru11.gru.local;172.31.49.191,fe80:0:0:0:569f:35ff:fe71:daac,fe80:0:0:0:569f:35ff:fe71:d92e,172.31.49.163,10.1.1.58,172.31.49.190,169.254.223.104;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;root;15 May 2025 10:15PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+19455101;SPRDAPVPXGRU01.gru.local;0.0.0.0,0.0.0.0,172.31.50.157,0.0.0.0,0.0.0.0;VM,SCA,PM,CSAM;Windows Microsoft Windows Server 2012 R2 Standard 6.3.9600 Build 9600;gru.local\adm-thiago.rocha;14 Mar 2025 05:12PM GMT-0300;VM Manifest Downloaded;SPRDAPVPXGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-BCBP
+90974260;SHOMBDMOOGRU01;10.36.52.82,fe80:0:0:0:250:56ff:fe8a:be67;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;sysgru;15 May 2025 09:44PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+121907744;GRU-TI-754TC44.gru.local;fe80:0:0:0:a088:f309:a799:b733,fe80:0:0:0:7861:a138:bdec:1431;VM,SCA,PM,CSAM;Microsoft Windows 11 Pro 10.0.22631 64 bits N/A Build 22631 UBR 4112;GRU\evandro.santiago;16 May 2025 11:10AM GMT-0300;Inventory Scan Complete;GRU-TI-754TC44;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+65226378;SPRDSKPPCGRU05;fe80:0:0:0:394f:6c4d:c49c:1e14,172.31.48.27;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 06:59AM GMT-0300;Inventory Scan Complete;1950237-105;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+23716871;SPRDAPHHGRU01.gru.local;172.31.49.83;VM,SCA,PM,CSAM;Microsoft Windows 7 Professional 6.1.7601 32-bit Service Pack 1 Build 7601;GRU\washington.silva;16 May 2025 01:51AM GMT-0300;Inventory Scan Complete;SPRDAPHHGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20192327;SPRDADGRU03.gru.local;172.31.50.23,172.31.50.22,fe80:0:0:0:10be:ed71:bc1a:301c;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7969;GRU\thiago.pereira;16 May 2025 02:47AM GMT-0300;Inventory Scan Complete;SPRDADGRU03;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+180852669;172.31.52.254;172.31.52.254;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193185533;10.36.52.122;10.36.52.122;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193136135;10.36.52.163;10.36.52.163;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19457197;SPRDAPATEGRU01.gru.local;172.31.50.233;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 8066;GRU\sistemas.gru;16 May 2025 03:10AM GMT-0300;Inventory Scan Complete;SPRDAPATEGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+19528867;SPRDAPIAMGRU05.gru.local;172.31.50.205;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7876;GRU\sistemas.gru;16 May 2025 03:10AM GMT-0300;Inventory Scan Complete;SPRDAPIAMGRU05;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+73046480;SPRDAPGLPIGRU01;172.31.50.80,fe80:0:0:0:250:56ff:feb6:7b11;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;root;15 May 2025 10:06PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25379848;SPRDAPCMSGRU08;172.31.49.127,192.168.122.1,172.31.49.199;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.7;root;15 May 2025 09:37PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CMS
+102538135;sprdapnbkgru01.gru.local;fe80:0:0:0:250:56ff:fea3:17e0,172.31.49.210;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 10:00PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193136136;172.31.52.193;172.31.52.193;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+89077955;SPRDAPPVGRU03;192.168.1.45;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3532;Administrator;16 May 2025 06:41AM GMT-0300;Inventory Scan Complete;SPRDAPPVGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193136141;shomapccgru01.gru.local;10.36.52.25;VM,CSAM;Windows 2016;'-;'-;Scanned;SHOMAPCCGRU01;;AG_GRU_Homologação
+193136140;172.31.52.119;172.31.52.119;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+198338141;SPRDAPCMSW01;192.168.0.62,fe80:0:0:0:250:56ff:fea3:8fb;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 08:42PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-CMS
+193136147;172.31.52.235;172.31.52.235;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20192421;SAD2-GRU.gru.local;172.31.50.21,fe80:0:0:0:df9:ac18:e17c:6e7d;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24559;GRU\sistemas.gru;16 May 2025 01:13PM GMT-0300;Inventory Scan Complete;SAD2-GRU;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193136146;172.31.52.0;172.31.52.0;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144343;10.36.52.85;10.36.52.85;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+22437059;SHOMAPFSGRU01.gru.local;10.36.52.123,fe80:0:0:0:f956:cbb1:9b5c:8d2d;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200;gru.local\adm-rafael.prado;16 May 2025 02:35AM GMT-0300;Inventory Scan Complete;SHOMAPFSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193144340;test-ams-web01.gru.local;10.36.52.68;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;TEST-AMS-WEB01;;AG_GRU_Homologação
+193144346;shombdrmagru01.gru.local;172.31.52.200;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144344;10.36.52.6;10.36.52.6;VM,CSAM;VMware ESXi 6.5.0 build 13004031;'-;'-;Scanned;;;AG_GRU_Homologação
+193136159;10.36.52.145;10.36.52.145;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193136163;shomvmgru06.gru.local;10.36.52.171;VM,CSAM;VMware ESXi 6.5.0 build 4564106;'-;'-;Scanned;;;AG_GRU_Homologação
+144614717;SPRDAPIMCGRU01.gru.local;fe80:0:0:0:10f1:900f:27a5:bab4,172.16.253.86;VM,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 21620;SPRDAPIMCGRU01\Administrator;16 May 2025 03:58AM GMT-0300;Inventory Scan Complete;SPRDAPIMCGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193144358;hintra.gru.com.br;10.36.52.156;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+204034436;test-ams-sql1.gru.local;10.36.52.70;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;TEST-AMS-SQL1;;AG_GRU_Homologação
+20962445;SHOMAPESBGRU03.gru.local;10.36.52.236;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7785;GRU\sistemas.gru;16 May 2025 09:11AM GMT-0300;Inventory Scan Complete;SHOMAPESBGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20890762;SPRDAPCCPRGRU02;fe80:0:0:0:250:56ff:fe92:3e7f,172.31.49.139,192.168.122.1;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.8;root;15 May 2025 08:50PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-TARIFAGRU
+180897662;shomaprimagru01.gru.local;172.31.52.238;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPRIMAGRU01;;AG_GRU_Homologação
+44734237;SPRDSKSQLGRU01;172.31.62.28,172.31.49.30,172.31.49.31,172.31.49.28,172.31.49.29;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6532;Administrator;16 May 2025 04:03AM GMT-0300;Inventory Scan Complete;SPRDSKSQLGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+193175107;shomapamswgru01.gru.local;10.36.52.36;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPAMSWGRU01;;AG_GRU_Homologação
+193175104;10.36.52.1;10.36.52.1;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144390;shomapwsgru03.gru.local;10.36.52.107;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMAPWSGRU03;;AG_GRU_Homologação
+19463407;SPRDSKSQLGRU02.gru.local;169.254.2.7,172.31.49.31,172.31.49.30,172.31.49.29,172.31.49.220,fe80:0:0:0:8cda:905e:56aa:9f78,172.31.49.21,fe80:0:0:0:58e2:1d71:7927:3c98,5.5.5.2,172.31.49.32;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 6167;GRU\marcus.souto.t;14 Nov 2023 05:45PM GMT-0300;VM Manifest Downloaded;SPRDSKSQLGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193175112;172.31.52.194;172.31.52.194;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+20876531;SHOMBDGRU01.gru.local;10.36.52.12,fe80:0:0:0:d58a:f6ab:e6a7:d58e;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 8066;GRU\svc-hvmware;16 May 2025 04:35AM GMT-0300;Inventory Scan Complete;SHOMBDGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193175123;sprdapamsgru02.gru.local;172.31.52.5;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175121;172.31.52.73;172.31.52.73;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175129;10.36.52.98;10.36.52.98;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193123934;172.31.52.176;172.31.52.176;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175135;10.36.52.183;10.36.52.183;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193175134;10.36.52.100;10.36.52.100;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193123932;10.36.52.114;10.36.52.114;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24409236;SPRDAPCCGRU01.gru.local;172.31.49.25,fe80:0:0:0:4aa:7118:c150:16a5;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64 bits N/A Build 14393 UBR 4583;GRU\eduardo.silva2.t;16 May 2025 03:08AM GMT-0300;Inventory Scan Complete;SPRDAPCCGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+44734283;SPRDSQLLGGRU02;172.31.62.120,172.31.49.120;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 5329;GRU\washington.silva;16 May 2025 03:15AM GMT-0300;Inventory Scan Complete;SPRDSQLLGGRU02;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-LG
+193123939;10.36.52.240;10.36.52.240;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193123937;172.31.52.117;172.31.52.117;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193123946;172.31.52.250;172.31.52.250;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20962506;SHOMBISCCGRU02.gru.local;10.36.52.235;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 03:06AM GMT-0300;Inventory Scan Complete;SHOMBISCCGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+44734291;SPRDVCSQLGRU07.gru.local;172.31.49.106,172.31.62.100;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 5830;GRU\thiago.rocha;16 May 2025 02:19AM GMT-0300;Inventory Scan Complete;SPRDVCSQLGRU07;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-AMS
+26094705;SPRDAUTGRU02.gru.local;172.31.50.239,172.31.34.29;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;administrator;19 Apr 2025 04:51PM GMT-0300;Inventory Scan Complete;SPRDAUTGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+101693455;SPRDAPINVGRU07.gru.local;172.31.57.60,fe80:0:0:0:716f:c2e7:b7e5:6b5d;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 5066;GRU\washington.silva;16 May 2025 05:45AM GMT-0300;Inventory Scan Complete;SPRDAPINVGRU07;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+97194953;GRU-TI-94YMSY2.gru.local;fe80:0:0:0:7028:73b1:c400:8e81,172.31.157.5,192.168.56.1;VM,SCA,PM,CSAM;Microsoft Windows 11 Pro 10.0.22631 64 bits N/A Build 22631 UBR 3880;GRU\rafael.prado;15 May 2025 01:06PM GMT-0300;Manifest Downloaded;GRU-TI-94YMSY2;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+193226119;10.36.52.140;10.36.52.140;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193142151;10.36.52.31;10.36.52.31;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+149458669;SPRDCFTVGRU01.gru.local;172.31.57.200,fe80:0:0:0:273d:43bd:3d61:97bb,10.36.61.200,10.36.60.200,fde1:53ba:e9a0:de11:9eb3:30db:cfae:d29,172.31.62.200,169.254.1.2,fe80:0:0:0:4c:f8b1:e31f:9eda;VM,SCA,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 3328;GRU\thiago.pereira;16 May 2025 02:15AM GMT-0300;Inventory Scan Complete;SPRDCFTVGRU200;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193142150;172.31.52.145;172.31.52.145;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174918;172.31.52.206;172.31.52.206;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24110953;SPRDBDOTRSGRU01.GRU.LOCAL;fe80:0:0:0:250:56ff:fea3:6eb8,172.31.49.16;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;root;16 May 2025 02:58AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+193142155;172.31.52.183;172.31.52.183;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193142154;10.36.52.213;10.36.52.213;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24112996;sprdapcmsgru02;172.31.49.87;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;16 May 2025 02:30AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+23441257;SPRDAPOMPCGRU01.gru.local;fe80:0:0:0:3df3:274d:d029:2340,172.31.49.71;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 20778;gru.local\leandro.jesus.t;27 Sep 2024 01:00PM GMT-0300;Inventory Scan Complete;SPRDAPOMPCGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174927;10.36.52.253;10.36.52.253;VM,CSAM;EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+109170828;SPRDAPAUDGRU01.gru.local;172.31.57.69;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6293;alpha;16 May 2025 04:05AM GMT-0300;Inventory Scan Complete;SPRDAPAUDGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174926;shomapcnwgru01.gru.local;10.36.52.50;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24268668;SDESAPNWGRU01;172.31.52.122,fe80:0:0:0:250:56ff:fe9d:6556;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;16 May 2025 04:08AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193142156;172.31.52.208;172.31.52.208;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19242806;sprdcctvgru08.gru.local;10.36.57.48,10.36.60.48,10.36.57.49,10.36.57.50,10.36.57.40,10.36.61.48,10.36.57.52;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Standard 6.3.9600 64-bit N/A Build 9600 UBR 19296;gru.local\adm-wanilson.santos;16 May 2025 01:00AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU08;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193174928;10.36.52.166;10.36.52.166;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+100023266;SPRDAPCADGRU01.gru.local;172.31.50.210,fe80:0:0:0:28f9:76e9:ae47:20f5;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\adm-washington.silva;16 May 2025 04:12AM GMT-0300;Inventory Scan Complete;SPRDAPCADGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+34931714;SPRDVCHSEGRU05;172.31.49.56;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6189;GRU\washington.silva;16 May 2025 03:54AM GMT-0300;Inventory Scan Complete;SPRDVCHSEGRU05;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+73052742;SPRDAPGLPIGRU02;172.31.50.82,fe80:0:0:0:250:56ff:feb6:778d;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.4;root;15 May 2025 11:02PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24393577;SHOMRMAGRU04;10.36.52.17,fe80:0:0:0:250:56ff:fe8a:4427;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;16 May 2025 04:30AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+22316913;SPRDBDWMBGRU01.gru.local;172.31.49.232;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\sergio.fais;16 May 2025 08:06AM GMT-0300;Inventory Scan Complete;SPRDBDWMBGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+198759920;SPRDBDHSQLGRU13.gru.local;172.31.62.54,172.31.49.180;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3453;alpha;16 May 2025 01:08AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU13;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+19529472;SPRDAPIAMGRU10.gru.local;172.31.50.214;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7876;GRU\sistemas.gru;16 May 2025 04:26AM GMT-0300;Inventory Scan Complete;SPRDAPIAMGRU10;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+25528236;SPRDAPCNIGRU01.gru.local;172.31.50.154;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19817;cleber.malaquias;16 May 2025 06:04AM GMT-0300;Inventory Scan Complete;SPRDAPCNIGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193140138;10.36.52.227;10.36.52.227;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193140137;10.36.52.111;10.36.52.111;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193140142;10.36.52.141;10.36.52.141;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193140151;10.36.52.148;10.36.52.148;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193140150;172.31.52.6;172.31.52.6;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193140149;shomapvcsagru01.gru.local;10.36.52.150;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19529489;SPRDAPSGPGRU01.gru.local;172.31.49.97;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19404;gru.local\adm-thiago.pereira;16 May 2025 02:00PM GMT-0300;Inventory Scan Complete;SPRDAPSGPGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193140157;172.31.52.125;172.31.52.125;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193142205;shomadgru02.gru.local;172.31.52.25;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMADGRU02;;AG_GRU_Homologação
+203348513;172.31.52.135;172.31.52.135;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+120754529;SHOMAPPTCAGRU01.gru.local;172.31.52.26;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\adm-allan.lira;16 May 2025 05:26AM GMT-0300;Inventory Scan Complete;SHOMAPPTCAGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+67981913;sprdaprdggru01.gru.local;192.168.0.29;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19652;gru.local\adm-thiago.pereira;16 May 2025 12:30PM GMT-0300;Inventory Scan Complete;SPRDAPRDGGRU01;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+101470288;SPRDAPCUPSGRU04;172.31.49.209;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 10:15PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+19242872;SPRDCCTVGRU26.gru.local;10.36.57.106,10.36.61.106,10.36.60.106,10.36.57.130,10.36.57.132,10.36.57.131;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4252;GRU\svc-sql-cluster;16 May 2025 07:19AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU26;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+20449115;SPRDAPEDIGRU01.gru.local;192.168.0.44,fe80:0:0:0:bdd5:21be:27a2:e80e;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7259;GRU\svc-edi;16 May 2025 02:51AM GMT-0300;Inventory Scan Complete;SPRDAPEDIGRU01;Cloud Agent;Cloud Agent, GRU_ACN_1-Insignificante, GRU-GERAL, GRU_CAT_ACN-SAP
+111646914;SPRDAPRMAGRU01.GRU.LOCAL;fe80:0:0:0:250:56ff:fe9d:1abc,172.31.50.140;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.1;root;15 May 2025 10:22PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20096852;SPRDSHPINTGRU03.gru.local;172.31.49.243;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19920;gru.local\adm-felipe.novais.t;16 May 2025 01:09AM GMT-0300;Inventory Scan Complete;SPRDSHPINTGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20891478;sprdbdoragru04.gru.local;169.254.249.133,172.31.49.141,10.1.1.17,172.31.49.91,fe80:0:0:0:baca:3aff:fe33:8ea8,172.31.49.145;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 09:39PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+112279769;sprdapbigru02;fe80:0:0:0:569f:35ff:fe71:def6,172.31.49.169,10.1.1.130,fe80:0:0:0:569f:35ff:fe71:d97c;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;sysgru;15 May 2025 10:42PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+70206041;SPRDAPPTCAGRU01.gru.local;172.31.50.78;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;GRU\svc-cms-logon;16 May 2025 02:06AM GMT-0300;Inventory Scan Complete;SPRDAPPTCAGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CMS
+20094795;SPRDSHPINTGRU04.gru.local;172.31.49.244;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19920;gru.local\sistemas.gru;16 May 2025 03:35AM GMT-0300;Inventory Scan Complete;SPRDSHPINTGRU04;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+24211445;SPRDAPWEBGRU02.gru.local;172.31.49.228;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;gru.local\sistemas.gru;16 May 2025 01:52PM GMT-0300;Inventory Scan Complete;SPRDAPWEBGRU02;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-AMS
+109535246;SPRDMONGRU01;fe80:0:0:0:250:56ff:feb6:66a2,172.31.49.41;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;root;16 May 2025 02:00PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+101802141;SPRDAPJPGRU03.gru.local;172.31.131.70,fe80:0:0:0:342f:fbf9:47a:218a;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6054;GRU\svc-mgmt;16 May 2025 02:48AM GMT-0300;Inventory Scan Complete;SPRDAPJPGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+114348126;SHOMAPBISCCGRU01;192.168.122.1,10.36.52.234;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;root;15 May 2025 09:06PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24801259;SPRDAPNEPSGRU01.gru.local;172.31.50.85;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601;GRU\svc-mgmt;16 May 2025 02:31AM GMT-0300;Inventory Scan Complete;SPRDAPNEPSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20350882;SPRDAPRPGRU13;192.168.0.59,fe80:0:0:0:250:56ff:feb6:1ca9;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;root;15 May 2025 10:13PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+19455926;SPRDAPVPXGRU04.gru.local;0.0.0.0,0.0.0.0,172.31.50.178;VM,SCA,PM,CSAM;Windows Microsoft Windows Server 2012 R2 Standard 6.3.9600 Build 9600;gru.local\adm-welison.araujo;20 Feb 2025 11:29AM GMT-0300;Manifest Downloaded;SPRDAPVPXGRU04;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-BCBP
+114124900;SPRDAPMETGRU03.gru.local;0.0.0.0,10.36.52.29;VM,SCA,PM,CSAM;Windows Microsoft Windows Server 2008 R2 Enterprise 6.1.1130 Service Pack 1 Build 1130;'-;15 May 2025 05:49AM GMT-0300;VM Manifest Downloaded;SPRDAPMETGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24571866;SPRDAPWSGRU02.gru.local;172.31.50.59;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7969;GRU\washington.silva;16 May 2025 03:32AM GMT-0300;Inventory Scan Complete;SPRDAPWSGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193152307;172.31.52.142;172.31.52.142;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152305;172.31.52.205;172.31.52.205;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152311;172.31.52.56;172.31.52.56;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152309;10.36.52.167;10.36.52.167;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152315;172.31.52.23;172.31.52.23;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152318;172.31.52.19;172.31.52.19;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152322;172.31.52.94;172.31.52.94;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152321;shomsqlgru09.gru.local;10.36.52.210;VM,CSAM;Windows 2016/2019/10;'-;'-;Scanned;SHOMSQLGRU09;;AG_GRU_Homologação
+20097014;SPRDSHPINTGRU01.gru.local;172.31.49.241;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 20778;gru.local\adm-thiago.pereira;16 May 2025 03:53AM GMT-0300;Inventory Scan Complete;SPRDSHPINTGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193152326;10.36.52.231;10.36.52.231;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193152324;shomdcgru01.gru.local;10.36.52.221;VM,CSAM;Windows 2016;'-;'-;Scanned;SHOMDCGRU01;;AG_GRU_Homologação
+193144136;10.36.52.129;10.36.52.129;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144142;10.36.52.92;10.36.52.92;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144146;172.31.52.253;172.31.52.253;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144144;10.36.52.254;10.36.52.254;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144151;10.36.52.169;10.36.52.169;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+82385470;SPRDAPPOSTGRU01;172.31.49.13;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 8.10;sysgru;15 May 2025 09:57PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193144157;172.31.52.167;172.31.52.167;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20293585;SPRDAPHSEGRU01.gru.local;172.31.49.22,fe80:0:0:0:48de:5679:801e:a65e;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 6452;GRU\sistemas.gru;16 May 2025 05:27AM GMT-0300;Inventory Scan Complete;SPRDAPHSEGRU01;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-GPA
+193144167;172.31.52.34;172.31.52.34;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193144166;172.31.52.173;172.31.52.173;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20293592;SPRDAPHSEGRU02.gru.local;192.168.0.38,192.168.0.71;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 2273;GRU\adm-rafael.prado;16 May 2025 07:30AM GMT-0300;Inventory Scan Complete;SPRDAPHSEGRU02;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-GPA
+20312004;SPRDAPEGTGRU04.gru.local;172.31.49.63;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 23255;gru.local\svc-egate;16 May 2025 01:51PM GMT-0300;Inventory Scan Complete;SPRDAPEGTGRU04;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-EGATE
+193226102;172.31.52.30;172.31.52.30;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193142138;172.31.52.139;172.31.52.139;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174905;10.36.52.125;10.36.52.125;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193226110;10.36.52.164;10.36.52.164;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+17747957;shomapotrsgru01;10.36.52.49;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;root;15 May 2025 08:25PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193142136;10.36.52.78;10.36.52.78;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193142143;10.36.52.241;10.36.52.241;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193142142;172.31.52.180;172.31.52.180;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174909;172.31.52.138;172.31.52.138;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174908;172.31.52.18;172.31.52.18;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193143939;172.31.52.11;172.31.52.11;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+109197702;sprdapzbpxgru01;fe80:0:0:0:250:56ff:feb6:1a82,172.16.253.84;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;root;15 May 2025 07:57PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+19523118;SPRDSQLGRU18.gru.local;10.1.2.51,172.31.50.41,169.254.32.190,fe80:0:0:0:1ca7:6d76:d078:20be,172.31.50.42,169.254.2.8,fe80:0:0:0:b0e2:8bfd:3120:6838;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64 bits N/A Build 14393 UBR 3930;GRU\cleber.malaquias;16 May 2025 06:35AM GMT-0300;Inventory Scan Complete;SPRDSQLGRU18;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193143940;10.36.52.79;10.36.52.79;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+16150526;SHOMAPBFGRU01.gru.local;10.36.52.34;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 02:03AM GMT-0300;Inventory Scan Complete;SHOMAPBFGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+21139018;SHOMAPIAMGRU03.gru.local;10.36.52.9;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64 bits N/A Build 14393 UBR 8066;GRU\svc-hvmware;16 May 2025 06:34AM GMT-0300;Inventory Scan Complete;SHOMAPIAMGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193143944;172.31.52.171;172.31.52.171;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+124160106;SPRDAPPVGRU02;192.168.1.44;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 23741;Administrator;16 May 2025 05:04AM GMT-0300;Inventory Scan Complete;SPRDAPPVGRU02;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-CMS
+193143951;172.31.52.244;172.31.52.244;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+65273070;SPRDSKPPCGRU04;fe80:0:0:0:1498:cb03:a0f1:1fe9,172.31.48.26;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 02:15AM GMT-0300;Inventory Scan Complete;1950237-104;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+65305833;SPRDSKPPCGRU08;fe80:0:0:0:e16d:b971:c8cd:1dd6,172.31.48.30;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 07:33AM GMT-0300;Inventory Scan Complete;1950237-108;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+110188956;WIN-262G2JIQA0A;172.31.50.79;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 6054;alpha;16 May 2025 06:39AM GMT-0300;Inventory Scan Complete;SPRDAPPEAGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193143950;10.36.52.119;10.36.52.119;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+204157755;10.36.52.144;10.36.52.144;VM,CSAM;EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+24374882;SPRDAPWEBGRU01.gru.local;172.31.49.227;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24385;GRU\sistemas.gru;16 May 2025 03:02AM GMT-0300;Inventory Scan Complete;SPRDAPWEBGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-AMS
+20117024;SPRDBKPPSTGRU01.gru.local;172.31.50.192,fe80:0:0:0:c9e9:1641:2eb9:4d0a;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 2322;GRU\eduardo.silva;16 May 2025 06:25AM GMT-0300;Inventory Scan Complete;SPRDBKPPSTGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193143961;shomapwbgru01.gru.local;10.36.52.54;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+189414481;SHOMAPGPROGRU01;172.31.52.242;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 11:00PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20893218;sprdbdoragru05.gru.local;172.31.49.143,172.31.49.144,172.31.49.92,fe80:0:0:0:baca:3aff:fe35:19e8,169.254.196.231,172.31.49.142,10.1.1.18;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;16 May 2025 02:48AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-CMS
+65305848;SPRDSKPPCGRU12;172.31.48.34,fe80:0:0:0:b423:d6b6:14ba:8659;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 03:01AM GMT-0300;Inventory Scan Complete;1950237-112;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+96354978;sprdapecgru05;172.31.49.166,fe80:0:0:0:569f:35ff:fe71:d948;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 09:36PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-SAP
+131772614;SPRDAPRPGRU14;192.168.0.28,192.168.0.26;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 10:25PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-AMS
+96996053;GRU-NOC-HW8JLZ1.gru.local;172.31.131.19,fe80:0:0:0:e0cc:306f:dc85:6f67;VM,SCA,PM,CSAM;Microsoft Windows 10 Pro 10.0.19045 64 bits N/A Build 19045 UBR 4529;GRU\renato.andrade;16 May 2025 02:47AM GMT-0300;Inventory Scan Complete;GRU-NOC-HW8JLZ1;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Workstation
+99902166;SPRDAPBMSGRUB.gru.local;172.31.49.94;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24356;Administrator;17 Mar 2025 08:26PM GMT-0300;VM Manifest Downloaded;SPRDAPBMSGRUB;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193143969;shomvmgru02.gru.local;10.36.52.5;VM,CSAM;VMware ESXi 6.5.0 build 13004031;'-;'-;Scanned;;;AG_GRU_Homologação
+189129836;SPRDBDHSQLGRU09.gru.local;fe80:0:0:0:1c49:44ef:9bd8:e597,169.254.2.182,172.31.62.102,1.1.1.161,172.31.49.102,fe80:0:0:0:be1a:a44f:64fa:a983;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3328;Administrator;16 May 2025 06:54AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU09;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193184938;172.31.52.166;172.31.52.166;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24581724;SHOMFSQAGRU01.gru.local;10.36.52.103;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;Administrator;16 May 2025 03:00AM GMT-0300;Inventory Scan Complete;SHOMFSQAGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+25552558;sprdapsmgru01;172.31.49.146,fe80:0:0:0:569f:35ff:fe73:fc8,10.1.1.81,fe80:0:0:0:569f:35ff:fe73:ba2;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.10;root;15 May 2025 08:03PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-SAP
+193184936;172.31.52.172;172.31.52.172;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193184941;10.36.52.179;10.36.52.179;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193184940;172.31.52.149;172.31.52.149;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193184951;10.36.52.185;10.36.52.185;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+198065400;SPRDAPCMSP01;172.31.49.181,fe80:0:0:0:250:56ff:fea3:8c54;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;15 May 2025 09:41PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_3-Maior, GRU-GERAL, GRU_CAT_ACN-CMS
+193184953;sias1-gru.gru.local;10.36.52.105;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193516722;SPRDAPESBGRU12;172.31.50.155;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3453;GRU\sistemas.gru;16 May 2025 02:32AM GMT-0300;Inventory Scan Complete;SPRDAPRIMAGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+21507699;SPRDTSQGRU01.gru.local;fe80:0:0:0:91ab:a329:ef07:6dbc,172.31.50.173;VM,SCA,PM,CSAM;Microsoft Windows Server 2022 Standard 10.0.20348 64-bit N/A Build 20348 UBR 2031;GRU\svc-mgmt;16 May 2025 05:25AM GMT-0300;Inventory Scan Complete;SPRDTSQGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193191102;10.36.52.137;10.36.52.137;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+193191107;10.36.52.61;10.36.52.61;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193191111;10.36.52.59;10.36.52.59;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193191110;172.31.52.14;172.31.52.14;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193191115;10.36.52.194;10.36.52.194;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193191113;10.36.52.187;10.36.52.187;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+48305578;SPRDVCRPTGRU01.gru.local;172.31.62.133,172.31.49.133,fe80:0:0:0:217c:6161:a9f8:110d;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6775;Administrator;16 May 2025 02:12AM GMT-0300;Inventory Scan Complete;SPRDVCRPTGRU01;Cloud Agent;Cloud Agent, GRU_ACN_1-Insignificante, GRU-GERAL, GRU_CAT_ACN-AMS
+193191112;172.31.52.148;172.31.52.148;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+84582980;SPRDZBGRU02;172.31.62.11,172.16.253.69,fe80:0:0:0:250:56ff:fe92:5051,fe80:0:0:0:250:56ff:fea3:b2d4;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.2;root;16 May 2025 02:47AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+24901161;SPRDAPPSGRU03.gru.local;172.31.50.129;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7606;GRU\sistemas.gru;16 May 2025 04:58AM GMT-0300;Inventory Scan Complete;SPRDAPPSGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193191120;10.36.52.147;10.36.52.147;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+24505901;sprdapsatgru01.gru.local;fe80:0:0:0:18c5:8761:3876:6077,172.31.49.248;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19377;GRU\svc-nfsat;26 Sep 2024 05:24PM GMT-0300;Manifest Downloaded;SPRDAPSATGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+115794363;shomapprmgru01;10.36.52.134,fe80:0:0:0:250:56ff:fe8a:8987;VM,SCA,PM,CSAM;Ubuntu Linux 22.04.5;sysgru;15 May 2025 09:28PM GMT-0300;Manifest Downloaded;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193172702;172.31.52.35;172.31.52.35;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193172700;10.36.52.51;10.36.52.51;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+149675915;SPRDNTDGRU03;fe80:0:0:0:0:0:0:1,fe80:0:0:0:482b:17ff:fe49:21b9,172.16.253.92,fe80:0:0:0:250:56ff:fe9d:4925;VM,SCA,PM,CSAM;Ubuntu Linux 16.04.7;sysgru;16 May 2025 01:28PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL
+65303685;SPRDSKESBGRU01;fe80:0:0:0:cb2b:7e3:4833:248f,192.168.1.108;VM,SCA,PM,CSAM;Microsoft Windows 10 Pro 10.0.19045 64-bit N/A Build 19045 UBR 5854;SD1950237\Administrator;16 May 2025 02:51AM GMT-0300;Inventory Scan Complete;E-SD;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+193172706;172.31.52.231;172.31.52.231;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193172705;172.31.52.70;172.31.52.70;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193172715;10.36.52.245;10.36.52.245;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+23924225;SPRDAPSCOGRU02.gru.local;172.31.49.218;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Enterprise 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;Administrator;15 May 2025 09:48PM GMT-0300;Inventory Scan Complete;SPRDAPSCOGRU02;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20192857;SINTELI1-GRU.gru.local;172.31.50.168,fe80:0:0:0:c45f:ad1:ac16:f91b;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24055;Administrator;16 May 2025 02:54AM GMT-0300;Inventory Scan Complete;SINTELI1-GRU;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20311623;SPRDAPEGTGRU03.gru.local;172.31.49.62;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 Datacenter 6.2.9200 64-bit N/A Build 9200 UBR 23255;gru.local\adm-marcio.campos.t;16 May 2025 03:57AM GMT-0300;Inventory Scan Complete;SPRDAPEGTGRU03;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-EGATE
+111647189;SPRDAPRMAGRU05.GRU.LOCAL;172.31.50.145,fe80:0:0:0:250:56ff:fe9d:ea47;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.1;root;16 May 2025 04:39AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193172720;172.31.52.232;172.31.52.232;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+101716324;SPRDAPINVGRU02.gru.local;172.31.57.55;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 5066;GRU\sistemas.gru;16 May 2025 05:17AM GMT-0300;Inventory Scan Complete;SPRDAPINVGRU02;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+24610306;SHOMBDOTRSGRU01.GRU.LOCAL;10.36.52.128;VM,SCA,PM,CSAM;Ubuntu Linux 20.04.6;root;15 Apr 2025 12:24PM GMT-0300;Inventory Scan Complete;SHOMBDOTRSGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193172725;10.36.52.218;10.36.52.218;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193172724;172.31.52.114;172.31.52.114;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193172728;172.31.52.82;172.31.52.82;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+20192841;GRU-VMSLOT-AMS.gru.local;172.31.50.161;VM,SCA,PM,CSAM;Microsoft Windows 7 Professional 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;GRU\leandro.jesus.t;16 May 2025 03:19AM GMT-0300;Inventory Scan Complete;GRU-VMSLOT-AMS;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+131557546;SPRDAPIHSGRU03;192.168.0.55,fe80:0:0:0:250:56ff:fea3:79bb;VM,SCA,PM,CSAM;Red Hat Enterprise Linux 9.6;sysgru;16 May 2025 03:58AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+19242661;SPRDCCTVGRU29.gru.local;10.36.60.103,10.36.61.103,10.36.57.121,10.36.57.122,10.36.57.120,10.36.57.103;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4499;GRU\svc-sql-cluster;16 May 2025 05:12AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU29;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193149954;172.31.52.170;172.31.52.170;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193176577;10.36.52.182;10.36.52.182;VM,CSAM;EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+193174535;172.31.52.243;172.31.52.243;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25523726;SPRDAPMPMGRU01.gru.local;172.31.50.102,fe80:0:0:0:6073:ea83:289c:89a6;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 7969;GRU\daniel.reis.t;16 May 2025 03:22AM GMT-0300;Inventory Scan Complete;SPRDAPMPMGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174536;172.31.52.213;172.31.52.213;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+19242666;SPRDCCTVGRU30.gru.local;10.36.60.104,10.36.57.104,10.36.57.123,10.36.57.124,10.36.57.125,fe80:0:0:0:1db8:47ab:7e0e:a929,10.36.61.104;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 4645;GRU\svc-sql-cluster;16 May 2025 07:15AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU30;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+195144754;SPRDBDHSQLGRU12.gru.local;172.31.49.52,172.31.62.52;VM,SCA,CSAM;Microsoft Windows Server 2022 Datacenter 10.0.20348 64-bit N/A Build 20348 UBR 3453;Administrator;16 May 2025 05:47AM GMT-0300;Inventory Scan Complete;SPRDBDHSQLGRU12;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-INFRACRITICA
+114356548;SPRDAPOCSGRU01;fe80:0:0:0:250:56ff:fe9d:1a13,172.16.253.89;VM,SCA,PM,CSAM;Debian Linux 10.13;sysgru;16 May 2025 02:00PM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174551;smd-hom.gru.com.br;10.36.52.204;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+45487393;SHOMAPWSGRU03.gru.local;10.36.52.107;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\svc-hvmware;16 May 2025 03:32AM GMT-0300;Inventory Scan Complete;SHOMAPWSGRU03;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193174548;172.31.52.158;172.31.52.158;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174553;172.31.52.3;172.31.52.3;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174552;172.31.52.147;172.31.52.147;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+70181810;SPRDSQLGRU23.gru.local;10.1.2.60,172.31.50.127,fe80:0:0:0:c71c:cb81:38a2:5e6f,169.254.2.165;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 7314;GRU\leandro.jesus.t;16 May 2025 05:47AM GMT-0300;Inventory Scan Complete;SPRDSQLGRU23;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+193147932;172.31.52.155;172.31.52.155;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193174556;172.31.52.91;172.31.52.91;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+101716400;SPRDAPINVGRU03.gru.local;172.31.57.56;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 5066;GRU\sistemas.gru;16 May 2025 07:23AM GMT-0300;Inventory Scan Complete;SPRDAPINVGRU03;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193147938;172.31.52.98;172.31.52.98;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147937;172.31.52.201;172.31.52.201;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147936;nossohubh.gru.com.br;10.36.52.242;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147942;shomsqlvonegru01.gru.local;10.36.52.161;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+193147945;172.31.52.71;172.31.52.71;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+25523754;SPRDAPBBGRU01.gru.local;172.31.50.159,fe80:0:0:0:d45d:5009:c0b1:2462;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 8066;GRU\svc-edi;16 May 2025 03:10AM GMT-0300;Inventory Scan Complete;SPRDAPBBGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-TARIFAGRU
+65297488;SPRDSKPPCGRU10;172.31.48.32,fe80:0:0:0:29df:dd42:9573:d4c9;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 05:20AM GMT-0300;Inventory Scan Complete;1950237-110;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+193147956;10.36.52.201;10.36.52.201;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+65303642;SPRDSKPPCGRU07;fe80:0:0:0:ed9f:c89f:e9b7:318a,172.31.48.29;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 6529;SD1950237\1950237_parkuser;16 May 2025 06:27AM GMT-0300;Inventory Scan Complete;1950237-107;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-ESTACIONAMENTO
+127985761;SPRDMYSQLGRU03;172.31.49.234,fe80:0:0:0:250:56ff:fea3:ca84;VM,SCA,PM,CSAM;Ubuntu Linux 24.04.1;sysgru;16 May 2025 04:55AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+48305443;SPRDVCAPVGRU01.gru.local;172.31.49.131;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 6775;GRU\sistemas.gru;16 May 2025 06:16AM GMT-0300;Inventory Scan Complete;SPRDVCAPVGRU01;Cloud Agent;Cloud Agent, GRU_ACN_5-Catastrofico, GRU-GERAL, GRU_CAT_ACN-AMS
+96872963;sprdappigru02.gru.local;fe80:0:0:0:569f:35ff:fe71:d96f,10.1.1.90,fe80:0:0:0:569f:35ff:fe71:de3f,172.31.49.168;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 6.6;sysgru;16 May 2025 12:11AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU_ACN_1-Insignificante, GRU-GERAL, GRU_CAT_ACN-SAP
+19529455;SPRDAPIAMGRU09.gru.local;172.31.50.213;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Standard 10.0.14393 64-bit N/A Build 14393 UBR 7876;GRU\sistemas.gru;16 May 2025 05:58AM GMT-0300;Inventory Scan Complete;SPRDAPIAMGRU09;Cloud Agent;Cloud Agent, GRU_ACN_2-Menor, GRU-GERAL, GRU_CAT_ACN-IAM
+180907267;172.31.52.107;172.31.52.107;VM,CSAM;Ubuntu / Tiny Core Linux / Linux 2.6.x / IBM ASM / HP StoreOnce / F5 Networks Big-IP;'-;'-;Scanned;;;AG_GRU_Homologação
+109490512;SPRDBDDACGRU01;fe80:0:0:0:250:56ff:fe9d:3e10,192.168.40.134;VM,SCA,PM,CSAM;CentOS 6.7;root;16 May 2025 04:46AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24876716;sprdapagpmgru01.gru.local;172.31.50.108;VM,SCA,PM,CSAM;Microsoft Windows Server 2012 R2 Datacenter 6.3.9600 64-bit N/A Build 9600 UBR 19377;GRU\sistemas.gru;16 May 2025 04:37AM GMT-0300;Inventory Scan Complete;SPRDAPAGPMGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+204076030;10.36.52.18;10.36.52.18;VM,CSAM;OS Not Identified;'-;'-;Scanned;;;AG_GRU_Homologação
+113068388;sprdbdoragru12;fe80:0:0:0:5fd9:f42e:5705:3693,172.31.49.70;VM,SCA,PM,CSAM;Red Hat Enterprise Linux Server 7.9;root;16 May 2025 06:27AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24907422;SPRDAPBROGRU01.gru.local;fe80:0:0:0:a965:2fde:f267:138c,172.31.50.134;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Datacenter 10.0.17763 64-bit N/A Build 17763 UBR 3165;GRU\svc-mgmt;16 May 2025 04:07AM GMT-0300;Inventory Scan Complete;SPRDAPBROGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+24907423;SPRDAPRVGRU01.gru.local;172.31.104.11,fe80:0:0:0:c18d:1879:2123:8594,172.31.50.135;VM,SCA,PM,CSAM;Microsoft Windows Server 2008 R2 Standard 6.1.7601 64-bit Service Pack 1 Build 7601 UBR 24544;gru\svc-relogios;16 May 2025 05:49AM GMT-0300;Inventory Scan Complete;SPRDAPRVGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+20960984;SHOMDCGRU01.gru.local;10.36.52.221;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64 bits N/A Build 14393 UBR 2248;GRU\svc-hvmware;16 May 2025 05:49AM GMT-0300;Inventory Scan Complete;SHOMDCGRU01;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+203277301;10.36.52.130;10.36.52.130;VM,CSAM;VMware ESX Server;'-;'-;Scanned;;;AG_GRU_Homologação
+190289083;SHOMAPPHPIGRU01;172.31.52.247;VM,SCA,CSAM;Red Hat Enterprise Linux 9.6;sysgru;16 May 2025 04:57AM GMT-0300;Inventory Scan Complete;;Cloud Agent;Cloud Agent, GRU-GERAL, GRU-CAT-Servidores
+107409819;SPRDCCTVGRU09.gru.local;10.36.57.41,10.36.61.50,fe80:0:0:0:dc0:882:74e0:98f5,10.36.57.43,10.36.57.42,fe80:0:0:0:ac63:a65a:1e46:5226,10.36.57.46,10.36.57.45,10.36.57.44,fe80:0:0:0:a15d:2a29:4a88:363,10.36.60.50;VM,SCA,PM,CSAM;Microsoft Windows Server 2019 Standard 10.0.17763 64-bit N/A Build 17763 UBR 5458;GRU\felipe.canosa;16 May 2025 04:17AM GMT-0300;Inventory Scan Complete;SPRDCCTVGRU09;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV
+193143934;10.36.52.81;10.36.52.81;VM,CSAM;Ubuntu/Linux;'-;'-;Scanned;;;AG_GRU_Homologação
+101743087;SPRDAPINVGRU01.gru.local;172.31.57.54;VM,SCA,PM,CSAM;Microsoft Windows Server 2016 Datacenter 10.0.14393 64-bit N/A Build 14393 UBR 5066;GRU\sistemas.gru;16 May 2025 02:46AM GMT-0300;Inventory Scan Complete;SPRDAPINVGRU01;Cloud Agent;Cloud Agent, GRU_ACN_4-Perigoso, GRU-GERAL, GRU_CAT_ACN-CFTV

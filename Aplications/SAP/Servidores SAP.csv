@@ -1,0 +1,39 @@
+Name;Description;Hostname;
+SPRDAPBIGRU01;ACN - ENCLOSURE5-GQWPZ12 - Tag 1WMMF22 - BO BI PRD Node 1;evandro.santiago[sysgru@172.31.49.156]@senhasegura.gru.com.br;172.31.62.12
+SPRDAPBIGRU02;ACN - ENCLOSURE6-DM8QZ12 - Tag 2GMNF22;evandro.santiago[sysgru@172.31.49.169]@senhasegura.gru.com.br;172.31.62.13
+SPRDAPPIGRU01;ACN - ENCLOSURE5-GQWPZ12 - Tag 31MNF22 - PI PRD Node 1;evandro.santiago[sysgru@172.31.49.155]@senhasegura.gru.com.br;172.31.62.14
+SPRDAPPIGRU02;ACN - ENCLOSURE6-DM8QZ12 - Tag 3N22012 - PI PRD Node 2;evandro.santiago[sysgru@172.31.49.168]@senhasegura.gru.com.br;172.31.62.15
+SPRDAPCCPRGRU01;ACN - Bilhetagem Produção, SAP BTP, TARIFA GRU;evandro.santiago[root@172.31.49.137]@senhasegura.gru.com.br;172.31.62.16
+SPRDAPCCPRGRU02;ACN - Bilhetagem Produção, SAP BTP, TARIFA GRU;evandro.santiago[root@172.31.49.139]@senhasegura.gru.com.br;172.31.62.17
+SPRDSAPNASGRU01;ACN - NFS SERVER ECC CLUSTER SAP;evandro.santiago[sysgru@172.31.49.202]@senhasegura.gru.com.br;172.31.62.18
+SAPPRDSCAN_01 => SPBDORAGRU11;ACN - VIP  ORACLE RAC SAP;evandro.santiago[root@172.31.49.191]@senhasegura.gru.com.br;172.31.62.19
+SAPPRDSCAN_02 => SPBDORAGRU09;ACN - VIP  ORACLE RAC SAP;evandro.santiago[root@172.31.49.192]@senhasegura.gru.com.br;172.31.62.20
+SAPPRDSCAN_03 => SPBDORAGRU09;ACN - VIP  ORACLE RAC SAP;evandro.santiago[root@172.31.49.193]@senhasegura.gru.com.br;172.31.62.21
+SPBDORAGRU09V => SPBDORAGRU09;ACN - VIP  ORACLE RAC SAP;evandro.santiago[root@172.31.49.189]@senhasegura.gru.com.br;172.31.62.22
+SPBDORAGRU11V => SPBDORAGRU11;ACN - VIP  ORACLE RAC SAP;evandro.santiago[root@172.31.49.190]@senhasegura.gru.com.br;172.31.62.23
+SPRDBDORAGRU09;ACN - ENCLOSURE5-GQWPZ12 - Tag HM24012 - Oracle RAC SAP (DB) Node 1;evandro.santiago[root@172.31.49.150]@senhasegura.gru.com.br;172.31.62.24
+SPRDBDORAGRU11;ACN - ENCLOSURE6-DM8QZ12 - Tag HM27012 - Oracle RAC SAP (DB) Node 2;evandro.santiago[root@172.31.49.163]@senhasegura.gru.com.br;172.31.62.25
+SPRDBDORAGRU12;ENCLOSURE6-DM8QZ12 - Tag JM22012;evandro.santiago[sysgru@172.31.49.70]@senhasegura.gru.com.br;172.31.62.26
+SPRDBDORAGRU13;;evandro.santiago[sysgru@172.31.49.212]@senhasegura.gru.com.br;172.31.62.27
+SPRDAPECGRU01;ACN - ENCLOSURE5-GQWPZ12 - Tag JDMZZ02;evandro.santiago[root@172.31.49.152]@senhasegura.gru.com.br;172.31.62.29
+SPRDAPECGRU02;ACN - ENCLOSURE5-GQWPZ12 - Tag FM22012;evandro.santiago[root@172.31.49.153]@senhasegura.gru.com.br;172.31.62.30
+SPRDAPECGRU03;ACN - ENCLOSURE5-GQWPZ12 - Tag FM24012;evandro.santiago[root@172.31.49.154]@senhasegura.gru.com.br;172.31.62.31
+SPRDAPECGRU04;ACN - ENCLOSURE6-DM8QZ12 - Tag 7FSYZ02;evandro.santiago[root@172.31.49.165]@senhasegura.gru.com.br;172.31.62.32
+SPRDAPECGRU05;ACN - ENCLOSURE6-DM8QZ12 - Tag GM24012;evandro.santiago[root@172.31.49.166]@senhasegura.gru.com.br;172.31.62.33
+SPRDAPECGRU06;ACN - ENCLOSURE6-DM8QZ12 - Tag 6VC5012;evandro.santiago[root@172.31.49.167]@senhasegura.gru.com.br;172.31.62.34
+SPRDAPECGRU07;;evandro.santiago[sysgru@172.31.49.211]@senhasegura.gru.com.br;172.31.62.10
+SPRDAPECGRUEN;ACN - VIP CLUSTER ECC - SAP;evandro.santiago[root@172.31.49.195]@senhasegura.gru.com.br;172.31.62.35
+SPRDAPECGRUV;ACN - VIP CLUSTER ECC - SAP;evandro.santiago[root@172.31.49.194]@senhasegura.gru.com.br;172.31.62.36
+SPRDAPSMGRU01;ACN - ENCLOSURE5-GQWPZ12 - Tag GM22012 - Solman PRD Node 1 - cuida de deploy e requests;evandro.santiago[root@172.31.49.146]@senhasegura.gru.com.br;172.31.62.37
+SPRDAPSMGRU02;ACN - ENCLOSURE6-DM8QZ12 - Tag 1N24012 - Solman PRD Node 2 - cuida de deploy e requests;evandro.santiago[root@172.31.49.147]@senhasegura.gru.com.br;172.31.62.38
+SPRDAPSMGRUEN;ACN - VIP CLUSTER SOL - SAP;evandro.santiago[root@172.31.49.201]@senhasegura.gru.com.br;172.31.62.39
+SPRDAPSMGRUV;ACN - VIP CLUSTER SOL - SAP;evandro.santiago[root@172.31.49.200]@senhasegura.gru.com.br;172.31.62.40
+;;;172.31.62.41
+;;;172.31.62.42
+;;;172.31.62.44
+;;;172.31.62.45
+;;;172.31.62.46
+;;;172.31.62.47
+;;;172.31.62.48
+;;;172.31.62.49
+;;;172.31.62.50

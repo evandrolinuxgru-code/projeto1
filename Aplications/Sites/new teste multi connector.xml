@@ -1,0 +1,48 @@
+<Connector port="8580" protocol="org.apache.coyote.http11.Http11NioProtocol"
+        connectionTimeout="20000" maxConnections="1000"
+        SSLCertificateFile="/etc/letsencrypt/live/dev.chat.contmatic.com.br/cert.pem"
+        SSLCertificateKeyFile="/etc/letsencrypt/live/dev.chat.contmatic.com.br/privkey.pem"
+        SSLCertificateChainFile="/etc/letsencrypt/live/dev.chat.contmatic.com.br/fullchain.pem"
+        SSLEnabled="true" scheme="https" secure="true"
+        clientAuth="false" sslProtocol="TLS" sslEnabledProtocols="TLSv1,TLSv1.1,TLSv1.2" />
+		
+
+<Connector 
+    address="192.168.0.100"
+    port="8443"
+    protocol="HTTP/1.1"  
+    maxHttpHeaderSize="65536" connectionTimeout="10000" 
+    SSLEnabled="true" scheme="https" secure="true">
+    <SSLHostConfig
+            sslProtocol="TLS"
+            certificateVerification="false">
+        <Certificate 
+            certificateKeystoreFile="myKeystore"
+            certificateKeystorePassword="changeit"
+            certificateKeyAlias="server1cert"
+            certificateKeyPassword="server1pw"
+        />
+    </SSLHostConfig>
+</Connector>
+
+<Connector 
+    address="192.168.0.101"
+    port="8443"
+    protocol="HTTP/1.1"
+    maxHttpHeaderSize="65536" maxThreads="150" 
+    SSLEnabled="true" scheme="https" secure="true">
+    <SSLHostConfig
+            sslProtocol="TLS"
+            certificateVerification="false">
+        <Certificate 
+            certificateKeystoreFile="myKeystore"
+            certificateKeystorePassword="changeit"
+            certificateKeyAlias="server2cert"
+            certificateKeyPassword="server2pw"
+        />
+    </SSLHostConfig>
+</Connector>
+	
+
+
+==========

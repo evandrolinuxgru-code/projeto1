@@ -1,0 +1,4 @@
+#!/bin/bash
+Tamanho Clientes
+ 
+echo  -e "Subject: Tamanho Diretorio dos Clientes - $(date +'%Y-%m-%d')\n\nSegue listagem dos clientes com mais de 15 GBs:\nok1\nok11" | ssmtp -vvv -F"Monitor SMB Skyone" -f"monitor@contmatic.inf.br"

@@ -1,0 +1,70 @@
+Requirements for template operation:
+1.Install Zabbix agent and MySQL client.
+2.Copy template_db_mysql.conf into folder with Zabbix agent configuration (/etc/zabbix/zabbix_agentd.d/ by default). Don't forget restart zabbix-agent. 
+3.Create MySQL user for monitoring. For example:
+
+CREATE USER 'zbx_monitor'@'%' IDENTIFIED BY '2ddRXMH@Rho@KyIeferfre';
+GRANT USAGE,REPLICATION CLIENT,PROCESS,SHOW DATABASES,SHOW VIEW ON *.* TO 'zbx_monitor'@'%';
+Flush privileges;
+
+For more information read the MYSQL documentation https://dev.mysql.com/doc/refman/8.0/en/grant.html , please. 
+4.Create .my.cnf in home directory of Zabbix agent for Linux (/var/lib/zabbix by default ) or my.cnf in c:\ for Windows. For example:
+[client]
+user='zbx_monitor'
+password='2ddRXMH@Rho@KyICizP4bk'
+
+
+You can discuss this template or leave feedback on our forum https://www.zabbix.com/forum/zabbix-suggestions-and-feedback/384189-discussion-thread-for-official-zabbix-template-db-mysql
+
+Template tooling version used: 0.37
+
+c!t@mtnoC#2017
+8U0iK5f.
+Cont#@10b3
+
+#comandos
+ALTER USER 'zbx_monitor'@'%' IDENTIFIED BY '2ddRXMHrferfCizP4bk';
+
+CREATE USER 'zbx_monitor'@'%' IDENTIFIED BY 'erferRho@KyICizP4bk';
+GRANT USAGE,REPLICATION CLIENT,PROCESS,SHOW DATABASES,SHOW VIEW ON *.* TO 'zbx_monitor'@'%';
+Flush privileges;
+
+CREATE USER 'zbx_monitor'@'localhost' IDENTIFIED BY '2ddRXMH@Rho@KyICferfre';
+GRANT USAGE,REPLICATION CLIENT,PROCESS,SHOW DATABASES,SHOW VIEW ON *.* TO 'zbx_monitor'@'localhost';
+Flush privileges;
+
+
+
+mkdir -p /var/lib/zabbix
+chown zabbix.zabbix /var/lib/zabbix
+
+echo [client] > /var/lib/zabbix/.my.cnf
+echo user=\'zbx_monitor\' >> /var/lib/zabbix/.my.cnf
+echo password=\'2ddRXMH@Rho@KyICizP4bk\' >> /var/lib/zabbix/.my.cnf 
+
+chown zabbix.zabbix /var/lib/zabbix/.my.cnf
+
+vim  /etc/zabbix/zabbix_agentd.d/template_db_mysql.conf
+
+#template_db_mysql.conf created by Zabbix for "Template DB MySQL" and Zabbix 4.2
+#For OS Linux: You need create .my.cnf in zabbix-agent home directory (/var/lib/zabbix by default)
+#For OS Windows: You need add PATH to mysql and mysqladmin and create my.cnf in %WINDIR%\my.cnf,C:\my.cnf,BASEDIR\my.cnf 
+#https://dev.mysql.com/doc/refman/5.7/en/option-files.html
+#The file must have three strings:
+#[client]
+#user='zbx_monitor'
+#password='<password>'
+#
+UserParameter=mysql.ping[*], mysqladmin -h"$1" -P"$2" ping
+UserParameter=mysql.get_status_variables[*], mysql -h"$1" -P"$2" -sNX -e "show global status"
+UserParameter=mysql.version[*], mysqladmin -s -h"$1" -P"$2" version
+UserParameter=mysql.db.discovery[*], mysql -h"$1" -P"$2" -sN -e "show databases"
+UserParameter=mysql.dbsize[*], mysql -h"$1" -P"$2" -sN -e "SELECT COALESCE(SUM(DATA_LENGTH + INDEX_LENGTH),0) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='$3'"
+UserParameter=mysql.replication.discovery[*], mysql -h"$1" -P"$2" -sNX -e "show slave status"
+UserParameter=mysql.slave_status[*], mysql -h"$1" -P"$2" -sNX -e "show slave status"
+
+service zabbix-agent restart
+
+
+
+

@@ -1,0 +1,44 @@
+<VirtualHost *:80>
+    ServerName ams.gru.com.br
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName ams.gru.com.br
+	
+	# Certificado
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/seu_certificado.crt
+    SSLCertificateKeyFile /etc/ssl/private/sua_chave_privada.key
+    SSLCertificateChainFile /etc/ssl/certs/cadeia_de_certificados.pem
+
+    # Configurações de protocolo e cifras SSL
+    SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+    SSLCipherSuite ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305
+    SSLHonorCipherOrder on
+    SSLSessionTickets off
+    SSLCompression off
+
+    # Segurança
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Configuração do Proxy
+    <Proxy balancer://ams_cluster>
+        BalancerMember http://172.31.49.227/AMS/
+        Order allow,deny
+        allow from all
+        ProxySet lbmethod=byrequests
+    </Proxy>
+
+    ProxyPass / balancer://ams_cluster/
+    ProxyPassReverse / balancer://ams_cluster/
+
+</VirtualHost>
+
+# Configuração global para SSL Stapling
+SSLUseStapling On
+SSLStaplingCache "shmcb:/var/run/apache2/ssl_stapling(32768)"

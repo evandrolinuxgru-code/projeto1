@@ -1,0 +1,16 @@
+https://itsolutiondesign.wordpress.com/2024/02/20/how-to-install-phpipam-on-ubuntu-22-0420-0418-04/
+
+apt install mariadb-server mariadb-client
+
+systemctl enable mariadb
+
+systemctl start mariadb
+
+mysql_secure_installation
+
+apt -y install php php-{mysql,curl,gd,intl,pear,imap,memcache,pspell,tidy,xmlrpc,mbstring,gmp,json,xml,fpm}
+
+
+
+git clone --recursive https://github.com/phpipam/phpipam.git /var/www/html/phpipam
+

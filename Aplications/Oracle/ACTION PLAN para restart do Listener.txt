@@ -1,0 +1,43 @@
+ACTION PLAN para restart do Listener no Node1
+(# executado com o root, $ executado com o oracle ou grid (dependendo do caso))
+Com o user "oracle" do Linux
+# su - oracle
+
+Conferir se a váriavel de ambiente ORACLE_HOME está setada corretamente. Caso não, setar.
+$ echo $ORACLE_HOME
+
+Verificar o status do listener (incluir o listener_name se for diferente de LISTENER):
+$ lsnrctl status [listener_name]
+
+Caso precise descobrir todos os Listeners rodando no server:
+$ ps -ef | grep tns
+
+O comando acima evidência o ORACLE_HOME onde o listener está rodando.
+
+Parar o listener:
+$ lsnrctl stop [listener_name]
+
+Confira se agora se o listener está down.
+$ lsnrctl status [listener_name]
+
+Se o listener estiver down, agora vamos startá-lo com o profile do GRID.
+Acesse o user "grid" do Linux.
+# su - grid
+
+Conferir se a váriavel de ambiente ORACLE_HOME está setada corretamente. Caso não, setar.
+$ echo $ORACLE_HOME
+
+Confira se agora se o listener está down:
+$ lsnrctl status [listener_name]
+$ srvctl status listener [-l listener_name]
+
+Startar o listener
+$ srvctl start listener [-l listener_name]
+
+Verifique o status do Listener:
+$ lsnrctl status [listener_name]
+
+Verifique se ele está rodando no ORACLE_HOME do grid.
+$ ps -ef | grep tns
+
+FIM ACTION PLAN para restart do Listener no Node1

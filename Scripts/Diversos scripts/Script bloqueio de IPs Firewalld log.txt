@@ -1,0 +1,12 @@
+#!/bin/bash
+cd /opt/streaming_tomcat/logs
+DATA=$(date '+%Y-%m-%d')
+LOG=localhost_access_log.$DATA
+
+IPS=$(cat $LOG | grep "401 127" | awk '{print $1 }' | sort | uniq)
+
+for IP in $IPS
+do 
+	firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address=$IP/24 reject"
+	echo "IP Bloqueado" $IP  $DATA >> /var/log/ips-bloqueados.log
+done

@@ -1,0 +1,77 @@
+<VirtualHost *:80>
+    ServerName servicedesk.gru.com.br
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName servicedesk.gru.com.br
+
+    # Certificado
+    SSLEngine on
+    SSLCertificateFile   /etc/ssl/certs/STAR_gru_com_br.crt
+    SSLCertificateKeyFile /etc/ssl/private/wildcard_gru.key
+    SSLCertificateChainFile /etc/ssl/certs/Sectigo_RSA_Domain_Validation.crt
+
+    # Configurações de protocolo e cifras SSL
+    SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+    SSLCipherSuite ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305
+    SSLHonorCipherOrder on
+    SSLSessionTickets off
+    SSLCompression off
+	
+    SSLProxyProtocol all -SSLv2 -SSLv3
+    SSLVerifyDepth 1
+    SSLProxyCheckPeerCN Off
+    SSLProxyCheckPeerName off
+
+
+    # Segurança
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Configuração do Proxy
+    ProxyRequests Off
+    ProxyPreserveHost on
+    RequestHeader set X-SSL-Protocol "%{SSL_PROTOCOL}s"
+    RequestHeader set X-SSL-Cipher "%{SSL_CIPHER}s"
+
+    <Proxy balancer://servicedesk_cluster>
+    BalancerMember http://172.31.49.49:80 route=1
+    Order   allow,deny
+    allow from all
+    ProxySet stickysession=ROUTEID
+    </Proxy>
+
+        # Redirecionamentos
+        RedirectMatch 301 ^/otrs/?$ /znuny/customer.pl
+        RedirectMatch 301 ^/atendentes$ /znuny/index.pl
+        RedirectMatch 301 ^/clientes$ /znuny/customer.pl
+        RedirectMatch 301 ^/otrs/index.pl$ /znuny/index.pl
+        RedirectMatch 301 ^/otrs/customer.pl$ /znuny/customer.pl
+        RedirectMatch 301 ^/otrs/public.pl$ /znuny/public.pl
+
+        RedirectMatch 301 ^/znuny$ /znuny/
+        RedirectMatch 301 ^/znuny-web$ /znuny-web/
+
+        # Caminhos do Znuny
+        ProxyPass /znuny/    balancer://servicedesk_cluster/znuny/
+        ProxyPass /znuny-web/ balancer://servicedesk_cluster/znuny-web/
+        ProxyPassReverse /znuny/ balancer://servicedesk_cluster/znuny/
+        ProxyPassReverse /znuny-web/ balancer://servicedesk_cluster/znuny-web/
+
+        # Redirecionamento da raiz
+        RedirectMatch ^/$ /znuny/customer.pl
+
+    Timeout 3600
+    ProxyTimeout 3600
+
+	
+    # Logs
+    ErrorLog logs/servicedesk_error.log
+    CustomLog logs/servicedesk_access.log combined
+
+</VirtualHost>
+

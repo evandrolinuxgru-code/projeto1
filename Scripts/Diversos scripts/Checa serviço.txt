@@ -1,0 +1,11 @@
+#!/bin/bash
+ps aux | grep -v grep | grep script-change-ip > /dev/null
+result=$?
+
+if [ "${result}" -eq "0" ] ; then
+        echo "`date`: script-change-ip.sh is running" >> /var/log/check-change-ip.log
+else
+        echo "`date`: script-change-ip.sh is not running" >> /var/log/check-change-ip.log
+        /root/script-change-ip.sh
+fi
+

@@ -1,0 +1,33 @@
+#rsyslog messages
+
+*.*;local5,auth,authpriv.none           -/var/log/syslog ????
+
+#rsyslog
+vim /etc/rsyslog.d/00-samba-audit.conf
+local5.notice /var/log/samba/audit.log 
+& ~
+
+
+#logrotate
+vi  /etc/logrotate.d/samba
+/var/log/samba/log.[b-z]* {
+    notifempty
+    olddir /var/log/samba/old
+    missingok
+    sharedscripts
+    copytruncate
+}
+
+/var/log/samba/audit.log {
+   weekly
+   missingok
+   rotate 90
+   postrotate
+      /bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+   endscript
+   compress
+   notifempty
+}
+
+
+

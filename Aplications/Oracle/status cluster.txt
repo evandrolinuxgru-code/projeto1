@@ -1,0 +1,93 @@
+[root@sprdbdoragru04 bin]# ./crsctl status res -t
+--------------------------------------------------------------------------------
+NAME           TARGET  STATE        SERVER                   STATE_DETAILS
+--------------------------------------------------------------------------------
+Local Resources
+--------------------------------------------------------------------------------
+ora.ARCH.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.ARCH2.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.CMSDATA.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.DATA.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.DATACMS.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.FRA.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.FRA_ZBX.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.LEGADOS.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.LISTENER.lsnr
+               ONLINE  OFFLINE      sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.OCRVOTE.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.REDO.dg
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.ZABBIX_INDEX.dg
+               ONLINE  OFFLINE      sprdbdoragru04
+               ONLINE  OFFLINE      sprdbdoragru05
+ora.ZABORA_DATA.dg
+               ONLINE  OFFLINE      sprdbdoragru04
+               ONLINE  OFFLINE      sprdbdoragru05
+ora.asm
+               ONLINE  ONLINE       sprdbdoragru04           Started
+               ONLINE  ONLINE       sprdbdoragru05           Started
+ora.gsd
+               OFFLINE OFFLINE      sprdbdoragru04
+               OFFLINE OFFLINE      sprdbdoragru05
+ora.net1.network
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.ons
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+ora.registry.acfs
+               ONLINE  ONLINE       sprdbdoragru04
+               ONLINE  ONLINE       sprdbdoragru05
+--------------------------------------------------------------------------------
+Cluster Resources
+--------------------------------------------------------------------------------
+ora.LISTENER_SCAN1.lsnr
+      1        ONLINE  INTERMEDIATE sprdbdoragru04           Not All Endpoints R
+                                                             egistered
+ora.LISTENER_SCAN2.lsnr
+      1        ONLINE  ONLINE       sprdbdoragru05
+ora.LISTENER_SCAN3.lsnr
+      1        ONLINE  ONLINE       sprdbdoragru05
+ora.cmsdbs.db
+      1        ONLINE  OFFLINE                               Instance Shutdown
+      2        ONLINE  OFFLINE
+ora.cvu
+      1        ONLINE  ONLINE       sprdbdoragru05
+ora.oc4j
+      1        ONLINE  ONLINE       sprdbdoragru04
+ora.prgr03.db
+      1        ONLINE  ONLINE       sprdbdoragru04           Open
+ora.scan1.vip
+      1        ONLINE  ONLINE       sprdbdoragru04
+ora.scan2.vip
+      1        ONLINE  ONLINE       sprdbdoragru05
+ora.scan3.vip
+      1        ONLINE  ONLINE       sprdbdoragru05
+ora.sprdbdoragru04.vip
+      1        ONLINE  ONLINE       sprdbdoragru04
+ora.sprdbdoragru05.vip
+      1        ONLINE  ONLINE       sprdbdoragru05
+ora.zabbix.db
+      1        OFFLINE OFFLINE                               Instance Shutdown
+      2        OFFLINE OFFLINE                               Instance Shutdown
+[root@sprdbdoragru04 bin]#

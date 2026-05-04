@@ -1,0 +1,44 @@
+Estrututrar AWX
+
+Infraestrutura
+Linux
+Microsoft
+Vmware 
+Backup
+Observabilidade
+Noc
+Redes
+Segurança da Informação
+
+Sistemas:
+N1
+N2
+N3
+
+Projetos:
+
+Governança:
+
+==============
+Workflows: Conecte seus Templates em fluxos lógicos com caminhos de sucesso, falha e aprovação manual.
+
+Surveys: Crie formulários para que usuários preencham variáveis (como versão ou nomes) sem tocar no código.
+
+Notificações: Configure alertas automáticos (Slack, Teams ou E-mail) para saber instantaneamente se algo falhou.
+
+Inventários Dinâmicos: Automatize a descoberta de hosts integrando o AWX com sua Nuvem ou Virtualizador.
+
+Execution Environments (EE): Garanta que todas as dependências (Python e Collections) estejam isoladas em containers.
+
+Schedules: Agende tarefas rotineiras e manutenções para rodarem sozinhas em horários específicos.
+=======================
+renomear playbooks:
+<dominio>/<acao>_<objeto>_<contexto>.yml
+linux/install_elastic.yml
+linux/install_elastic.yml
+
+renomear templates:
+LINUX - Install - Elastic Agent
+LINUX - Patch - OS Update
+LINUX - Hardening - SSH Service
+LINUX - Provision - Full Baselin

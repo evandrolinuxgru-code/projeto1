@@ -1,0 +1,230 @@
+1- Converter o certificado
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out pkcs.p12 -name tomcat -passout pass:ctmatic
+
+2-Importar o certificado para uma keystore
+./keytool -importkeystore -deststorepass ctmatic -destkeypass ctmatic -destkeystore .keystore -srckeystore pkcs.p12 -srcstoretype PKCS12 -srcstorepass ctmatic -alias tomcat
+
+3-Listar as keystore para validar
+./keytool -list -v -keystore .keystore -storepass ctmatic
+
+4-Backup da keystore atual identificada no caminho do server.xml do Tomcat
+cp /opt/contador-online/apache-tomcat-7.0.82/webapps/.keystore /root/
+
+5-Copiar a nova keystore para o path identificado no path do server.xml do Tomcat
+cp .keystore /opt/contador-online/apache-tomcat-7.0.82/webapps/
+
+
+6-Reiniciar o Tomcat
+
+
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out pkcs.p12 -name tomcat -passout pass:ctmatic
+/opt/sso/jdk1.8.0_144/jre/bin/keytool -importkeystore -deststorepass ctmatic -destkeypass ctmatic -destkeystore .keystore -srckeystore pkcs.p12 -srcstoretype PKCS12 -srcstorepass ctmatic -alias tomcat
+keytool -list -v -keystore .keystore -storepass ctmatic
+
+
+
+<Connector port="${redirect.port}" protocol="org.apache.coyote.http11.Http11NioProtocol"
+          maxHttpHeaderSize="1000000" maxThreads="800"
+          SSLEnabled="true" scheme="https" secure="true"
+          clientAuth="false" sslProtocol="TLS"
+          keystoreFile="/opt/sso_tomcat/conf/.keystore"
+          keystorePass="ctmatic" compression="on" useSendfile="false" compressionMinSize="0"/>
+
+    <Connector port="${http.port}" protocol="org.apache.coyote.http11.Http11NioProtocol"
+            connectionTimeout="20000"
+			maxHttpHeaderSize="1000000" maxThreads="800"
+			SSLEnabled="true" scheme="https" secure="true"
+			clientAuth="false" sslProtocol="TLS"
+			keystoreFile="/opt/delivery-api_tomcat/conf/.keystore"
+			keystorePass="ctmatic" compression="on" useSendfile="false" compressionMinSize="0"/>
+            redirectPort="8443" />
+			   
+	
+    <Connector port="9993" protocol="org.apache.coyote.http11.Http11NioProtocol"
+                SSLEnabled="true" scheme="https" secure="true" maxHttpHeaderSize="1000000"
+                clientAuth="false" sslProtocol="TLS" compression="on" useSendfile="false" compressionMinSize="0"
+                keystoreFile="/captcha-cep/app_captcha/NEW_CAPTCHA/tomcat/conf/.keystore"
+                keystorePass="ctmatic" maxThreads="800"/>
+
+
+    <Connector port="${http.port}" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="${redirect.port}"
+               compression="on" useSendfile="false" compressionMinSize="0" />
+
+    <Connector port="${redirect.port}" protocol="org.apache.coyote.http11.Http11NioProtocol"
+               connectionTimeout="20000"
+               SSLEnabled="true" scheme="https" secure="true"
+               clientAuth="false" sslProtocol="TLS"
+               keystoreFile="/opt/marketplace-api_tomcat/conf/.keystore"
+               keystorePass="ctmatic" compression="on" useSendfile="false" compressionMinSize="0"/>
+			   
+    <Connector port="7043" protocol="org.apache.coyote.http11.Http11NioProtocol"
+               connectionTimeout="20000"
+               SSLEnabled="true" scheme="https" secure="true"
+               clientAuth="false" sslProtocol="TLS"
+               keystoreFile="/opt/sso_private_tomcat/conf/.keystore"
+               keystorePass="ctmatic" compression="on" useSendfile="false" compressionMinSize="0"/>			   
+			   
+<Connector port="9993" protocol="org.apache.coyote.http11.Http11NioProtocol"
+                SSLEnabled="true" scheme="https" secure="true" maxHttpHeaderSize="1000000"
+                clientAuth="false" sslProtocol="TLS" compression="on" useSendfile="false" compressionMinSize="0"
+                keystoreFile="/captcha-cep/app_captcha/NEW_CAPTCHA/tomcat/conf/.keystore"
+                keystorePass="ctmatic" maxThreads="800"/>
+
+# Systemd unit file for tomcat
+[Unit]
+Description=Apache Tomcat Web Application Container
+After=syslog.target network.target
+[Service]
+Type=forking
+WorkingDirectory=/opt/contcaptcha_tomcat
+Environment=JAVA_HOME=/opt/contcaptcha_jdk/jre
+Environment=CATALINA_PID=/opt/contcaptcha_tomcat/temp/tomcat.pid
+Environment=CATALINA_HOME=/opt/contcaptcha_tomcat
+Environment=CATALINA_BASE=/opt/contcaptcha_tomcat
+Environment='CATALINA_OPTS=-Xms32M -Xmx2048M -server -XX:+UseShenandoahGC -XX:+UseStringDeduplication -XX:+CompactStrings'
+Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Dhttp.port=8180 -Dshutdown.port=8105 -Dajp.port=8190 -Dredirect.port=443'
+ExecStart=/opt/contcaptcha_tomcat/bin/catalina.sh start
+#ExecStop=/bin/kill -15 $MAINPID
+ExecStop=/opt/contcaptcha_tomcat/bin/shutdown.sh
+
+LimitNOFILE=500000
+LimitNPROC=500000
+
+User=root
+Group=root
+UMask=0007
+RestartSec=10
+Restart=always
+[Install]
+WantedBy=multi-user.target
+~
+
+
+#Renovar Certificado
+certbot certonly --manual --preferred-challenge dns -m infra@grupo.com -d zabbix.grupo.com
+certbot certonly --manual --preferred-challenge dns -m infra@grupo.com -d redmine.grupo.com
+
+
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out pkcs.p12 -name tomcat -passout pass:ctmatic
+
+keytool -importkeystore -deststorepass ctmatic -destkeypass ctmatic -destkeystore .keystore -srckeystore pkcs.p12 -srcstoretype PKCS12 -srcstorepass ctmatic -alias tomcat
+
+keytool -list -v -keystore .keystore -storepass ctmatic
+
+#instalar certbot
+yum install -y certbot python2-certbot-apache mod_ssl
+
+
+#apache tomcat version
+grep Tomcat catalina.out
+java -cp /home/cndphoenix/cnd_web/server_web/lib/:q
+org.apache.catalina.util.ServerInfo
+java -version
+
+#checar chaves
+openssl x509 -noout -modulus -in fullchain.pem | openssl md5
+openssl rsa -noout -modulus -in privkey.pem | openssl md5
+
+#escutar na porta 80
+python -m SimpleHTTPServer 80
+nc -l -p 80
+
+#Listar processos httpd
+ss  -tup |  awk '{print $6}' | grep http|  sort
+
+#Lentidão de site, teste velocidade
+curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null https://sistema.fundacaosergiocontente.org.br
+
+#Redirect Tomcat in web.xml (before  </web-app>)
+
+<!-- Force HTTPS, required for HTTP redirect! -->
+<security-constraint>
+<web-resource-collection>
+<web-resource-name>Protected Context</web-resource-name>
+<url-pattern>/*</url-pattern>
+</web-resource-collection>
+ 
+<!-- auth-constraint goes here if you require authentication -->
+<user-data-constraint>
+<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+</user-data-constraint>
+</security-constraint>
+
+
+#Configurações server xml
+<Connector port="${redirect.port}" protocol="org.apache.coyote.http11.Http11NioProtocol"
+        compression="on" useSendfile="false" compressionMinSize="0"
+        maxThreads="800" SSLEnabled="true" scheme="https" secure="true"
+        clientAuth="false" sslProtocol="TLS"
+        SSLCertificateFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/cert.pem"
+        SSLCertificateKeyFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/privkey.pem"
+        SSLCertificateChainFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/fullchain.pem"
+         />
+
+
+<Connector port="8580" protocol="org.apache.coyote.http11.Http11NioProtocol"
+	connectionTimeout="20000" maxConnections="1000"
+	SSLCertificateFile="/etc/letsencrypt/live/dev.chat.ctmatic.com.br/cert.pem"
+	SSLCertificateKeyFile="/etc/letsencrypt/live/dev.chat.ctmatic.com.br/privkey.pem"
+	SSLCertificateChainFile="/etc/letsencrypt/live/dev.chat.ctmatic.com.br/fullchain.pem"
+	SSLEnabled="true" scheme="https" secure="true"
+	clientAuth="false" sslProtocol="TLS" sslEnabledProtocols="TLSv1,TLSv1.1,TLSv1.2" />
+
+
+		 
+SSLCertificateFile="/etc/letsencrypt/live/avaliacao.ctmaticgestaoempresarial.com.br/cert.pem"
+SSLCertificateKeyFile="/etc/letsencrypt/live/avaliacao.ctmaticgestaoempresarial.com.br/privkey.pem"
+SSLCertificateChainFile="/etc/letsencrypt/live/avaliacao.ctmaticgestaoempresarial.com.br/fullchain.pem"
+
+<Connector port="5443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+        compression="on" useSendfile="false" compressionMinSize="0"
+        maxThreads="800" SSLEnabled="true" scheme="https" secure="true"
+        clientAuth="false" sslProtocol="TLS"
+        SSLCertificateFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/cert.pem"
+        SSLCertificateKeyFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/privkey.pem"
+        SSLCertificateChainFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/fullchain.pem"
+         />
+    <Connector port="5443" protocol="org.apache.coyote.http11.Http11Protocol"
+        maxThreads="150" SSLEnabled="true" scheme="https" secure="true" 
+		compression="on" useSendfile="false" compressionMinSize="0"
+        clientAuth="false" sslProtocol="TLS"
+        SSLCertificateFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/cert.pem"
+        SSLCertificateKeyFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/privkey.pem"
+        SSLCertificateChainFile="/etc/letsencrypt/live/dev.connectcont-avaliacao.ctmatic.com.br/fullchain.pem"
+		/>
+<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+        compression="on" useSendfile="false" compressionMinSize="0"
+        maxThreads="800" SSLEnabled="true" scheme="https" secure="true"
+        clientAuth="false" sslProtocol="TLS"
+        SSLCertificateFile="/etc/letsencrypt/live/homolog.sso-comuns.ctmatic.com.br/cert.pem"
+        SSLCertificateKeyFile="/etc/letsencrypt/live/homolog.sso-comuns.ctmatic.com.br/privkey.pem"
+        SSLCertificateChainFile="/etc/letsencrypt/live/homolog.sso-comuns.ctmatic.com.br/fullchain.pem"
+         />
+
+
+
+<VirtualHost *:80>
+ServerName www.cndphoenix.com.br
+#ProxyPreserveHost On
+#ProxyRequests On
+ProxyPass / http://localhost:8080/
+ProxyPassReverse /(.*) http://localhost:8080/(.*)
+#RewriteEngine on
+#RewriteCond %{SERVER_NAME} =www.cndphoenix.com.br
+#RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+<VirtualHost *:80>
+ServerName app.cnd.ctmatic.com.br
+#ProxyPreserveHost On
+#ProxyRequests On
+ProxyPass / http://localhost:8080/
+ProxyPassReverse /(.*) http://localhost:8080/(.*)
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =app.cnd.ctmatic.com.br
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+

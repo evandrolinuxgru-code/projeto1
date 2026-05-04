@@ -1,0 +1,45 @@
+ACTION PLAN para restart do ohasd.bin no Node1:
+(# executado com o root, $ executado com o oracle ou grid (dependendo do caso))
+
+Precisamos executar o stop e start com o user root, mas antes precisamos setar as variáveis de ambiente do GRID.
+
+# cat /etc/oratab | grep -i asm
+
+Vamos usar a instância do ASM listada no passo anterior (geralmente +AMS1, no primeiro node)
+# . oraenv
++AMS1 <imputar o nome da instância do ASM>
+
+Conferir se a váriavel de ambiente ORACLE_HOME está setada corretamente. Caso não, setar.
+# echo $ORACLE_HOME
+
+Verificar o status atual dos recursos do cluster. (Tome nota)
+# crsctl status res -t
+
+Parar toda a stack do Oracle incluindo o ohasd.bin
+# crsctl stop crs
+
+O output esperado será algo como:
+CRS-2791: Starting shutdown of Oracle High Availability Services-managed resources on 'node1'
+CRS-2673: Attempting to stop 'ora.crsd' on 'node1'
+CRS-2790: Starting shutdown of Cluster Ready Services-managed resources on 'node1'
+CRS-2673: Attempting to stop 'ora.LISTENER_SCAN1.lsnr' on 'node1'
+CRS-2673: Attempting to stop 'ora.oc4j' on 'node1'
+CRS-2673: Attempting to stop 'ora.OCR.dg' on 'node1'
+CRS-2673: Attempting to stop 'ora.registry.acfs' on 'node1'
+CRS-2673: Attempting to stop 'ora.dbn.db' on 'node1'
+...
+CRS-4133: Oracle High Availability Services has been stopped.
+
+Verificar se o processo do ohasd.bin foi parado. O próximo comando não deve ter output.
+# ps -ef | grep ohasd.bin
+
+Em seguida, startar novamente a stack.
+# crsctl start crs
+
+O output será algo como:
+CRS-4123: Oracle High Availability Services has been started.
+
+E para acompanhar quais serviços já estão ONLINE, basta:
+# crsctl status res -t
+
+FIM ACTION PLAN para restart do ohasd.bin no Node1.

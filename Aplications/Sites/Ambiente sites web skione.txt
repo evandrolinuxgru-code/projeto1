@@ -1,0 +1,35 @@
+PROD:
+IP Servidor web: 192.168.5.240
+Directorio:/var/www/html/autoskywebauth
+Pagina: https://web.contmatic.com.br/
+
+IP Banco: 192.168.5.187
+DNS web.database.contmatic.com.br
+Database: web
+User: web_prod
+Senha: D@9sFtEExO3Qh@k4JN8wlo
+
+---------------------------------------------
+HOMOLOG:
+IP Servidor web: 192.168.5.161
+Directorio:
+Pagina: https://homolog.web.contmatic.com.br 
+
+IP Banco: 192.168.5.83
+DNS homolog.database.web.contmatic.com.br
+Database: web
+User: web_homolog
+Senha: KqyR2UVt@FWk8iWdmg5UZ@
+
+
+---------------------------------------------
+DEV:
+IP Servidor web: 192.168.5.134
+Directorio: 
+Pagina: https://dev.web.contmatic.com.br 
+
+IP Banco: 192.168.5.150
+DNS dev.database.web.contmatic.com.br
+Database: web
+User: web_dev
+Senha: Cnt$3wlvQKYmVpn@21mh5

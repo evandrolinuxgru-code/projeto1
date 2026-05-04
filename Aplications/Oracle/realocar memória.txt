@@ -1,0 +1,23 @@
+Realocar memória para novo Oracle
+
+Origem:
+ENCLOSURE6-DM8QZ12 - https://172.31.6.97/cgi-bin/webcgi/main?aa0a8d650c88ad414a512585657f358b#
+SPRDAPBPGRU02 64GB 3WMMF22 - Slot 9 - PowerEdge M620
+SPRDAPMSGRU02 64GB 5WMMF22 - Slot 12 - PowerEdge M620
+
+Destino:
+ENCLOSURE2-BY381Y1 - https://172.31.6.24/cgi-bin/webcgi/main?3c0300521b3f64e37329f10471e2ae0a#
+SPRDAPCMSGRU06 128GB 9R5PKZ1 - Slot 12 - PowerEdge M620
+
+
+===========
+
+
+Origem das Memórias: ENCLOSURE6-DM8QZ12 - (https://172.31.6.97/cgi-bin/webcgi/main?aa0a8d650c88ad414a512585657f358b#)
+SPRDAPBPGRU02 64GB 3WMMF22 - Slot 9 - PowerEdge M620
+SPRDAPMSGRU02 64GB 5WMMF22 - Slot 12 - PowerEdge M620
+
+Destino das Memórias: ENCLOSURE6-DM8QZ12
+SPRDBDORAGRU10 64GB JM22012 - Slot 1 - PowerEdge M620
+
+

@@ -1,0 +1,11 @@
+ShareName UserName     ComputerName 
+--------- --------     ------------ 
+CMS$      svc-cms      172.31.49.98 
+CMS$      SVC-CMS      172.31.49.89 
+CMS$      svc-cms      172.31.49.99 
+CMS$      svc-cms      172.31.49.199
+CMS$      sistemas.gru 172.31.50.78 
+CMS$      SVC-CMS      172.31.49.90 
+
+entre 1 hora e 3 da manhã
+

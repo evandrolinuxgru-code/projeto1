@@ -1,0 +1,10 @@
+#!/bin/sh
+PATH=/var/lib/mongodb-mms-automation/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/aws/bin
+USUARIOS=temp
+DATA=`date`
+
+mongo 127.0.0.1:27000/admin --username master --password '123456789' --authenticationDatabase admin --eval "db.system.users.find({}, { db: 1, user: 1})" | sed "s/\"//g" | sed "/connecting/d" | sed "/shell/d" > $USUARIOS
+
+(echo "Subject: Report: Permissoes MongoDB Arquivos - $DATA"  ; echo; cat $USUARIOS ) | /usr/sbin/sendmail -f monitor@contmatic.inf.br -t email@gru.com.br
+
+echo 0 > $USUARIOS

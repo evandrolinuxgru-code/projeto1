@@ -1,0 +1,35 @@
+mysql -uroot -p -t -e 'SELECT GRANTEE, PRIVILEGE_TYPE, IS_GRANTABLE FROM information_schema.USER_PRIVILEGES ORDER BY GRANTEE, PRIVILEGE_TYPE' > USER_PRIVILEGES.txt
+mysql -uroot -p -t -e 'SELECT GRANTEE, PRIVILEGE_TYPE, IS_GRANTABLE FROM information_schema.SCHEMA_PRIVILEGES ORDER BY GRANTEE, PRIVILEGE_TYPE' > SCHEMA_PRIVILEGES.txt
+mysql -uroot -p -t -e 'SELECT GRANTEE, PRIVILEGE_TYPE, IS_GRANTABLE FROM information_schema.TABLE_PRIVILEGES ORDER BY GRANTEE, PRIVILEGE_TYPE' > TABLE_PRIVILEGES.txt
+
+
+
+==================
+Passos:
+
+yum install -y ssmtp
+
+vim /etc/ssmtp/ssmtp.conf
+i
+mailhub=smtp.contmatic.inf.br:587
+AuthUser=monitor@contmatic.inf.br
+AuthPass=b2KkvxQy65AmsQAGnhO9
+RewriteDomain=contmatic.inf.br
+
+useradd monitor
+sudo su - monitor
+
+vim monitor.sh
+i
+#!/bin/sh
+
+Data=`date`
+Report=/home/monitor/permissoes.txt
+
+mysql -uroot -p8U0iK5f. information_schema -t -e  'select grantee as Permissao, table_schema as Tabela, privilege_type Privilegio FROM schema_privileges order by grantee Asc, table_schema Asc, privilege_type Asc ;' > /home/monitor/permissoes.txt
+
+(echo "Subject: Report: Permissoes DB Diversos - $HOSTNAME - $Data"  ; echo; cat $Report ) | /usr/sbin/sendmail infra@contmatic.com.br
+
+=================
+select * from information_schema.user_privileges;
+

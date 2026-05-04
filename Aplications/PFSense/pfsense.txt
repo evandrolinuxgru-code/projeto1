@@ -1,0 +1,79 @@
+========================== VIGIAGRO FISICO  ======================== REMOVER
+IP: 172.31.0.10
+user:admin
+pass:Gru@#E#uxsd64
+
+LINK_SAMM 	 	bce2 (00:26:b9:82:a9:5d) => 177.130.117.188
+GERENCIAMENTO 	bce0 (00:26:b9:82:a9:59) => 172.31.0.10
+LAN_VIGIAGRO 	bce1 (00:26:b9:82:a9:5b) => 10.11.13.1
+LINK_EMBRATEL   bce3 (00:26:b9:82:a9:5f) => 200.174.72.188
+
+
+==============================VIGIAGRO HCI==========================
+SPRDAPPFSGRU01 - PFSENSE-WEB-VIGIAGRO
+IP: 172.31.0.15
+user:admin
+pass:Gru@#E#uxsd64
+
+GERENCIA		vmx0 (00:50:56:a3:3d:f7) => 172.31.0.15
+LINK_SAMM 		vmx1 (00:50:56:a3:e9:0b) => 189.91.108.131
+LAN_VIGIAGRO 	vmx2 (00:50:56:a3:06:74) => 10.11.13.254
+
+
+==============================RECEITA FEDERAL HCI=================== ESSE
+SPRDAPPFSGRU02 - PFSENSE-WEB-RECEITA-FEDERAL
+IP: 172.31.0.20
+user:admin
+pass:F#iaGS@Xu@sd65
+
+LINK_SAMM 		vmx1 (00:50:56:a3:6f:8c) => 189.91.108.133
+LAN_PF 			vmx2 (00:50:56:a3:ad:57) => 10.166.0.1
+GERENCIAMENTO 	vmx0 (00:50:56:a3:b8:35) => 172.31.0.20
+
+DHCP: 
+10.166.0.1 
+10.166.1.10 - 10.166.3.254
+
+==============================RECEITA FEDERAL 6.5=================== REMOVER
+SPRDAPPFSGRU02-NEW
+
+user:admin
+pass:
+
+WAN		vmx0  => 189.91.108.132
+LAN		vmx1 => 10.166.0.10
+
+
+==============================VPN POLICIA FEDERAL===================
+SPRDAPPFSGRU02 - PFSENSE-VPN-POLICIA-FEDERAL
+IP: 172.31.0.25
+
+user:admin
+pass:Gru@#H#rerd75
+
+EMBRATEL 	vmx2 (00:50:56:a3:96:5c) => 200.174.72.187
+INTERNO		vmx3 (00:50:56:a3:7f:28) => 172.31.210.76
+Gerencia	vmx1 (00:50:56:a3:6c:05) => 172.31.0.25
+SAMM		vmx0 (00:50:56:a3:64:84) => 177.130.117.187
+WG_GRU		tun_wg0 (tun_wg0) 		 => 192.168.255.24
+
+
+==============================POLICIA FEDERAL=======================
+SPRDAPPFSGRU04 - PFSENSE-WEB-POLICIA-FEDERAL
+IP: 172.31.0.30
+
+user:admin
+pass:y4x6n^!e2v7S@Pf
+
+Interfaces:
+LINK_SAMM		vmx1 (00:50:56:a3:ef:18) 189.91.108.137
+LAN_PF			vmx2 (00:50:56:a3:4a:c7) 
+GERENCIA		vmx0 (00:50:56:a3:9c:76) 172.31.0.30
+
+DHCP: 
+192.168.77.2 => 192.168.77.254
+192.168.77.1
+8.8.8.8
+1.1.1.1
+fw.local
+

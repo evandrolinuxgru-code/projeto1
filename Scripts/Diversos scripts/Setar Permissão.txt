@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#listadegrupos
+grupos=`wbinfo -g`
+
+for each grupo em grupos
+
+echo grupo | sed "s/contmatic-homolog.//" | sed "s/-.*//"
+
+listadepastas
+
+achar pasta sem permissão correta
+
+setar permissão em cada pasta
+
+
+
+
+
+restringir permissão
+

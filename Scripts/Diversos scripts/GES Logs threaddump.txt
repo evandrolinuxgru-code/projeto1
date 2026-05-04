@@ -1,0 +1,35 @@
+atuacao travamento gestao
+maquina ges01 caminho do app /gestao/app
+
+processo do tomcat está como usuario gestao
+
+1- executar com o usuario gestao /gestao/app/threadDump.sh, os arquivos ficam salvos na pasta /gestao/app/tdump
+OBS: usar intervalo de 1min para 3 execucoes
+
+2- - executar com o usuario gestao "jmap (caminho do java: zulu7.31.0.5-ca-jdk7.0.232-linux_x64/bin),  linha de comando exemplo: "
+usar o pid do threadDump.sh (passo1) ou pegar via ps (grep tomcat ou grep gestao) 
+./jmap -dump:live,format=b,file=gestao-18-05-2020.bin 27067
+
+3- caso seja preciso reiniciar o gestao (/gestao/app scripts (stopAll.sh e startAll-01.sh)
+
+
+------
+
+****quando solicitarem logs da aplicação /gestao/app/tomcat-gestao/logs/gestao_web.log - /gestao/app/tomcat-financeiro/logs/financeiro.log
+
+front financeiro 04
+--------------------------------------------------------------
+
+Atuacao em GMUD
+
+1- a-cópia do war ou jar da gmud para a pasta publicar (/gestao/app/publicar) da máquina em questao 
+   b-parar a aplicacao (/gestao/app (script stopAll.sh)
+
+2- Executar os scripts da gmud de acordo com o plano definido: ex script:  ContAPPGestao01-p1.sh ou ContAPPGestao01-p2.sh
+
+3- Iniciar o gestao (/gestao/app (script startAll-01.sh)
+
+1
+2
+4
+3

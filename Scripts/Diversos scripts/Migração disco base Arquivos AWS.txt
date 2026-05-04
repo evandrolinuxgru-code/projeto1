@@ -1,0 +1,30 @@
+1- Criação de snapshot de disco 2.3TB: 5 minutos
+
+2- Criação de disco: 1 minutos
+
+3- Anexar disco e Converter MBR para GPT
+
+gdisk
+
+n
+
+inicio 34, fim 2047
+
+codigo 8300
+
+w
+
+5 - aumentar partição
+
+parted /dev/disco
+print free
+resizepart x
+
+incio/fim (checar o fim do disco)
+
+6- montar disco
+
+
+
+
+
