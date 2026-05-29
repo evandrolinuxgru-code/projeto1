@@ -1,0 +1,30 @@
+---
+- name: Criar VM VMware
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+
+    - name: Criar VM
+      community.vmware.vmware_guest:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: false
+
+        datacenter: GRU
+        cluster: Cluster-PRD
+
+        folder: /GRU/vm
+
+        name: "{{ vm_name }}"
+        template: "{{ vm_template }}"
+        datastore: "{{ vm_datastore }}"
+
+        state: poweredon
+
+        hardware:
+          memory_mb: "{{ vm_memory }}"
+          num_cpus: "{{ vm_cpu }}"
+
+      delegate_to: localhost
