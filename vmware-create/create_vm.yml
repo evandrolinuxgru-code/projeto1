@@ -7,8 +7,8 @@
     - name: Criar VM
       community.vmware.vmware_guest:
         hostname: "{{ vcenter_hostname }}"
-        username: "{{ lookup('env', 'VMWARE_USER') }}"
-        password: "{{ lookup('env', 'VMWARE_PASSWORD') }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
         validate_certs: false
         datacenter: GRU
         cluster: Cluster-PRD
