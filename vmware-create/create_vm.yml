@@ -12,7 +12,7 @@
         validate_certs: false
         datacenter: "DC Homolog"
         cluster: "CL Homolog"
-        folder: "/Discovered virtual machine"
+        folder: "/DC Homolog/vm/Discovered virtual machine"
 
         name: "{{ vm_name }}"
         template: "{{ vm_template }}"
