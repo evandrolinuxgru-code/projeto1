@@ -10,9 +10,9 @@
         username: "{{ vcenter_username }}"
         password: "{{ vcenter_password }}"
         validate_certs: false
-        datacenter: GRU
-        cluster: Cluster-PRD
-        folder: /GRU/vm
+        datacenter: "DC Homolog"
+        cluster: "CL Homolog"
+        folder: "/Discovered virtual machine"
 
         name: "{{ vm_name }}"
         template: "{{ vm_template }}"
