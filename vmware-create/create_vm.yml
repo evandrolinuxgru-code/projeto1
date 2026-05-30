@@ -4,24 +4,45 @@
   gather_facts: false
 
   tasks:
-    - name: Criar VM
+    - name: Criar VM a partir de template
       community.vmware.vmware_guest:
         hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_username }}"
         password: "{{ vcenter_password }}"
         validate_certs: false
-        datacenter: "DC Homolog"
-        cluster: "CL Homolog"
-        folder: "/DC Homolog/vm/Discovered virtual machine"
+
+        datacenter: "{{ vcenter_datacenter }}"
+        cluster: "{{ vcenter_cluster }}"
 
         name: "{{ vm_name }}"
         template: "{{ vm_template }}"
         datastore: "{{ vm_datastore }}"
-
         state: poweredon
 
         hardware:
           memory_mb: "{{ vm_memory }}"
           num_cpus: "{{ vm_cpu }}"
+
+        disk:
+          - size_gb: "{{ vm_disk_gb }}"
+            type: thin
+            datastore: "{{ vm_datastore }}"
+
+        networks:
+          - name: "{{ vm_network }}"
+            type: static
+            ip: "{{ vm_ip }}"
+            netmask: "{{ vm_netmask }}"
+            gateway: "{{ vm_gateway }}"
+            start_connected: true
+
+        customization:
+          hostname: "{{ vm_name }}"
+          domain: "{{ vm_domain }}"
+          dns_servers:
+            - "{{ dns1 }}"
+            - "{{ dns2 }}"
+
+        wait_for_ip_address: true
 
       delegate_to: localhost
