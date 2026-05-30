@@ -6,11 +6,10 @@
   tasks:
     - name: Criar VM
       community.vmware.vmware_guest:
-        hostname: "{{ lookup('env', 'VMWARE_HOST') }}"
+        hostname: "{{ vcenter_hostname }}"
         username: "{{ lookup('env', 'VMWARE_USER') }}"
         password: "{{ lookup('env', 'VMWARE_PASSWORD') }}"
         validate_certs: false
-
         datacenter: GRU
         cluster: Cluster-PRD
         folder: /GRU/vm
